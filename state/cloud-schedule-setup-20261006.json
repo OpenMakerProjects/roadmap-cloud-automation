@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scheduleId": "6ac3fd99bfc88191b9cefd5ea5c04359",
-  "enabled": true,
+  "enabled": false,
   "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Kolkata:20261006T040000\nRRULE:FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
   "timezone": "Asia/Kolkata",
   "execution": "ChatGPT cloud scheduled task; user computer/local executor prohibited",
@@ -37,6 +37,7 @@
   "setupMergeCommit": "dac94b2121b9d49704726e13cdbf7eccc5ffb2f7",
   "gmailSetupMessageId": "1a10d983d793a449",
   "schedulerNextRunTime": null,
-  "schedulerReadbackEnabled": true,
-  "operationalStatus": "schedule enabled; end-to-end project creation blocked/unverified"
+  "schedulerReadbackEnabled": false,
+  "operationalStatus": "paused due to persistent public repository creation capability gap",
+  "lastRunRecord": "state/run-20261006.json"
 }
