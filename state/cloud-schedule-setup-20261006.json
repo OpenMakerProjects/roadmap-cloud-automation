@@ -21,16 +21,22 @@
     "controlRepoAdminReported": true,
     "controlRepoPushReported": true,
     "branchCreationVerified": true,
-    "commitPRMerge": "verified only after setup PR succeeds",
+    "commitPRMerge": "verified through merged setup PR #1",
     "organizationRepoCreation": "not verified; no repository-create operation exposed",
     "organizationMembershipLookup": "returned empty list",
     "gmailProfileRead": true,
-    "gmailSend": "available but unattended send permission not yet verified"
+    "gmailSend": "setup HTML report delivered successfully; future unattended execution not yet run"
   },
   "blockers": [
     "Public repository creation capability not exposed by current GitHub connector",
     "Organization repository creation authority remains unverified"
   ],
   "completionPolicy": "Never mark complete without required main tree verification",
-  "credentialsStored": false
+  "credentialsStored": false,
+  "setupPR": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/pull/1",
+  "setupMergeCommit": "dac94b2121b9d49704726e13cdbf7eccc5ffb2f7",
+  "gmailSetupMessageId": "1a10d983d793a449",
+  "schedulerNextRunTime": null,
+  "schedulerReadbackEnabled": true,
+  "operationalStatus": "schedule enabled; end-to-end project creation blocked/unverified"
 }
