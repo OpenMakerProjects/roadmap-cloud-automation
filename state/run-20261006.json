@@ -1,0 +1,335 @@
+{
+  "runId": "2026-10-06",
+  "status": "blocked",
+  "lease": {
+    "owner": "cloud-run-20261006",
+    "status": "report_pending",
+    "expiresAtIST": "2026-10-06T06:00:00+05:30"
+  },
+  "timestampIST": "2026-10-06T04:05:05+05:30",
+  "selectedIDs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "attemptedBuildIDs": [],
+  "projects": [
+    {
+      "id": 1,
+      "mainCommit": "89cd7861e6ece82f60d9349719720855fa696f77",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 2,
+      "mainCommit": "aa78b31b68fe596b0b5c062b743e41a9a26c6170",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 3,
+      "mainCommit": "827a2850e48024e3ae988ff65d938abf2cc33a19",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 4,
+      "mainCommit": "9de1ff0ac09fbfc809129170ef84d1792b219130",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 5,
+      "mainCommit": "c285298b841887148541e439fc4c8a92690c4df1",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 6,
+      "mainCommit": "14465b837c545937e762cf1e51509a87191728c8",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 7,
+      "mainCommit": "ff163760b002784ec2c5081b88644be6312b6673",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 8,
+      "mainCommit": "55baae58e934c360d1cfc525a2641a1abdf361af",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 9,
+      "mainCommit": "5cf06fa780fc2f2bf9cecb763fb1247ec51bbb0e",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 10,
+      "mainCommit": "11fdc920f301248da3c5793724883e2f50eeef68",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 11,
+      "mainCommit": "59a2eaa1239ed2a9d09ad689dc375971ba657c19",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 12,
+      "mainCommit": "d4b537c2ae01c652dcbcb05d0830ed65871a13c4",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-mobile-alerts",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 13,
+      "mainCommit": "10728881d80bd117d82c9c29dc1da97d50b5c5f0",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-voice-control",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 14,
+      "mainCommit": "3f9945746a5706c71d78932894ff5c8ebe2b957d",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 15,
+      "mainCommit": "7bb6e482b1c65e5cdf509308b61a66d5f39ffbe1",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 16,
+      "mainCommit": "a35a07d34b4e956af2b83bfc3a9ab6b21d2ae2ae",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 17,
+      "mainCommit": "95dc278df3a703a6b1d5c22506ace06596e670d9",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 18,
+      "mainCommit": "01aeadcb36fb6b82cee9e8b665e221842190bd93",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 19,
+      "mainCommit": "2036fc0c1efc611a29c08fe1a56ae9f5db441cf0",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    },
+    {
+      "id": 20,
+      "mainCommit": "d7bf31588b729247ff59044b51e523887dd3989b",
+      "missing": [
+        "docs/images/project-overview.png",
+        "docs/circuit-diagram.svg"
+      ],
+      "error": null,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
+      "pullRequest": null,
+      "validation": "main tree audit: required PNG and SVG missing",
+      "mergeState": "not attempted",
+      "status": "blocked"
+    }
+  ],
+  "blockers": [
+    "Current authenticated GitHub connector exposes no public repository creation operation; organization creation authority unverified"
+  ],
+  "seedTotals": {
+    "publishedUnverified": 367,
+    "failed": 1833
+  },
+  "totals": {
+    "verifiedComplete": 0,
+    "verifiedIncomplete": 20,
+    "unaudited": 2180,
+    "notVerifiedComplete": 2200,
+    "remainingExact": null
+  },
+  "nextStartingID": 1,
+  "scheduleEnabled": false,
+  "gmail": {
+    "status": "pending",
+    "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
+  },
+  "credentialsStored": false
+}
