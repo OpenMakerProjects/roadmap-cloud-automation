@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "scheduleId": "6ac3fd99bfc88191b9cefd5ea5c04359",
+  "enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Kolkata:20261006T040000\nRRULE:FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
+  "timezone": "Asia/Kolkata",
+  "execution": "ChatGPT cloud scheduled task; user computer/local executor prohibited",
+  "controlRepository": "OpenMakerProjects/roadmap-cloud-automation",
+  "githubLogin": "shrutikbalwan",
+  "reportRecipient": "balwanshrutik@gmail.com",
+  "contractBlob": "c97008e1f12ef303143861cce423e6712d8fc29d",
+  "roadmapBlob": "6bd55bbbdad6457f35ac5138bc5489354cb3ebd1",
+  "roadmapEntries": 2200,
+  "seedLatest": {
+    "publishedUnverified": 367,
+    "failed": 1833
+  },
+  "projectBatchSize": 20,
+  "permissions": {
+    "controlRepoRead": true,
+    "controlRepoAdminReported": true,
+    "controlRepoPushReported": true,
+    "branchCreationVerified": true,
+    "commitPRMerge": "verified only after setup PR succeeds",
+    "organizationRepoCreation": "not verified; no repository-create operation exposed",
+    "organizationMembershipLookup": "returned empty list",
+    "gmailProfileRead": true,
+    "gmailSend": "available but unattended send permission not yet verified"
+  },
+  "blockers": [
+    "Public repository creation capability not exposed by current GitHub connector",
+    "Organization repository creation authority remains unverified"
+  ],
+  "completionPolicy": "Never mark complete without required main tree verification",
+  "credentialsStored": false
+}
