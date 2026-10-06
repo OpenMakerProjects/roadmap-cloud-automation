@@ -1,5 +1,5 @@
 {
-  "status": "image_recovery_passed_final_ci_pending",
+  "status": "id1_verified_remaining_batch_pending",
   "selectedIDs": [
     1,
     2,
@@ -34,12 +34,13 @@
       "id": 1,
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
       "publicationStatus": "published",
-      "verifiedComplete": false,
-      "buildStatus": "final_board_gate_pending",
+      "verifiedComplete": true,
+      "buildStatus": "verified_complete",
       "branch": "automation/complete-001-20261006",
       "pr": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard/pull/1",
-      "headCommit": "6b43e7ed70b0df95806bc51424b9a467a19b93c8",
-      "merged": false
+      "headCommit": "72c0f21f671f2a9061f1da4c517505afc2f4d66e",
+      "merged": true,
+      "mainCommit": "98447bb62307e317986a3cf41677f56f3ee0a9dd"
     },
     {
       "id": 2,
@@ -256,11 +257,11 @@
     "partialCompletion": "passed",
     "svgRendered": "passed using Inkscape",
     "boardBuild": "passed on GitHub Actions run 37406890175, commit 499f7450d9495d26501a2cc76d8da915a46809c4",
-    "fullCompletion": "passed on decoded commit; final-head host CI passed",
+    "fullCompletion": "passed final head 72c0f21f671f2a9061f1da4c517505afc2f4d66e",
     "selectorRegressionTests": "2 passed",
     "imageTransport": "3 regression tests passed",
     "tokenPush": "passed with contents:write GITHUB_TOKEN; no stored credentials",
-    "finalHeadBoard": "pending"
+    "finalHeadBoard": "passed"
   },
   "blocker": {
     "resolved": true,
@@ -279,18 +280,19 @@
     "gitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
     "temporaryBase64Chunks": 0
   },
-  "completedThisRun": 0,
-  "nextID": 1,
-  "globalVerifiedComplete": null,
+  "completedThisRun": 1,
+  "nextID": 2,
+  "globalVerifiedComplete": 1,
   "remainingExact": null,
   "gmail": {
     "status": "sent",
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T08:47:43.004+05:30",
+  "timestampIST": "2026-10-06T08:50:50.372+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "pending"
-  }
+  },
+  "remainingNotVerified": 2199
 }
