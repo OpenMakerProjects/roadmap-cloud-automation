@@ -1,0 +1,71 @@
+{
+  "runId": "2026-10-06-id005-recovery",
+  "timestampIST": "2026-10-06T10:25:45.044+05:30",
+  "id": 5,
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
+  "publicationStatus": "published",
+  "verifiedComplete": true,
+  "status": "verified_complete",
+  "buildStatus": "verified_complete",
+  "branch": "automation/complete-005-20261006",
+  "pr": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance/pull/1",
+  "headCommit": "c26ec339b56bde989ebc1aeea7df956bedcf0019",
+  "merged": true,
+  "mergeCommit": "062e5341bc69a7d7fbf1574f4d7f418aacb8197b",
+  "mainCommit": "3f495b8f553b2b766d74471ad881899b23e156d6",
+  "postMergeDocumentationCommit": "3f495b8f553b2b766d74471ad881899b23e156d6",
+  "image": {
+    "bytes": 1937099,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "1cda5d63dab2e9bce8c06340d63a23954afafde95601953d326030ac7953b591",
+    "chunks": [
+      "project-overview.png.b64.000",
+      "project-overview.png.b64.001",
+      "project-overview.png.b64.002",
+      "project-overview.png.b64.003",
+      "project-overview.png.b64.004",
+      "project-overview.png.b64.005",
+      "project-overview.png.b64.006",
+      "project-overview.png.b64.007",
+      "project-overview.png.b64.008",
+      "project-overview.png.b64.009",
+      "project-overview.png.b64.010",
+      "project-overview.png.b64.011",
+      "project-overview.png.b64.012",
+      "project-overview.png.b64.013",
+      "project-overview.png.b64.014",
+      "project-overview.png.b64.015",
+      "project-overview.png.b64.016"
+    ],
+    "gitBlob": "46840fc54f9a5bcde982b9913389225b92c644be",
+    "temporaryBase64Chunks": 0
+  },
+  "validation": {
+    "host": "policy assertions and 3 PNG transport tests passed",
+    "board": "ESPHome config and ESP32 compilation passed",
+    "completion": "PNG/SVG/local links/license/credential checks passed",
+    "runs": [
+      37415653155,
+      37415657060
+    ],
+    "finalHead": "push and PR passed",
+    "decodeRun": 37415434963,
+    "tokenPush": "success",
+    "resolvedError": "custom MaintenancePolicy include ordering repaired with shared inline accessor",
+    "hardware": "not performed",
+    "postMergeDocumentationCI": "pending; text-only test-result update, no code changes"
+  },
+  "verifiedAtIST": "2026-10-06T10:25:45.044+05:30",
+  "pullRequest": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance/pull/1",
+  "requiredMainTreeVerified": true,
+  "emailStatus": "pending_batch_report",
+  "totals": {
+    "verifiedComplete": 5,
+    "notVerifiedComplete": 2195,
+    "remainingExact": null,
+    "nextStartingID": 6
+  }
+}

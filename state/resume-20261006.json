@@ -1,5 +1,5 @@
 {
-  "status": "id4_verified_id5_active",
+  "status": "id5_verified_id6_active",
   "selectedIDs": [
     1,
     2,
@@ -181,12 +181,12 @@
       "id": 5,
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
       "publicationStatus": "published",
-      "verifiedComplete": false,
-      "buildStatus": "decoded_png_host_passed_target_build_pending",
+      "verifiedComplete": true,
+      "buildStatus": "verified_complete",
       "branch": "automation/complete-005-20261006",
       "pr": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance/pull/1",
-      "headCommit": "eb9a2d50d33392f7ea33948f26018d036f61b743",
-      "merged": false,
+      "headCommit": "c26ec339b56bde989ebc1aeea7df956bedcf0019",
+      "merged": true,
       "image": {
         "bytes": 1937099,
         "dimensions": [
@@ -212,15 +212,30 @@
           "project-overview.png.b64.014",
           "project-overview.png.b64.015",
           "project-overview.png.b64.016"
-        ]
+        ],
+        "gitBlob": "46840fc54f9a5bcde982b9913389225b92c644be",
+        "temporaryBase64Chunks": 0
       },
       "validation": {
-        "host": "passed policy and PNG transport/completion checks",
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESPHome config and ESP32 compilation passed",
+        "completion": "PNG/SVG/local links/license/credential checks passed",
+        "runs": [
+          37415653155,
+          37415657060
+        ],
+        "finalHead": "push and PR passed",
         "decodeRun": 37415434963,
         "tokenPush": "success",
-        "board": "pending",
-        "hardware": "not performed"
-      }
+        "resolvedError": "custom MaintenancePolicy include ordering repaired with shared inline accessor",
+        "hardware": "not performed",
+        "postMergeDocumentationCI": "pending; text-only test-result update, no code changes"
+      },
+      "status": "verified_complete",
+      "mergeCommit": "062e5341bc69a7d7fbf1574f4d7f418aacb8197b",
+      "mainCommit": "3f495b8f553b2b766d74471ad881899b23e156d6",
+      "postMergeDocumentationCommit": "3f495b8f553b2b766d74471ad881899b23e156d6",
+      "verifiedAtIST": "2026-10-06T10:25:45.044+05:30"
     },
     {
       "id": 6,
@@ -416,16 +431,16 @@
     "gitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
     "temporaryBase64Chunks": 0
   },
-  "completedThisRun": 4,
-  "nextID": 5,
-  "globalVerifiedComplete": 4,
+  "completedThisRun": 5,
+  "nextID": 6,
+  "globalVerifiedComplete": 5,
   "remainingExact": null,
   "gmail": {
     "status": "sent",
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T10:19:31.592+05:30",
+  "timestampIST": "2026-10-06T10:25:45.044+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
@@ -433,11 +448,10 @@
     "threadId": "1a10e356c0825727",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "remainingNotVerified": 2196,
+  "remainingNotVerified": 2195,
   "continuation": {
     "status": "remaining_batch_in_progress",
     "IDs": [
-      5,
       6,
       7,
       8,
