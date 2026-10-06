@@ -26,7 +26,8 @@
     1,
     2,
     3,
-    4
+    4,
+    5
   ],
   "leaseOwner": "cloud-id4-1791260955190",
   "leaseStatus": "active",
@@ -181,11 +182,38 @@
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
       "publicationStatus": "published",
       "verifiedComplete": false,
-      "buildStatus": "pending_existing_repository_build",
-      "branch": null,
+      "buildStatus": "image_transport_prepared",
+      "branch": "automation/complete-005-20261006",
       "pr": null,
       "headCommit": null,
-      "merged": false
+      "merged": false,
+      "image": {
+        "bytes": 1937099,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "1cda5d63dab2e9bce8c06340d63a23954afafde95601953d326030ac7953b591",
+        "chunks": [
+          "project-overview.png.b64.000",
+          "project-overview.png.b64.001",
+          "project-overview.png.b64.002",
+          "project-overview.png.b64.003",
+          "project-overview.png.b64.004",
+          "project-overview.png.b64.005",
+          "project-overview.png.b64.006",
+          "project-overview.png.b64.007",
+          "project-overview.png.b64.008",
+          "project-overview.png.b64.009",
+          "project-overview.png.b64.010",
+          "project-overview.png.b64.011",
+          "project-overview.png.b64.012",
+          "project-overview.png.b64.013",
+          "project-overview.png.b64.014",
+          "project-overview.png.b64.015",
+          "project-overview.png.b64.016"
+        ]
+      }
     },
     {
       "id": 6,
@@ -390,7 +418,7 @@
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T10:13:11.478+05:30",
+  "timestampIST": "2026-10-06T10:15:49.244+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
