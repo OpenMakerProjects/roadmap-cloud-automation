@@ -1,5 +1,5 @@
 {
-  "status": "id6_verified_id7_active",
+  "status": "id7_building",
   "selectedIDs": [
     1,
     2,
@@ -28,7 +28,8 @@
     3,
     4,
     5,
-    6
+    6,
+    7
   ],
   "leaseOwner": "cloud-id4-1791260955190",
   "leaseStatus": "active",
@@ -302,11 +303,38 @@
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics",
       "publicationStatus": "published",
       "verifiedComplete": false,
-      "buildStatus": "pending_existing_repository_build",
-      "branch": null,
+      "buildStatus": "implementation_and_generated_image_prepared",
+      "branch": "automation/complete-007-20261006",
       "pr": null,
       "headCommit": null,
-      "merged": false
+      "merged": false,
+      "image": {
+        "bytes": 1910836,
+        "sha256": "37bb737a294c9cafe0d4c43519a7a2355ac7788a125185fa08530f00cf42c039",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "chunks": [
+          "project-overview.png.b64.000",
+          "project-overview.png.b64.001",
+          "project-overview.png.b64.002",
+          "project-overview.png.b64.003",
+          "project-overview.png.b64.004",
+          "project-overview.png.b64.005",
+          "project-overview.png.b64.006",
+          "project-overview.png.b64.007",
+          "project-overview.png.b64.008",
+          "project-overview.png.b64.009",
+          "project-overview.png.b64.010",
+          "project-overview.png.b64.011",
+          "project-overview.png.b64.012",
+          "project-overview.png.b64.013",
+          "project-overview.png.b64.014",
+          "project-overview.png.b64.015"
+        ],
+        "transport": "base64 text chunks; GitHub Actions decoder"
+      }
     },
     {
       "id": 8,
