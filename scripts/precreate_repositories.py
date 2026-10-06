@@ -78,7 +78,7 @@ def append_log(project: dict, status: str, detail: str = "") -> None:
             handle.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
-def create_repository(project: dict, max_attempts: int = 30) -> tuple[bool, str]:
+def create_repository(project: dict, max_attempts: int = 8) -> tuple[bool, str]:
     description = f"OpenMakerProjects #{project['id']}: {project['title']}"
     payload = json.dumps(
         {
@@ -101,7 +101,10 @@ def create_repository(project: dict, max_attempts: int = 30) -> tuple[bool, str]
         if "already exists" in error.lower() or "name already exists" in error.lower():
             return True, "already-exists"
         if "rate limit" in error.lower() or "secondary" in error.lower() or "http 403" in error.lower() or "http 429" in error.lower():
-            delay = min(900, max(90, 30 * attempt))
+            # Repository creation is a content-generating operation. GitHub's
+            # secondary limit can remain active well beyond the core API reset,
+            # so use a long escalating cooldown instead of repeated short probes.
+            delay = min(3600, 900 * attempt)
             print(f"rate-limit pause={delay}s attempt={attempt} slug={project['slug']}", flush=True)
             time.sleep(delay)
             continue
@@ -118,8 +121,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--execute", action="store_true", help="Create repositories; otherwise only report the plan")
     parser.add_argument("--limit", type=int, default=0, help="Maximum repositories to process; 0 means all")
-    parser.add_argument("--delay", type=float, default=1.0, help="Delay after successful creations")
-    parser.add_argument("--workers", type=int, default=3, choices=range(1, 5), help="Parallel creation workers")
+    parser.add_argument("--delay", type=float, default=12.0, help="Delay after successful creations")
+    parser.add_argument("--workers", type=int, default=1, choices=range(1, 5), help="Parallel creation workers")
     args = parser.parse_args()
 
     projects = json.loads(MANIFEST.read_text(encoding="utf-8"))
