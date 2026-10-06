@@ -124,10 +124,10 @@
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
       "publicationStatus": "published",
       "verifiedComplete": false,
-      "buildStatus": "image_transport_prepared",
+      "buildStatus": "decoded_png_committed_host_gates_passed_board_pending",
       "branch": "automation/complete-004-20261006",
-      "pr": null,
-      "headCommit": null,
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver/pull/1",
+      "headCommit": "b06ee13df28048dc0c0177f3252f2ac629bed4fd",
       "merged": false,
       "image": {
         "bytes": 2099251,
@@ -156,6 +156,13 @@
           "project-overview.png.b64.016",
           "project-overview.png.b64.017"
         ]
+      },
+      "validation": {
+        "host": "passed on decoded commit",
+        "decodeRun": 37414718524,
+        "tokenPush": "success",
+        "board": "pending",
+        "hardware": "not performed"
       }
     },
     {
@@ -372,7 +379,7 @@
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T10:05:07.780+05:30",
+  "timestampIST": "2026-10-06T10:09:45.672+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
