@@ -1,0 +1,41 @@
+{
+  "1": {
+    "id": 1,
+    "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
+    "publicationStatus": "published",
+    "verifiedComplete": true,
+    "buildStatus": "verified_complete",
+    "branch": "automation/complete-001-20261006",
+    "pr": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard/pull/1",
+    "headCommit": "72c0f21f671f2a9061f1da4c517505afc2f4d66e",
+    "merged": true,
+    "mainCommit": "98447bb62307e317986a3cf41677f56f3ee0a9dd",
+    "status": "verified_complete",
+    "timestampIST": "2026-10-06T08:50:50.372+05:30",
+    "requiredMainTreeVerified": true,
+    "image": {
+      "generated": true,
+      "committed": true,
+      "bytes": 1885928,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "ea59b12b135a74bd46eee008ec02bc37c8ed0e45e8ef69eb0f6d3705f22e4a9f",
+      "gitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
+      "temporaryBase64Chunks": 0
+    },
+    "tests": {
+      "nativeCpp": "passed",
+      "partialCompletion": "passed",
+      "svgRendered": "passed using Inkscape",
+      "boardBuild": "passed on GitHub Actions run 37406890175, commit 499f7450d9495d26501a2cc76d8da915a46809c4",
+      "fullCompletion": "passed final head 72c0f21f671f2a9061f1da4c517505afc2f4d66e",
+      "selectorRegressionTests": "2 passed",
+      "imageTransport": "3 regression tests passed",
+      "tokenPush": "passed with contents:write GITHUB_TOKEN; no stored credentials",
+      "finalHeadBoard": "passed"
+    },
+    "checksRun": 37408269825
+  }
+}
