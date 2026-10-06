@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scheduleId": "6ac3fd99bfc88191b9cefd5ea5c04359",
-  "enabled": false,
+  "enabled": true,
   "schedule": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Kolkata:20261006T040000\nRRULE:FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
   "timezone": "Asia/Kolkata",
   "execution": "ChatGPT cloud scheduled task; user computer/local executor prohibited",
@@ -28,8 +28,7 @@
     "gmailSend": "setup HTML report delivered successfully; future unattended execution not yet run"
   },
   "blockers": [
-    "Public repository creation capability not exposed by current GitHub connector",
-    "Organization repository creation authority remains unverified"
+    "Repository creation remains unverified for actually absent future repositories only"
   ],
   "completionPolicy": "Never mark complete without required main tree verification",
   "credentialsStored": false,
@@ -37,7 +36,16 @@
   "setupMergeCommit": "dac94b2121b9d49704726e13cdbf7eccc5ffb2f7",
   "gmailSetupMessageId": "1a10d983d793a449",
   "schedulerNextRunTime": null,
-  "schedulerReadbackEnabled": false,
-  "operationalStatus": "paused due to persistent public repository creation capability gap",
-  "lastRunRecord": "state/run-20261006.json"
+  "schedulerReadbackEnabled": true,
+  "operationalStatus": "enabled: existing repositories proceed; direct PNG rejection recovered by authorized base64 text and GitHub Actions",
+  "lastRunRecord": "state/resume-20261006.json",
+  "repositoryCreationPolicy": "Block only selected ID whose repository is confirmed absent; proceed with other selected existing repositories",
+  "imageUploadRecovery": "base64 UTF-8 text/chunks, validated lossless PNG decoding, same-branch GITHUB_TOKEN push, explicit final gates",
+  "imageRecoveryVerified": {
+    "run": 37408029403,
+    "decodedCommit": "cbbb55ac65058b6c6186d8a179f9b43638a17c9e",
+    "tokenPush": "success",
+    "credentialPatternScan": "passed",
+    "storedCredentials": false
+  }
 }
