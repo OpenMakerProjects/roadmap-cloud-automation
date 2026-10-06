@@ -1,0 +1,66 @@
+{
+  "runId": "2026-10-06-id003-recovery",
+  "timestampIST": "2026-10-06T09:54:35.300+05:30",
+  "id": 3,
+  "slug": "room-climate-hub-voice-control",
+  "status": "verified_complete",
+  "publicationStatus": "published",
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
+  "pullRequest": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control/pull/1",
+  "headCommit": "ec7858a65bb5ed28937162f5f8bb1f39ff940cfc",
+  "mainCommit": "cf02854a489a4aff503aec34e2a741939b205c49",
+  "mergeCommit": "cf02854a489a4aff503aec34e2a741939b205c49",
+  "requiredMainTreeVerified": true,
+  "image": {
+    "bytes": 1943736,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "a42b78fa3007d6fc732762d838bec833469b144ad7c99c708a7c59377c983027",
+    "chunks": [
+      "project-overview.png.b64.000",
+      "project-overview.png.b64.001",
+      "project-overview.png.b64.002",
+      "project-overview.png.b64.003",
+      "project-overview.png.b64.004",
+      "project-overview.png.b64.005",
+      "project-overview.png.b64.006",
+      "project-overview.png.b64.007",
+      "project-overview.png.b64.008",
+      "project-overview.png.b64.009",
+      "project-overview.png.b64.010",
+      "project-overview.png.b64.011",
+      "project-overview.png.b64.012",
+      "project-overview.png.b64.013",
+      "project-overview.png.b64.014",
+      "project-overview.png.b64.015",
+      "project-overview.png.b64.016"
+    ],
+    "gitBlob": "29d2b06411687778d95ceed66d87ee2aecd627b3",
+    "temporaryBase64Chunks": 0
+  },
+  "validation": {
+    "host": "11 tests passed: policy, mocked INA219, PNG transport",
+    "application": "Python compilation and synthetic command simulation passed",
+    "finalHead": "Validate project and Completion gates passed on final head",
+    "runs": [
+      37413474943,
+      37413474926,
+      37413471403,
+      37413471342
+    ],
+    "decodeRun": 37413381759,
+    "tokenPush": "success",
+    "secrets": "credential-pattern scans passed; no credentials stored",
+    "hardware": "not performed"
+  },
+  "emailStatus": "pending",
+  "totals": {
+    "verifiedComplete": 3,
+    "notVerifiedComplete": 2197,
+    "remainingExact": null,
+    "nextStartingID": 4
+  },
+  "transientIssue": "Cloud scratch 503 recovered by handling native generated-image data URL as byte-preserving base64 text in cloud orchestration; GitHub Actions validated the decoded bytes"
+}
