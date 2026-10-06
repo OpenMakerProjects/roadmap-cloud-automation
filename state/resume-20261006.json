@@ -67,11 +67,43 @@
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
       "publicationStatus": "published",
       "verifiedComplete": false,
-      "buildStatus": "implementation_prepared",
+      "buildStatus": "cloud_image_decode_completion_running",
       "branch": "automation/complete-003-20261006",
-      "pr": null,
-      "headCommit": null,
-      "merged": false
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control/pull/1",
+      "headCommit": "47a40b4ef6ef7fb198b1c60c6442693c64ea9f98",
+      "merged": false,
+      "image": {
+        "bytes": 1943736,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "a42b78fa3007d6fc732762d838bec833469b144ad7c99c708a7c59377c983027",
+        "chunks": [
+          "project-overview.png.b64.000",
+          "project-overview.png.b64.001",
+          "project-overview.png.b64.002",
+          "project-overview.png.b64.003",
+          "project-overview.png.b64.004",
+          "project-overview.png.b64.005",
+          "project-overview.png.b64.006",
+          "project-overview.png.b64.007",
+          "project-overview.png.b64.008",
+          "project-overview.png.b64.009",
+          "project-overview.png.b64.010",
+          "project-overview.png.b64.011",
+          "project-overview.png.b64.012",
+          "project-overview.png.b64.013",
+          "project-overview.png.b64.014",
+          "project-overview.png.b64.015",
+          "project-overview.png.b64.016"
+        ]
+      },
+      "validation": {
+        "host": "11 policy, mocked I2C and image-transport tests passed; Python simulation/compilation and SVG render checked",
+        "physical": "not performed",
+        "finalCloud": "pending"
+      }
     },
     {
       "id": 4,
@@ -329,5 +361,10 @@
       19,
       20
     ]
+  },
+  "transientEnvironmentIssue": {
+    "status": "recovered_without_local_executor",
+    "error": "exec-server environment registry 503 Service Unavailable",
+    "recovery": "Generated image bytes handled in cloud code orchestration and text chunks; GitHub Actions runs validation"
   }
 }
