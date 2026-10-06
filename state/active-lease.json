@@ -2,9 +2,8 @@
   "owner": "cloud-id4-1791260955190",
   "status": "active",
   "acquiredAtIST": "2026-10-06T09:59:15.190+05:30",
-  "expiresAt": "2026-10-06T07:55:45.044Z",
+  "expiresAt": "2026-10-06T08:05:11.131Z",
   "selectedIDs": [
-    6,
     7,
     8,
     9,
@@ -21,7 +20,6 @@
     20
   ],
   "remainingIDs": [
-    6,
     7,
     8,
     9,
@@ -42,7 +40,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "reconciledID2": {
     "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
@@ -70,6 +69,6 @@
     19,
     20
   ],
-  "activeProject": 6,
-  "lastCheckpoint": "ID5 verified complete, ID6 active"
+  "activeProject": 7,
+  "lastCheckpoint": "ID6 verified complete, ID7 active"
 }

@@ -1,0 +1,69 @@
+{
+  "runId": "2026-10-06-id006-recovery",
+  "timestampIST": "2026-10-06T10:35:11.131+05:30",
+  "id": 6,
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation",
+  "publicationStatus": "published",
+  "verifiedComplete": true,
+  "status": "verified_complete",
+  "buildStatus": "verified_complete",
+  "branch": "automation/complete-006-20261006",
+  "pr": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation/pull/1",
+  "headCommit": "e09d73461bcd5b4a53260f934b1d92627eb508f6",
+  "merged": true,
+  "mergeCommit": "d747e112e33678e9eb0342c92aee3fecc1af68be",
+  "mainCommit": "d747e112e33678e9eb0342c92aee3fecc1af68be",
+  "image": {
+    "bytes": 1966723,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "509221f460cc0180d4b74fae7895f2d75b92d3735d41b530cfab648fb455cd24",
+    "chunks": [
+      "project-overview.png.b64.000",
+      "project-overview.png.b64.001",
+      "project-overview.png.b64.002",
+      "project-overview.png.b64.003",
+      "project-overview.png.b64.004",
+      "project-overview.png.b64.005",
+      "project-overview.png.b64.006",
+      "project-overview.png.b64.007",
+      "project-overview.png.b64.008",
+      "project-overview.png.b64.009",
+      "project-overview.png.b64.010",
+      "project-overview.png.b64.011",
+      "project-overview.png.b64.012",
+      "project-overview.png.b64.013",
+      "project-overview.png.b64.014",
+      "project-overview.png.b64.015",
+      "project-overview.png.b64.016"
+    ],
+    "gitBlob": "a3f147dfeb6c53f9f5b697cfa762513c5f04dc20",
+    "temporaryBase64Chunks": 0
+  },
+  "validation": {
+    "host": "policy assertions and 3 PNG transport tests passed",
+    "board": "ESP32 esp32dev compilation passed",
+    "completion": "PNG/SVG/local image links/MIT/credential checks passed",
+    "runs": [
+      37416655738,
+      37416659344
+    ],
+    "decodeRun": 37416498969,
+    "tokenPush": "success",
+    "finalHead": "push and PR passed",
+    "readme": "actual passed results committed by recovery workflow",
+    "hardware": "not performed"
+  },
+  "verifiedAtIST": "2026-10-06T10:35:11.131+05:30",
+  "pullRequest": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation/pull/1",
+  "requiredMainTreeVerified": true,
+  "emailStatus": "pending_batch_report",
+  "totals": {
+    "verifiedComplete": 6,
+    "notVerifiedComplete": 2194,
+    "remainingExact": null,
+    "nextStartingID": 7
+  }
+}
