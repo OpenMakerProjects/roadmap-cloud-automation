@@ -1,0 +1,29 @@
+{
+  "status": "in_progress",
+  "selectedIDs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "leaseOwner": "cloud-resume-20261006",
+  "leaseExpiresAtIST": "2026-10-07T08:00:00+05:30",
+  "correction": "Existing repository builds proceed regardless of repository creation capability. Audit-only blocked rows do not regress seed published status.",
+  "projects": []
+}
