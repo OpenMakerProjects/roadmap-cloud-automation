@@ -1,10 +1,9 @@
 {
   "owner": "cloud-continuation-1791257003625",
-  "status": "active",
+  "status": "released",
   "acquiredAtIST": "2026-10-06T08:53:23.625+05:30",
   "expiresAt": "2026-10-06T06:23:23.625Z",
   "selectedIDs": [
-    3,
     4,
     5,
     6,
@@ -24,7 +23,6 @@
     20
   ],
   "remainingIDs": [
-    3,
     4,
     5,
     6,
@@ -45,7 +43,8 @@
   ],
   "completedIDs": [
     1,
-    2
+    2,
+    3
   ],
   "reconciledID2": {
     "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
@@ -73,6 +72,7 @@
     19,
     20
   ],
-  "activeProject": 3,
-  "lastCheckpoint": "ID 2 reconciled; ID 3 PR #1 open and original image text transfer in progress"
+  "activeProject": null,
+  "lastCheckpoint": "ID 3 merged and verified; report delivered; next unfinished ID 4",
+  "releasedAtIST": "2026-10-06T09:57:14.475+05:30"
 }
