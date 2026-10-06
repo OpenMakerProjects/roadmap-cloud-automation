@@ -15,7 +15,10 @@
     "circuitDiagram": "docs/circuit-diagram.svg"
   },
   "projectImage": {
-    "dimensions": [1536, 1024],
+    "dimensions": [
+      1536,
+      1024
+    ],
     "bytes": 1792338,
     "sha256": "b25590de468aee4c3ab67e697ea99db426dd664f506cbd0ad0b3416d921e4840"
   },
@@ -25,6 +28,12 @@
     "metadata": "passed",
     "requiredMainTree": "passed"
   },
-  "emailStatus": "pending-next-cloud-report",
-  "notes": "The Arduino Nano 33 IoT build passed after WiFiNINA was pinned from its official tagged source. Historical audit rows remain preserved."
+  "emailStatus": "sent",
+  "notes": "The Arduino Nano 33 IoT build passed after WiFiNINA was pinned from its official tagged source. Historical audit rows remain preserved.",
+  "gmail": {
+    "messageId": "1a10f766f1a03067",
+    "threadId": "1a10e356c0825727",
+    "recipient": "me",
+    "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
+  }
 }
