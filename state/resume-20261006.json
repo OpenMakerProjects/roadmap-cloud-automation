@@ -182,10 +182,10 @@
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
       "publicationStatus": "published",
       "verifiedComplete": false,
-      "buildStatus": "image_transport_prepared",
+      "buildStatus": "decoded_png_host_passed_target_build_pending",
       "branch": "automation/complete-005-20261006",
-      "pr": null,
-      "headCommit": null,
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance/pull/1",
+      "headCommit": "eb9a2d50d33392f7ea33948f26018d036f61b743",
       "merged": false,
       "image": {
         "bytes": 1937099,
@@ -213,6 +213,13 @@
           "project-overview.png.b64.015",
           "project-overview.png.b64.016"
         ]
+      },
+      "validation": {
+        "host": "passed policy and PNG transport/completion checks",
+        "decodeRun": 37415434963,
+        "tokenPush": "success",
+        "board": "pending",
+        "hardware": "not performed"
       }
     },
     {
@@ -418,7 +425,7 @@
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T10:15:49.244+05:30",
+  "timestampIST": "2026-10-06T10:19:31.592+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
