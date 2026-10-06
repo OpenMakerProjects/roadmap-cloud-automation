@@ -1,0 +1,69 @@
+{
+  "runId": "2026-10-06-id004-recovery",
+  "timestampIST": "2026-10-06T10:13:11.478+05:30",
+  "id": 4,
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
+  "publicationStatus": "published",
+  "verifiedComplete": true,
+  "buildStatus": "verified_complete",
+  "status": "verified_complete",
+  "branch": "automation/complete-004-20261006",
+  "pr": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver/pull/1",
+  "headCommit": "898b63f97c056d70cf802e47cc9cbf0b729d8a26",
+  "merged": true,
+  "mainCommit": "965afabf726eb293a0175ac21cde96b3607eff9a",
+  "image": {
+    "bytes": 2099251,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sha256": "477882b4fcbb228833e9a6943944de8b3ae0cd32b220f242e20658c28f0a5e12",
+    "chunks": [
+      "project-overview.png.b64.000",
+      "project-overview.png.b64.001",
+      "project-overview.png.b64.002",
+      "project-overview.png.b64.003",
+      "project-overview.png.b64.004",
+      "project-overview.png.b64.005",
+      "project-overview.png.b64.006",
+      "project-overview.png.b64.007",
+      "project-overview.png.b64.008",
+      "project-overview.png.b64.009",
+      "project-overview.png.b64.010",
+      "project-overview.png.b64.011",
+      "project-overview.png.b64.012",
+      "project-overview.png.b64.013",
+      "project-overview.png.b64.014",
+      "project-overview.png.b64.015",
+      "project-overview.png.b64.016",
+      "project-overview.png.b64.017"
+    ],
+    "gitBlob": "8d6936a871bfcf5bcf97ad8a6914cb8069faab39",
+    "temporaryBase64Chunks": 0
+  },
+  "validation": {
+    "host": "policy assertions and 3 PNG transport tests passed",
+    "board": "ESP8266 nodemcuv2 compilation passed",
+    "completion": "PNG/SVG/local-image-links/license/credential checks passed",
+    "finalHead": "push and pull_request host/board passed",
+    "runs": [
+      37414857923,
+      37414863191
+    ],
+    "decodeRun": 37414718524,
+    "tokenPush": "success",
+    "hardware": "not performed"
+  },
+  "verifiedAtIST": "2026-10-06T10:13:11.478+05:30",
+  "pullRequest": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver/pull/1",
+  "mergeCommit": "965afabf726eb293a0175ac21cde96b3607eff9a",
+  "requiredMainTreeVerified": true,
+  "emailStatus": "pending_batch_report",
+  "totals": {
+    "verifiedComplete": 4,
+    "notVerifiedComplete": 2196,
+    "remainingExact": null,
+    "nextStartingID": 5
+  }
+}

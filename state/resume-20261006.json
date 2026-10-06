@@ -1,5 +1,5 @@
 {
-  "status": "id4_build_in_progress",
+  "status": "id4_verified_id5_active",
   "selectedIDs": [
     1,
     2,
@@ -123,12 +123,12 @@
       "id": 4,
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
       "publicationStatus": "published",
-      "verifiedComplete": false,
-      "buildStatus": "decoded_png_committed_host_gates_passed_board_pending",
+      "verifiedComplete": true,
+      "buildStatus": "verified_complete",
       "branch": "automation/complete-004-20261006",
       "pr": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver/pull/1",
-      "headCommit": "b06ee13df28048dc0c0177f3252f2ac629bed4fd",
-      "merged": false,
+      "headCommit": "898b63f97c056d70cf802e47cc9cbf0b729d8a26",
+      "merged": true,
       "image": {
         "bytes": 2099251,
         "dimensions": [
@@ -155,15 +155,26 @@
           "project-overview.png.b64.015",
           "project-overview.png.b64.016",
           "project-overview.png.b64.017"
-        ]
+        ],
+        "gitBlob": "8d6936a871bfcf5bcf97ad8a6914cb8069faab39",
+        "temporaryBase64Chunks": 0
       },
       "validation": {
-        "host": "passed on decoded commit",
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESP8266 nodemcuv2 compilation passed",
+        "completion": "PNG/SVG/local-image-links/license/credential checks passed",
+        "finalHead": "push and pull_request host/board passed",
+        "runs": [
+          37414857923,
+          37414863191
+        ],
         "decodeRun": 37414718524,
         "tokenPush": "success",
-        "board": "pending",
         "hardware": "not performed"
-      }
+      },
+      "status": "verified_complete",
+      "mainCommit": "965afabf726eb293a0175ac21cde96b3607eff9a",
+      "verifiedAtIST": "2026-10-06T10:13:11.478+05:30"
     },
     {
       "id": 5,
@@ -370,16 +381,16 @@
     "gitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
     "temporaryBase64Chunks": 0
   },
-  "completedThisRun": 3,
-  "nextID": 4,
-  "globalVerifiedComplete": 3,
+  "completedThisRun": 4,
+  "nextID": 5,
+  "globalVerifiedComplete": 4,
   "remainingExact": null,
   "gmail": {
     "status": "sent",
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T10:09:45.672+05:30",
+  "timestampIST": "2026-10-06T10:13:11.478+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
@@ -387,11 +398,10 @@
     "threadId": "1a10e356c0825727",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "remainingNotVerified": 2197,
+  "remainingNotVerified": 2196,
   "continuation": {
-    "status": "remaining_batch_pending",
+    "status": "remaining_batch_in_progress",
     "IDs": [
-      4,
       5,
       6,
       7,
