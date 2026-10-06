@@ -26,7 +26,7 @@
     1
   ],
   "leaseOwner": "cloud-resume-20261006",
-  "leaseStatus": "report_pending",
+  "leaseStatus": "released",
   "publicationStatusPolicy": "blocked audit/build outcomes do not revoke seed publication; verified completion is separate",
   "repositoryCreationPolicy": "Missing repository-creation operation is never a blocker for an existing repository",
   "projects": [
@@ -275,6 +275,10 @@
   "globalVerifiedComplete": null,
   "remainingExact": null,
   "gmail": {
-    "status": "pending"
-  }
+    "status": "sent",
+    "messageId": "1a10f2add152d5fb",
+    "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
+  },
+  "timestampIST": "2026-10-06, 8:33:50 a.m. IST",
+  "scheduleEnabled": false
 }
