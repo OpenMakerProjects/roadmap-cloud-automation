@@ -48,16 +48,19 @@
       "id": 2,
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts",
       "publicationStatus": "published",
-      "verifiedComplete": false,
-      "buildStatus": "cloud_image_decode_and_board_validation_running",
+      "verifiedComplete": true,
+      "buildStatus": "verified_complete",
       "branch": "automation/complete-002-20261006",
       "pr": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts/pull/1",
-      "headCommit": "ac26c1985142d78040b86cea18a8df74a107ce02",
-      "merged": false,
+      "headCommit": "49054455bf63a539f97c8a7d79a8d475a62df33c",
+      "merged": true,
       "validation": {
-        "host": "passed native C++ plus 7 Python tests; PNG, SVG, links, license and credential checks passed",
-        "board": "pending"
-      }
+        "host": "passed",
+        "validate": "passed",
+        "board": "passed",
+        "requiredMainTree": "passed"
+      },
+      "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4"
     },
     {
       "id": 3,
@@ -286,9 +289,9 @@
     "gitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
     "temporaryBase64Chunks": 0
   },
-  "completedThisRun": 1,
-  "nextID": 2,
-  "globalVerifiedComplete": 1,
+  "completedThisRun": 2,
+  "nextID": 3,
+  "globalVerifiedComplete": 2,
   "remainingExact": null,
   "gmail": {
     "status": "sent",
@@ -303,11 +306,10 @@
     "threadId": "1a10e356c0825727",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "remainingNotVerified": 2199,
+  "remainingNotVerified": 2198,
   "continuation": {
     "status": "running",
     "IDs": [
-      2,
       3,
       4,
       5,
