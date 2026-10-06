@@ -26,7 +26,6 @@
     20
   ],
   "remainingIDs": [
-    2,
     3,
     4,
     5,
@@ -45,5 +44,13 @@
     18,
     19,
     20
-  ]
+  ],
+  "completedIDs": [
+    1,
+    2
+  ],
+  "reconciledID2": {
+    "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
+    "record": "state/recovery-20261006-id002.json"
+  }
 }
