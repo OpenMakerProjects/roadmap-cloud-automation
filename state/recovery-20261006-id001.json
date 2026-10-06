@@ -1,0 +1,30 @@
+{
+  "runId": "2026-10-06-id001-recovery",
+  "timestampIST": "2026-10-06T08:48:35+05:30",
+  "id": 1,
+  "slug": "room-climate-hub-live-dashboard",
+  "status": "verified",
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
+  "pullRequest": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard/pull/1",
+  "mergeCommit": "98447bb62307e317986a3cf41677f56f3ee0a9dd",
+  "requiredFiles": {
+    "readme": "README.md",
+    "license": "LICENSE",
+    "projectImage": "docs/images/project-overview.png",
+    "circuitDiagram": "docs/circuit-diagram.svg"
+  },
+  "projectImage": {
+    "dimensions": [1536, 1024],
+    "bytes": 1885928,
+    "sha256": "ea59b12b135a74bd46eee008ec02bc37c8ed0e45e8ef69eb0f6d3705f22e4a9f"
+  },
+  "validation": {
+    "host": "passed",
+    "board": "passed",
+    "metadata": "passed",
+    "readmeLinks": "passed",
+    "svgParse": "passed"
+  },
+  "emailStatus": "sent:1a10f2add152d5fb",
+  "notes": "Recovered the generated PNG through base64 text transport and a same-branch GitHub Actions decode job. Historical blocked audit rows remain preserved."
+}
