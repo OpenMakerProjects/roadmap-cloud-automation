@@ -55,12 +55,18 @@
     "secrets": "credential-pattern scans passed; no credentials stored",
     "hardware": "not performed"
   },
-  "emailStatus": "pending",
+  "emailStatus": "sent",
   "totals": {
     "verifiedComplete": 3,
     "notVerifiedComplete": 2197,
     "remainingExact": null,
     "nextStartingID": 4
   },
-  "transientIssue": "Cloud scratch 503 recovered by handling native generated-image data URL as byte-preserving base64 text in cloud orchestration; GitHub Actions validated the decoded bytes"
+  "transientIssue": "Cloud scratch 503 recovered by handling native generated-image data URL as byte-preserving base64 text in cloud orchestration; GitHub Actions validated the decoded bytes",
+  "gmail": {
+    "messageId": "1a10f766f1a03067",
+    "threadId": "1a10e356c0825727",
+    "recipient": "me",
+    "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
+  }
 }
