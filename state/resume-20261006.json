@@ -1,5 +1,5 @@
 {
-  "status": "resuming_existing_batch",
+  "status": "ids1_3_verified_remaining_batch_pending",
   "selectedIDs": [
     1,
     2,
@@ -66,12 +66,12 @@
       "id": 3,
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
       "publicationStatus": "published",
-      "verifiedComplete": false,
-      "buildStatus": "cloud_image_decode_completion_running",
+      "verifiedComplete": true,
+      "buildStatus": "verified_complete",
       "branch": "automation/complete-003-20261006",
       "pr": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control/pull/1",
-      "headCommit": "47a40b4ef6ef7fb198b1c60c6442693c64ea9f98",
-      "merged": false,
+      "headCommit": "ec7858a65bb5ed28937162f5f8bb1f39ff940cfc",
+      "merged": true,
       "image": {
         "bytes": 1943736,
         "dimensions": [
@@ -97,13 +97,26 @@
           "project-overview.png.b64.014",
           "project-overview.png.b64.015",
           "project-overview.png.b64.016"
-        ]
+        ],
+        "gitBlob": "29d2b06411687778d95ceed66d87ee2aecd627b3",
+        "temporaryBase64Chunks": 0
       },
       "validation": {
-        "host": "11 policy, mocked I2C and image-transport tests passed; Python simulation/compilation and SVG render checked",
-        "physical": "not performed",
-        "finalCloud": "pending"
-      }
+        "host": "11 tests passed: policy, mocked INA219, PNG transport",
+        "application": "Python compilation and synthetic command simulation passed",
+        "finalHead": "Validate project and Completion gates passed on final head",
+        "runs": [
+          37413474943,
+          37413474926,
+          37413471403,
+          37413471342
+        ],
+        "decodeRun": 37413381759,
+        "tokenPush": "success",
+        "secrets": "credential-pattern scans passed; no credentials stored",
+        "hardware": "not performed"
+      },
+      "mainCommit": "cf02854a489a4aff503aec34e2a741939b205c49"
     },
     {
       "id": 4,
@@ -321,16 +334,16 @@
     "gitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
     "temporaryBase64Chunks": 0
   },
-  "completedThisRun": 2,
-  "nextID": 3,
-  "globalVerifiedComplete": 2,
+  "completedThisRun": 3,
+  "nextID": 4,
+  "globalVerifiedComplete": 3,
   "remainingExact": null,
   "gmail": {
     "status": "sent",
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T08:50:50.372+05:30",
+  "timestampIST": "2026-10-06T09:54:35.300+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
@@ -338,11 +351,10 @@
     "threadId": "1a10e356c0825727",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "remainingNotVerified": 2198,
+  "remainingNotVerified": 2197,
   "continuation": {
-    "status": "running",
+    "status": "remaining_batch_pending",
     "IDs": [
-      3,
       4,
       5,
       6,
@@ -366,5 +378,8 @@
     "status": "recovered_without_local_executor",
     "error": "exec-server environment registry 503 Service Unavailable",
     "recovery": "Generated image bytes handled in cloud code orchestration and text chunks; GitHub Actions runs validation"
+  },
+  "gmailContinuation": {
+    "status": "pending"
   }
 }
