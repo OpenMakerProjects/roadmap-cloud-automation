@@ -37,5 +37,43 @@
       "finalHeadBoard": "passed"
     },
     "checksRun": 37408269825
+  },
+  "2": {
+    "runId": "2026-10-06-id002-recovery",
+    "timestampIST": "2026-10-06T09:10:10+05:30",
+    "id": 2,
+    "slug": "room-climate-hub-mobile-alerts",
+    "status": "verified_complete",
+    "repository": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts",
+    "pullRequest": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts/pull/1",
+    "headCommit": "49054455bf63a539f97c8a7d79a8d475a62df33c",
+    "mergeCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
+    "requiredFiles": {
+      "readme": "README.md",
+      "license": "LICENSE",
+      "projectImage": "docs/images/project-overview.png",
+      "circuitDiagram": "docs/circuit-diagram.svg"
+    },
+    "projectImage": {
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 1792338,
+      "sha256": "b25590de468aee4c3ab67e697ea99db426dd664f506cbd0ad0b3416d921e4840"
+    },
+    "validation": {
+      "host": "passed",
+      "board": "passed",
+      "metadata": "passed",
+      "requiredMainTree": "passed"
+    },
+    "emailStatus": "pending-next-cloud-report",
+    "notes": "The Arduino Nano 33 IoT build passed after WiFiNINA was pinned from its official tagged source. Historical audit rows remain preserved.",
+    "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
+    "requiredMainTreeVerified": true,
+    "publicationStatus": "published",
+    "verifiedComplete": true,
+    "checks": "authoritative recovery record plus fresh main tree/ref confirmation"
   }
 }
