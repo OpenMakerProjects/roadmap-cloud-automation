@@ -27,7 +27,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "leaseOwner": "cloud-id4-1791260955190",
   "leaseStatus": "active",
@@ -229,7 +230,8 @@
         "tokenPush": "success",
         "resolvedError": "custom MaintenancePolicy include ordering repaired with shared inline accessor",
         "hardware": "not performed",
-        "postMergeDocumentationCI": "pending; text-only test-result update, no code changes"
+        "postMergeDocumentationCI": "passed",
+        "postMergeDocumentationRun": 37415961393
       },
       "status": "verified_complete",
       "mergeCommit": "062e5341bc69a7d7fbf1574f4d7f418aacb8197b",
@@ -242,11 +244,38 @@
       "repository": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation",
       "publicationStatus": "published",
       "verifiedComplete": false,
-      "buildStatus": "pending_existing_repository_build",
-      "branch": null,
+      "buildStatus": "image_transport_prepared",
+      "branch": "automation/complete-006-20261006",
       "pr": null,
       "headCommit": null,
-      "merged": false
+      "merged": false,
+      "image": {
+        "bytes": 1966723,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "sha256": "509221f460cc0180d4b74fae7895f2d75b92d3735d41b530cfab648fb455cd24",
+        "chunks": [
+          "project-overview.png.b64.000",
+          "project-overview.png.b64.001",
+          "project-overview.png.b64.002",
+          "project-overview.png.b64.003",
+          "project-overview.png.b64.004",
+          "project-overview.png.b64.005",
+          "project-overview.png.b64.006",
+          "project-overview.png.b64.007",
+          "project-overview.png.b64.008",
+          "project-overview.png.b64.009",
+          "project-overview.png.b64.010",
+          "project-overview.png.b64.011",
+          "project-overview.png.b64.012",
+          "project-overview.png.b64.013",
+          "project-overview.png.b64.014",
+          "project-overview.png.b64.015",
+          "project-overview.png.b64.016"
+        ]
+      }
     },
     {
       "id": 7,
@@ -440,7 +469,7 @@
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T10:25:45.044+05:30",
+  "timestampIST": "2026-10-06T10:28:47.383+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
