@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
+  "status": "blocked_image_upload",
   "selectedIDs": [
     1,
     2,
@@ -22,8 +22,259 @@
     19,
     20
   ],
+  "attemptedBuildIDs": [
+    1
+  ],
   "leaseOwner": "cloud-resume-20261006",
-  "leaseExpiresAtIST": "2026-10-07T08:00:00+05:30",
-  "correction": "Existing repository builds proceed regardless of repository creation capability. Audit-only blocked rows do not regress seed published status.",
-  "projects": []
+  "leaseStatus": "report_pending",
+  "publicationStatusPolicy": "blocked audit/build outcomes do not revoke seed publication; verified completion is separate",
+  "repositoryCreationPolicy": "Missing repository-creation operation is never a blocker for an existing repository",
+  "projects": [
+    {
+      "id": 1,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "pr_open_image_upload_rejected",
+      "branch": "automation/complete-001-20261006",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard/pull/1",
+      "headCommit": "cca55ec6b0b7c12fc16e0e198ca9a1e40edee2b6",
+      "merged": false
+    },
+    {
+      "id": 2,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 3,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 4,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 5,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 6,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 7,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 8,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 9,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 10,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 11,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 12,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-mobile-alerts",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 13,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-voice-control",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 14,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 15,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 16,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 17,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 18,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 19,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    },
+    {
+      "id": 20,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
+      "publicationStatus": "published",
+      "verifiedComplete": false,
+      "buildStatus": "not_attempted_after_shared_binary_write_rejection",
+      "branch": null,
+      "pr": null,
+      "headCommit": null,
+      "merged": false
+    }
+  ],
+  "tests": {
+    "nativeCpp": "passed",
+    "partialCompletion": "passed",
+    "svgRendered": "passed using Inkscape",
+    "boardBuild": "passed on GitHub Actions run 37406890175, commit 499f7450d9495d26501a2cc76d8da915a46809c4",
+    "fullCompletion": "failed: required PNG missing",
+    "selectorRegressionTests": "2 passed"
+  },
+  "blocker": {
+    "action": "GitHub create_blob base64 PNG upload",
+    "result": "user rejected MCP tool call",
+    "reason": "No reason supplied by tool",
+    "retry": false
+  },
+  "image": {
+    "generated": true,
+    "committed": false,
+    "localPath": "/workspace/scratch/3216d432a254/generated_images/exec-51608816-8a2d-43af-bacd-057d0ce512fd.png"
+  },
+  "completedThisRun": 0,
+  "nextID": 1,
+  "globalVerifiedComplete": null,
+  "remainingExact": null,
+  "gmail": {
+    "status": "pending"
+  }
 }
