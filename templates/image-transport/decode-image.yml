@@ -1,0 +1,60 @@
+name: Decode project image and validate
+on:
+  push:
+    branches: ['automation/**']
+    paths:
+      - 'docs/images/project-overview.png.b64.*'
+      - 'docs/images/project-overview.manifest.json'
+      - 'tools/decode_project_image.py'
+      - '.github/workflows/decode-image.yml'
+permissions:
+  contents: write
+concurrency:
+  group: decode-image-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  recover:
+    if: startsWith(github.ref, 'refs/heads/automation/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Guard on pending transport
+        id: pending
+        run: |
+          if compgen -G 'docs/images/project-overview.png.b64.*' > /dev/null; then
+            echo 'present=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'present=false' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Validate and losslessly decode PNG
+        if: steps.pending.outputs.present == 'true'
+        run: python tools/decode_project_image.py
+      - name: Commit decoded image to same branch
+        if: steps.pending.outputs.present == 'true'
+        env:
+          BRANCH_REF: ${{ github.ref }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- docs/images/project-overview.png docs/images/project-overview.png.b64.*
+          git diff --cached --quiet && exit 0
+          git commit -m 'Decode validated generated project image'
+          git push origin "HEAD:$BRANCH_REF"
+      # GITHUB_TOKEN pushes may not trigger push workflows. Run gates explicitly
+      # on the resulting image commit here; the cloud agent also verifies that SHA.
+      - name: Run full completion gates on decoded commit
+        if: steps.pending.outputs.present == 'true'
+        run: |
+          python tools/validate.py
+          python tools/validate_completion.py
+      - name: Build ESP32 on decoded commit
+        if: steps.pending.outputs.present == 'true'
+        run: |
+          pip install platformio==6.1.18
+          pio run -e esp32dev
