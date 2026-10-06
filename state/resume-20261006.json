@@ -28,7 +28,7 @@
     3
   ],
   "leaseOwner": "cloud-continuation-1791257003625",
-  "leaseStatus": "active",
+  "leaseStatus": "released",
   "publicationStatusPolicy": "blocked audit/build outcomes do not revoke seed publication; verified completion is separate",
   "repositoryCreationPolicy": "Missing repository-creation operation is never a blocker for an existing repository",
   "projects": [
@@ -343,7 +343,7 @@
     "messageId": "1a10f2add152d5fb",
     "subject": "OpenMakerProjects daily build report - 2026-10-06 IST"
   },
-  "timestampIST": "2026-10-06T09:54:35.300+05:30",
+  "timestampIST": "2026-10-06T09:57:14.475+05:30",
   "scheduleEnabled": true,
   "gmailRecovery": {
     "status": "sent",
@@ -380,6 +380,8 @@
     "recovery": "Generated image bytes handled in cloud code orchestration and text chunks; GitHub Actions runs validation"
   },
   "gmailContinuation": {
-    "status": "pending"
+    "status": "sent",
+    "messageId": "1a10f766f1a03067",
+    "threadId": "1a10e356c0825727"
   }
 }
