@@ -1,9 +1,15 @@
 {
-  "owner": "cloud-id4-1791260955190",
+  "owner": "cloud-20261008-1791412414546",
   "status": "active",
-  "acquiredAtIST": "2026-10-06T09:59:15.190+05:30",
-  "expiresAt": "2026-10-06T08:17:25.020Z",
-  "selectedIDs": [
+  "acquiredAtIST": "2026-10-07T22:33:34.546Z",
+  "expiresAt": "2026-10-08T01:33:34.547Z",
+  "originalSelectedIDs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
     7,
     8,
     9,
@@ -42,34 +48,5 @@
     4,
     5,
     6
-  ],
-  "reconciledID2": {
-    "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
-    "record": "state/recovery-20261006-id002.json"
-  },
-  "originalSelectedIDs": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
-  ],
-  "activeProject": 7,
-  "lastCheckpoint": "IDs 1–6 main trees reconciled; ID7 implementation started",
-  "delegate": "cloud-id7-continuation"
+  ]
 }
