@@ -56,7 +56,7 @@ class CompletionEvidenceTests(unittest.TestCase):
             "esp8266Arduino":"pio run -e nodemcuv2","nanoArduino":"pio run -e nano_33_iot",
             "piPython":"python -m src.main --simulate --iterations 5 --interval 0"}[catalog]
         r["validation"]={"head":final,"host":{"projectSpecific":True,"projectID":ident,
-            "passedTests":7,"command":"synthetic-fixture-command",
+            "passedTests":7,"command":plan["actualTargetGate"].get("hostPolicyCommand","python -m unittest discover -s tests -v"),
             "cases":plan["proposedHostTests"],"productionPolicyCovered":True},
             "target":{"catalogRef":catalog,"command":command,"conclusion":"success",
                 "kind":"linux_runtime_config" if catalog=="piPython" else "board_compile",
