@@ -1,8 +1,8 @@
 {
-  "owner": "cloud-resume-20261010-1791572169483",
-  "status": "interrupted",
-  "acquiredAtIST": "2026-10-10T00:26:09.483+05:30",
-  "expiresAt": "2026-10-09T20:17:06.023Z",
+  "owner": "cloud-resume-1791577120408",
+  "status": "active",
+  "acquiredAtIST": "2026-10-10T01:48:40.408+05:30",
+  "expiresAt": "2026-10-10T00:18:40.408Z",
   "originalSelectedIDs": [
     1,
     2,
@@ -52,5 +52,6 @@
   "previousExpiredOwner": "cloud-20261008-1791412414546",
   "activeProject": 12,
   "lastCheckpoint": "IDs1–11 verified. ID12 source safely committed; image transport interrupted before final commit. Recovery details state/recovery-20261010-id012.json. No ID12 PR exists. Gmail report deferred until original batch ends or genuine blocker.",
-  "timestampIST": "2026-10-10T01:47:06.023+05:30"
+  "timestampIST": "2026-10-10T01:47:06.023+05:30",
+  "previousOwner": "cloud-resume-20261010-1791572169483"
 }
