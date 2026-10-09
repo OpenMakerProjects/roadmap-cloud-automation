@@ -1,0 +1,17 @@
+{
+  "scheduleId": "6ac3fd99bfc88191b9cefd5ea5c04359",
+  "observedAtIST": "2026-10-10T04:48:21.887+05:30",
+  "source": "authoritative cloud automations.peek",
+  "enabled": true,
+  "paused": false,
+  "timezone": "Asia/Kolkata",
+  "timingMode": "exact_schedule",
+  "recurrence": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Kolkata:20261006T040000\nRRULE:FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
+  "nextRunTime": null,
+  "nextRunTimeStatus": "not exposed (null); no dispatch time confirmed",
+  "lastRunTime": "2026-10-06T22:30:22.303070+00:00",
+  "schedulerUpdatedAt": "2026-10-09T22:53:13.661755+00:00",
+  "action": "read-only; already enabled",
+  "projectExecutionStarted": false,
+  "emailSent": false
+}
