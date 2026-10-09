@@ -1,10 +1,10 @@
 {
   "id": 17,
-  "status": "image_transport_committed",
-  "verifiedComplete": false,
+  "status": "verified_complete",
+  "verifiedComplete": true,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics",
   "branch": "automation/complete-017-20261010",
-  "headCommit": "36d67b75e9875d094208d37fb356f116605956d5",
+  "headCommit": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
   "image": {
     "bytes": 1715468,
     "dimensions": [
@@ -87,7 +87,7 @@
       "project-overview.png.b64.071"
     ]
   },
-  "timestampIST": "2026-10-10T03:17:24.020+05:30",
+  "timestampIST": "2026-10-10T03:43:09.226+05:30",
   "gmail": "deferred until original batch ends",
   "previousUnuploadedImage": {
     "bytes": 1834033,
@@ -176,5 +176,42 @@
       "project-overview.png.b64.076"
     ]
   },
-  "recovery": "Transient runtime reset before byte upload; regenerated original image, kept source and branch, committed all bounded chunks"
+  "recovery": "Transient runtime reset before byte upload; regenerated original image, kept source and branch, committed all bounded chunks",
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics/pull/1",
+  "mainCommit": "dc100069b871ea43c71461a55f4665de4485e991",
+  "checks": [
+    {
+      "id": 37997638506,
+      "name": "Validate project",
+      "event": "pull_request",
+      "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+      "conclusion": "success"
+    },
+    {
+      "id": 37997638489,
+      "name": "Completion gates",
+      "event": "pull_request",
+      "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+      "conclusion": "success"
+    },
+    {
+      "id": 37997493435,
+      "name": "Validate project",
+      "event": "push",
+      "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+      "conclusion": "success"
+    },
+    {
+      "id": 37997493453,
+      "name": "Completion gates",
+      "event": "push",
+      "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "C++ usage counter tests, three image tests, Home Assistant YAML syntax, PNG/SVG/links/MIT/credentials and actual PlatformIO NodeMCU firmware build",
+  "hardwareTests": "not performed; MQTT/HA/Matter bridge pairing untested"
 }
