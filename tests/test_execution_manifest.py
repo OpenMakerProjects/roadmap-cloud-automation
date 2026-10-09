@@ -79,6 +79,7 @@ class ManifestTests(unittest.TestCase):
         self.reject(lambda b: b[0]["projects"][0]["actualTargetGate"].__setitem__("catalogRef","unknown"))
         self.reject(lambda b: b[0]["targetGateCatalog"]["esphomeESP32"].__setitem__("commands",[]))
         self.reject(lambda b: b[0]["dependencyCatalog"].__setitem__("esphome",{}))
+        self.reject(lambda b: b[0]["dependencyCatalog"]["esphome"].__setitem__("scope",""))
 
     def test_execution_requirements_fail_closed(self):
         for key in REQUIREMENTS:
@@ -98,6 +99,7 @@ class ManifestTests(unittest.TestCase):
                 with self.subTest(parent=parent,key=key):
                     self.reject(lambda b: b[index][parent].pop(key))
                     self.reject(lambda b: b[index][parent].__setitem__(key,not value))
+        self.reject(lambda b: b[1]["comparison"].__setitem__("roadmapEntries",19))
         self.reject(lambda b: b[1].pop("readiness"))
         self.reject(lambda b: b[1]["readiness"].__setitem__("readyForMerge",True))
         self.reject(lambda b: b[1]["readiness"].__setitem__("condition",""))
