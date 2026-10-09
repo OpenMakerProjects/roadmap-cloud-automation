@@ -1,8 +1,63 @@
 {
   "id": 13,
-  "status": "remediation_png_decode_pending",
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
+  "repository": "https://github.com/OpenMakerProjects/smart-entryway-voice-control",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+  "prHistory": [
+    {
+      "number": 2,
+      "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+      "mergeCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+      "head": "4c583762ca5b1d86d30f592c1ec7a56d88f5e75c",
+      "mergedAt": "2026-10-09T20:53:17Z"
+    },
+    {
+      "number": 1,
+      "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/1",
+      "mergeCommit": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
+      "head": "d635ac1ac59829b0afbf57dca0a6a5865361b647",
+      "mergedAt": "2026-10-09T20:33:22Z"
+    }
+  ],
+  "remediation": "PR1 prematurely merged without PNG and with failed board checks. Authorized PR2 added lossless PNG, removed all stale transport files, passed all final-head checks and repaired main.",
   "branch": "automation/complete-013-20261010",
-  "sourceCommit": "f2ac2857b96ac03fdcd6cb60ffca64dc64fc674e",
+  "headCommit": "4c583762ca5b1d86d30f592c1ec7a56d88f5e75c",
+  "mainCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+  "checks": [
+    {
+      "id": 37989352794,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37989352870,
+      "event": "pull_request",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37988932025,
+      "event": "push",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37988932072,
+      "event": "push",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "C++ OLED scaling tests, 3 image tests, ESPHome config and ESP32 ESP-IDF compile, PNG/SVG/links/MIT/credential gates passed",
   "image": {
     "bytes": 1407262,
     "dimensions": [
@@ -72,20 +127,6 @@
       "project-overview.png.b64.058"
     ]
   },
-  "verifiedComplete": false,
-  "hardwareTests": "not performed; local voice/HA untested",
-  "timestampIST": "2026-10-10T02:00:20.832+05:30",
-  "requiredMainTreeVerified": false,
-  "incompleteMain": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
-  "prHistory": [
-    {
-      "number": 1,
-      "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/1",
-      "mergeCommit": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
-      "head": "d635ac1ac59829b0afbf57dca0a6a5865361b647",
-      "mergedAt": "2026-10-09T20:33:22Z"
-    }
-  ],
-  "error": "PR1 merged before required PNG existed and host-board gates succeeded; authorized follow-up PR2 required. Do not count ID13 complete until corrected main is verified.",
-  "transportCommit": "8c6d1e3ceca5aca738db0c0e1d0bc34ac43dba23"
+  "hardwareTests": "not performed; HA/local voice untested",
+  "timestampIST": "2026-10-10T02:23:52.827+05:30"
 }
