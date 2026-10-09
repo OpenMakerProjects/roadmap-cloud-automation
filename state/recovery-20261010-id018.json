@@ -1,11 +1,11 @@
 {
   "id": 18,
-  "status": "pr_open_final_checks",
-  "verifiedComplete": false,
+  "status": "merged_verified",
+  "verifiedComplete": true,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
   "branch": "automation/complete-018-20261010",
-  "headCommit": "78a78f6915c6f1a94b30be5ab0c3bee3e075d151",
-  "timestampIST": "2026-10-10T03:33:42.170+05:30",
+  "headCommit": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+  "timestampIST": "2026-10-10T04:10:12.952+05:30",
   "gmail": "deferred until original batch ends",
   "image": {
     "bytes": 1662840,
@@ -105,5 +105,50 @@
     }
   ],
   "pr": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network/pull/1",
-  "finalHead": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85"
+  "finalHead": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+  "mainCommit": "84390cccb2ee034c5a6c1c48923a685fa6086584",
+  "tests": "C++ microphone policy host tests; 3 PNG transport tests; PNG/SVG/links/MIT/credential gates; Home Assistant YAML; ESPHome 2026.9.1 config and ESP-IDF compile for both node-a and node-b",
+  "checks": [
+    {
+      "id": 37999926719,
+      "name": "Validate project",
+      "event": "pull_request",
+      "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+      "conclusion": "success"
+    },
+    {
+      "id": 37999926724,
+      "name": "Completion gates",
+      "event": "pull_request",
+      "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+      "conclusion": "success"
+    },
+    {
+      "id": 37999923518,
+      "name": "Validate project",
+      "event": "push",
+      "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+      "conclusion": "success"
+    },
+    {
+      "id": 37999923505,
+      "name": "Completion gates",
+      "event": "push",
+      "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+      "conclusion": "success"
+    }
+  ],
+  "requiredMainFiles": [
+    "README.md",
+    "LICENSE",
+    "docs/circuit-diagram.svg",
+    "docs/images/project-overview.png",
+    "firmware/device.yaml",
+    "firmware/node-a.yaml",
+    "firmware/node-b.yaml",
+    "firmware/mic_window.h",
+    "tests/mic_test.cpp",
+    ".github/workflows/completion.yml"
+  ],
+  "transportChunksRemaining": 0
 }
