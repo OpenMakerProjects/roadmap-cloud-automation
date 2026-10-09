@@ -111,6 +111,11 @@ def validate(manifest, qa, roadmap, preflight):
         for key, value in catalog.items():
             text(key, "catalog.key"); obj(value, "catalog." + key)
             require(bool(value), "catalog." + key + ".empty")
+            for field, content in value.items():
+                if type(content) is list:
+                    texts(content, "catalog." + key + "." + field)
+                else:
+                    text(content, "catalog." + key + "." + field)
     same(manifest.get("readmeRequiredSections"), README, "readmeRequiredSections")
     for p, q in zip(plans, qrows):
         ident = p["id"]; prefix = f"project[{ident}]"
@@ -162,6 +167,10 @@ def validate(manifest, qa, roadmap, preflight):
         text(reporting.get(key), "batchReporting." + key)
     require("Exactly one HTML Gmail" in reporting["when"], "singleGmail")
     require("message ID" in reporting["delivery"] and "reconcile" in reporting["delivery"], "gmailReconciliation")
+    comparison = qa.get("comparison"); obj(comparison, "qa.comparison")
+    for key in ("roadmapEntries", "preflightHeadEntrypointMatches", "seedEntrypointsRead"):
+        same(comparison.get(key), 20, "qa.comparison." + key)
+    same(comparison.get("exactRoadmapFieldsPreserved"), True, "qa.comparison.roadmap")
     readiness = qa.get("readiness"); obj(readiness, "qa.readiness")
     require(type(readiness.get("readyForUnattendedImplementation")) is bool, "qa.readiness.implementation")
     same(readiness.get("readyForMerge"), False, "qa.readiness.merge")
