@@ -16,5 +16,7 @@ jobs:
           python-version: '3.12'
       - name: Validate authoritative planning bundle
         run: python tools/validate_execution_manifest.py
+      - name: Validate control checkpoint and selector
+        run: python tools/validate_control_state.py
       - name: Run offline regression tests
         run: python -m unittest discover -s tests -v
