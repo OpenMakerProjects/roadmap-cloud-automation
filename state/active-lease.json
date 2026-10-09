@@ -26,7 +26,6 @@
     20
   ],
   "remainingIDs": [
-    8,
     9,
     10,
     11,
@@ -47,9 +46,10 @@
     4,
     5,
     6,
-    7
+    7,
+    8
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 8,
-  "lastCheckpoint": "ID7 merged and verified; ID8 transport/source committed"
+  "activeProject": 9,
+  "lastCheckpoint": "ID8 merged and verified; ID9 image generated"
 }
