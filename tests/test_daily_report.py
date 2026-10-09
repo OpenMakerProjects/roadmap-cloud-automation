@@ -113,6 +113,8 @@ class DailyReportTests(unittest.TestCase):
         self.reject(lambda r:r.__setitem__("status","failed"))
         self.reject(lambda r:r["timestampIST"].__class__ if False else r.__setitem__("timestampIST","2026-10-10T00:00:00Z"))
         self.reject(lambda r:r["projects"][0].__setitem__("hardwareTesting",{"status":"performed"}))
+        self.reject(lambda r:r["projects"][0].__setitem__("tests",{"hardware":"passed"}))
+        self.reject(lambda r:r["projects"][0].__setitem__("tests","Hardware tests passed"))
 
     def test_no_credentials(self):
         self.reject(lambda r:r["projects"][0].__setitem__("tests",{"wifi_password":"example-private-value"}))
