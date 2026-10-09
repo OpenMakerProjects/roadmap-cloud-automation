@@ -1,6 +1,6 @@
 {
   "id": 19,
-  "status": "final_push_checks",
+  "status": "pr_open_final_checks",
   "verifiedComplete": false,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock",
   "branch": "automation/complete-019-20261010",
@@ -100,5 +100,10 @@
   "decoderRun": 38001125369,
   "decodedCommit": "c3548a01a16dc4dc4c4b5679b4e2156330e40e9b",
   "finalHead": "1b352374cd40fff0b7f6f185603a5296549436bc",
-  "decoderConclusion": "success"
+  "decoderConclusion": "success",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock/pull/1",
+  "pushRuns": [
+    38001345828,
+    38001345820
+  ]
 }
