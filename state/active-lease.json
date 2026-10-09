@@ -49,9 +49,12 @@
     20
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 21,
-  "lastCheckpoint": "ID20 verified merged main; activate ID21",
-  "timestampIST": "2026-10-10T04:36:56.386+05:30",
+  "activeProject": null,
+  "lastCheckpoint": "Original IDs1–20 complete; single HTML report delivery pending; next daily starting ID21",
+  "timestampIST": "2026-10-10T04:38:56.460+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483",
-  "recurringTaskEnabled": true
+  "recurringTaskEnabled": true,
+  "verifiedTotal": 20,
+  "remainingTotal": 2180,
+  "nextStartingID": 21
 }
