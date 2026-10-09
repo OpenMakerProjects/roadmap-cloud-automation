@@ -1,11 +1,11 @@
 {
   "id": 19,
-  "status": "pr_open_final_checks",
-  "verifiedComplete": false,
+  "status": "merged_verified",
+  "verifiedComplete": true,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock",
   "branch": "automation/complete-019-20261010",
-  "headCommit": "00a2d157c6d82f4fb09a0d12fabf305db1d68d9f",
-  "timestampIST": "2026-10-10T04:18:32.012+05:30",
+  "headCommit": "1b352374cd40fff0b7f6f185603a5296549436bc",
+  "timestampIST": "2026-10-10T04:23:29.168+05:30",
   "gmail": "deferred until original batch ends",
   "image": {
     "bytes": 1906403,
@@ -105,5 +105,49 @@
   "pushRuns": [
     38001345828,
     38001345820
-  ]
+  ],
+  "mainCommit": "81faf3ee8deef8d243d197282452b56ff4672ce6",
+  "tests": "C++ interlock qualification/fault/recovery/wrap tests; 3 image transport tests; PNG/SVG/links/MIT/credential gates; actual ESP32 Arduino PlatformIO build",
+  "checks": [
+    {
+      "id": 38001469140,
+      "name": "Validate project",
+      "event": "pull_request",
+      "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+      "conclusion": "success"
+    },
+    {
+      "id": 38001469219,
+      "name": "Completion gates",
+      "event": "pull_request",
+      "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+      "conclusion": "success"
+    },
+    {
+      "id": 38001345828,
+      "name": "Validate project",
+      "event": "push",
+      "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+      "conclusion": "success"
+    },
+    {
+      "id": 38001345820,
+      "name": "Completion gates",
+      "event": "push",
+      "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+      "conclusion": "success"
+    }
+  ],
+  "requiredMainFiles": [
+    "README.md",
+    "LICENSE",
+    "docs/circuit-diagram.svg",
+    "docs/images/project-overview.png",
+    "firmware/main.cpp",
+    "firmware/interlock.h",
+    "platformio.ini",
+    "tests/interlock_test.cpp",
+    ".github/workflows/completion.yml"
+  ],
+  "transportChunksRemaining": 0
 }
