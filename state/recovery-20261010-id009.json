@@ -1,8 +1,46 @@
 {
   "id": 9,
-  "status": "cloud_validation_pending",
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock",
+  "pr": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock/pull/1",
   "branch": "automation/complete-009-20261010",
-  "transportCommit": "9b002250652cf854b65558d8bd3c6e23c9c983a3",
+  "headCommit": "613e7ba9d01793bfb1f75f695994a6efc3640b72",
+  "mainCommit": "8ce4be2fa7fb672272fd032b9a92ef0b45d45de3",
+  "tests": "Shared C++ policy tests, 3 image tests, ESP8266 target build, PNG/SVG/links/MIT/credential gates passed",
+  "checks": [
+    {
+      "id": 37982353877,
+      "event": "pull_request",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37982353803,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37982196903,
+      "event": "push",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37982196888,
+      "event": "push",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
   "image": {
     "bytes": 1286228,
     "dimensions": [
@@ -68,5 +106,5 @@
     ]
   },
   "hardwareTests": "not performed",
-  "timestampIST": "2026-10-10T01:12:19.915+05:30"
+  "timestampIST": "2026-10-10T01:17:56.212+05:30"
 }
