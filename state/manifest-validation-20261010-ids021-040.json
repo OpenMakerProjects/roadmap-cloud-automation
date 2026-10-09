@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "control_manifest_validation",
+  "observedAtIST": "2026-10-10T05:10:34.792+05:30",
+  "authenticatedGitHub": "shrutikbalwan",
+  "testedCommit": "820f5c72e28f0c914617b9718578e2d0ef711e8a",
+  "filesAdded": [
+    "tools/validate_execution_manifest.py",
+    "tests/test_execution_manifest.py",
+    ".github/workflows/control-manifest.yml"
+  ],
+  "manifestChange": "Added explicit machine-readable completion and single-recipient Gmail requirements; roadmap fields and QA history preserved.",
+  "commands": [
+    {
+      "command": "python tools/validate_execution_manifest.py",
+      "exitCode": 0,
+      "result": {
+        "valid": true,
+        "projectCount": 20,
+        "selectedIDs": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ]
+      }
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exitCode": 0,
+      "result": {
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "newManifestTestMethods": 9,
+        "existingSelectionTests": 2,
+        "negativeMutationSubcases": true,
+        "temporaryFixtures": true,
+        "unitTestsNetworkFree": true
+      }
+    }
+  ],
+  "cloudExecution": {
+    "provider": "GitHub Actions",
+    "runID": 38005541379,
+    "jobID": 114073357525,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38005541379",
+    "conclusion": "success",
+    "python": "3.12.15",
+    "runner": "Ubuntu 24.04"
+  },
+  "restrictionsObserved": {
+    "onlyControlRepositoryChanged": true,
+    "projectBuildLeaseAcquired": false,
+    "activeLeaseUnchanged": true,
+    "projectRepositoriesMutated": false,
+    "projectBranchesOrPRsCreated": false,
+    "projectTargetBuildsRun": false,
+    "imagesGenerated": false,
+    "emailSent": false,
+    "credentialsCommitted": false
+  },
+  "limitations": "Static planning validation enforces structure, exact source correspondence and required execution obligations; it does not prove future hardware, firmware correctness, commissioning, images or build completion."
+}
