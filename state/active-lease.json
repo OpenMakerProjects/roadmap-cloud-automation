@@ -26,7 +26,6 @@
     20
   ],
   "remainingIDs": [
-    17,
     18,
     19,
     20
@@ -47,11 +46,12 @@
     13,
     14,
     15,
-    16
+    16,
+    17
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 17,
-  "lastCheckpoint": "ID16 merged main verified with all final-head checks; activate ID17",
-  "timestampIST": "2026-10-10T03:14:25.857+05:30",
+  "activeProject": 18,
+  "lastCheckpoint": "ID17 verified merged main; activate ID18",
+  "timestampIST": "2026-10-10T03:43:09.226+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483"
 }
