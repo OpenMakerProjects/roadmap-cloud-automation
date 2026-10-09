@@ -1,6 +1,6 @@
 {
   "id": 13,
-  "status": "image_transport_pending",
+  "status": "remediation_png_decode_pending",
   "branch": "automation/complete-013-20261010",
   "sourceCommit": "f2ac2857b96ac03fdcd6cb60ffca64dc64fc674e",
   "image": {
@@ -74,5 +74,18 @@
   },
   "verifiedComplete": false,
   "hardwareTests": "not performed; local voice/HA untested",
-  "timestampIST": "2026-10-10T02:00:20.832+05:30"
+  "timestampIST": "2026-10-10T02:00:20.832+05:30",
+  "requiredMainTreeVerified": false,
+  "incompleteMain": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
+  "prHistory": [
+    {
+      "number": 1,
+      "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/1",
+      "mergeCommit": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
+      "head": "d635ac1ac59829b0afbf57dca0a6a5865361b647",
+      "mergedAt": "2026-10-09T20:33:22Z"
+    }
+  ],
+  "error": "PR1 merged before required PNG existed and host-board gates succeeded; authorized follow-up PR2 required. Do not count ID13 complete until corrected main is verified.",
+  "transportCommit": "8c6d1e3ceca5aca738db0c0e1d0bc34ac43dba23"
 }
