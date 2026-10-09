@@ -1628,5 +1628,60 @@
       ]
     },
     "timestampIST": "2026-10-10T03:43:09.226+05:30"
+  },
+  "18": {
+    "id": 18,
+    "status": "merged_verified",
+    "verifiedComplete": true,
+    "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
+    "pr": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network/pull/1",
+    "mainCommit": "84390cccb2ee034c5a6c1c48923a685fa6086584",
+    "headCommit": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+    "tests": "C++ microphone policy host tests; 3 PNG transport tests; PNG/SVG/links/MIT/credential gates; Home Assistant YAML; ESPHome 2026.9.1 config and ESP-IDF compile for both node-a and node-b",
+    "checks": [
+      {
+        "id": 37999926719,
+        "name": "Validate project",
+        "event": "pull_request",
+        "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+        "conclusion": "success"
+      },
+      {
+        "id": 37999926724,
+        "name": "Completion gates",
+        "event": "pull_request",
+        "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+        "conclusion": "success"
+      },
+      {
+        "id": 37999923518,
+        "name": "Validate project",
+        "event": "push",
+        "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+        "conclusion": "success"
+      },
+      {
+        "id": 37999923505,
+        "name": "Completion gates",
+        "event": "push",
+        "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+        "conclusion": "success"
+      }
+    ],
+    "requiredMainFiles": [
+      "README.md",
+      "LICENSE",
+      "docs/circuit-diagram.svg",
+      "docs/images/project-overview.png",
+      "firmware/device.yaml",
+      "firmware/node-a.yaml",
+      "firmware/node-b.yaml",
+      "firmware/mic_window.h",
+      "tests/mic_test.cpp",
+      ".github/workflows/completion.yml"
+    ],
+    "transportChunksRemaining": 0,
+    "timestampIST": "2026-10-10T04:10:12.952+05:30",
+    "gmail": "deferred until original batch ends"
   }
 }
