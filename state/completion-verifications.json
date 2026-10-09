@@ -992,5 +992,137 @@
     },
     "hardwareTests": "not performed; MQTT/HA/mobile/Matter untested",
     "timestampIST": "2026-10-10T02:00:55.323+05:30"
+  },
+  "13": {
+    "id": 13,
+    "status": "verified_complete",
+    "verifiedComplete": true,
+    "publicationStatus": "published",
+    "requiredMainTreeVerified": true,
+    "merged": true,
+    "repository": "https://github.com/OpenMakerProjects/smart-entryway-voice-control",
+    "pr": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+    "prHistory": [
+      {
+        "number": 2,
+        "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+        "mergeCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+        "head": "4c583762ca5b1d86d30f592c1ec7a56d88f5e75c",
+        "mergedAt": "2026-10-09T20:53:17Z"
+      },
+      {
+        "number": 1,
+        "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/1",
+        "mergeCommit": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
+        "head": "d635ac1ac59829b0afbf57dca0a6a5865361b647",
+        "mergedAt": "2026-10-09T20:33:22Z"
+      }
+    ],
+    "remediation": "PR1 prematurely merged without PNG and with failed board checks. Authorized PR2 added lossless PNG, removed all stale transport files, passed all final-head checks and repaired main.",
+    "branch": "automation/complete-013-20261010",
+    "headCommit": "4c583762ca5b1d86d30f592c1ec7a56d88f5e75c",
+    "mainCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+    "checks": [
+      {
+        "id": 37989352794,
+        "event": "pull_request",
+        "name": "Completion gates",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 37989352870,
+        "event": "pull_request",
+        "name": "Validate project",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 37988932025,
+        "event": "push",
+        "name": "Validate project",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 37988932072,
+        "event": "push",
+        "name": "Completion gates",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "tests": "C++ OLED scaling tests, 3 image tests, ESPHome config and ESP32 ESP-IDF compile, PNG/SVG/links/MIT/credential gates passed",
+    "image": {
+      "bytes": 1407262,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "77a4d9da94a936697faa71199a49ab48c8be8088185ccece27898990e2e27e83",
+      "chunks": [
+        "project-overview.png.b64.000",
+        "project-overview.png.b64.001",
+        "project-overview.png.b64.002",
+        "project-overview.png.b64.003",
+        "project-overview.png.b64.004",
+        "project-overview.png.b64.005",
+        "project-overview.png.b64.006",
+        "project-overview.png.b64.007",
+        "project-overview.png.b64.008",
+        "project-overview.png.b64.009",
+        "project-overview.png.b64.010",
+        "project-overview.png.b64.011",
+        "project-overview.png.b64.012",
+        "project-overview.png.b64.013",
+        "project-overview.png.b64.014",
+        "project-overview.png.b64.015",
+        "project-overview.png.b64.016",
+        "project-overview.png.b64.017",
+        "project-overview.png.b64.018",
+        "project-overview.png.b64.019",
+        "project-overview.png.b64.020",
+        "project-overview.png.b64.021",
+        "project-overview.png.b64.022",
+        "project-overview.png.b64.023",
+        "project-overview.png.b64.024",
+        "project-overview.png.b64.025",
+        "project-overview.png.b64.026",
+        "project-overview.png.b64.027",
+        "project-overview.png.b64.028",
+        "project-overview.png.b64.029",
+        "project-overview.png.b64.030",
+        "project-overview.png.b64.031",
+        "project-overview.png.b64.032",
+        "project-overview.png.b64.033",
+        "project-overview.png.b64.034",
+        "project-overview.png.b64.035",
+        "project-overview.png.b64.036",
+        "project-overview.png.b64.037",
+        "project-overview.png.b64.038",
+        "project-overview.png.b64.039",
+        "project-overview.png.b64.040",
+        "project-overview.png.b64.041",
+        "project-overview.png.b64.042",
+        "project-overview.png.b64.043",
+        "project-overview.png.b64.044",
+        "project-overview.png.b64.045",
+        "project-overview.png.b64.046",
+        "project-overview.png.b64.047",
+        "project-overview.png.b64.048",
+        "project-overview.png.b64.049",
+        "project-overview.png.b64.050",
+        "project-overview.png.b64.051",
+        "project-overview.png.b64.052",
+        "project-overview.png.b64.053",
+        "project-overview.png.b64.054",
+        "project-overview.png.b64.055",
+        "project-overview.png.b64.056",
+        "project-overview.png.b64.057",
+        "project-overview.png.b64.058"
+      ]
+    },
+    "hardwareTests": "not performed; HA/local voice untested",
+    "timestampIST": "2026-10-10T02:23:52.827+05:30"
   }
 }
