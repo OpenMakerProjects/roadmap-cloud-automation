@@ -26,7 +26,6 @@
     20
   ],
   "remainingIDs": [
-    13,
     14,
     15,
     16,
@@ -47,11 +46,12 @@
     9,
     10,
     11,
-    12
+    12,
+    13
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 13,
-  "lastCheckpoint": "ID12 merged and main verified; ID13 source and image checkpointed",
-  "timestampIST": "2026-10-10T01:47:06.023+05:30",
+  "activeProject": 14,
+  "lastCheckpoint": "ID13 authorized PR2 remediation merged and main verified; ID14 PNG decoded, final checks pending",
+  "timestampIST": "2026-10-10T02:27:12.245+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483"
 }
