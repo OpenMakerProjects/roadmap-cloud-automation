@@ -71,7 +71,8 @@ def sent_index(records):
     return found,pending
 
 def validate_ledger(run,roadmap):
-    obj(run,"run"); require(run.get("status") in TERMINAL,"run terminal status")
+    obj(run,"run"); clean(run)
+    require(run.get("status") in TERMINAL,"run terminal status")
     same(run.get("cloudOnly"),True,"run.cloudOnly")
     ref=run.get("runId")
     require(type(ref) is str and bool(re.fullmatch(r"OMP-[A-Za-z0-9-]+",ref)),"stable runId/reportReference")
@@ -251,7 +252,9 @@ def main():
             if historical.get("status")=="sent":
                 require(run["runId"] in sent,"missing durable sent evidence")
                 # Validate original evidence independently of this new renderer's output.
-                path=args.root/"state/reports/daily-20261010-batch001-020.html"
+                day=result["subject"].rsplit(" ",1)[-1].replace("-","")
+                ids=run["selectedIDs"]
+                path=args.root/f"state/reports/daily-{day}-batch{ids[0]:03d}-{ids[-1]:03d}.html"
                 require(path.exists(),"historical HTML missing")
                 digest=hashlib.sha256(path.read_bytes()).hexdigest()
                 same(digest,historical.get("htmlSha256"),"historical HTML hash")
