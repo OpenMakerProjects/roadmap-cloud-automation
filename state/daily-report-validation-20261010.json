@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "daily_report_renderer_validation",
+  "observedAtIST": "2026-10-10T05:22:55.385+05:30",
+  "testedCommit": "76174348494c07e2503f95d8c2de00a3781dea56",
+  "filesAdded": [
+    "tools/daily_report.py",
+    "tests/test_daily_report.py"
+  ],
+  "ciExtended": ".github/workflows/control-manifest.yml",
+  "commands": [
+    {
+      "command": "python tools/daily_report.py --validate-history",
+      "exitCode": 0,
+      "result": {
+        "action": "validate_only_no_send",
+        "selectedCount": 20,
+        "succeededCount": 20,
+        "reportReference": "OMP-001-020-20261010",
+        "renderedHtmlSha256": "237d386204562ca317c824676195365daee82ef6db3293d756d63bf36d973002",
+        "originalSentHtmlHashVerified": true
+      }
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exitCode": 0,
+      "tests": 29,
+      "newDailyReportTests": 9,
+      "failures": 0,
+      "errors": 0,
+      "unitTestsOffline": true
+    }
+  ],
+  "coverage": [
+    "Canonical date/ID-based reportReference and subject, to=me/resolved profile/empty cc,bcc",
+    "Deterministic text escaping, strict expected HTTPS GitHub links, HTML parser validation, credential-field/pattern exclusion, no external images",
+    "Selected table: repository/PR, validation, hardware evidence, merged verified main, blockers; totals/next ID",
+    "Reject missing/contradictory evidence and unsubstantiated hardware-test claims",
+    "Prevent sent or unresolved-intent retries; deduplicate JSON reconciliation and mapped CSV rows by report reference/message ID",
+    "Temporary fixtures for tomorrow IDs21–40 success and zero-success/no-attempt failure reporting"
+  ],
+  "cloudCI": {
+    "runID": 38006505648,
+    "jobID": 114076404987,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38006505648",
+    "conclusion": "success"
+  },
+  "history": {
+    "originalRunLedgerUnchanged": true,
+    "originalSentHtmlUnchanged": true,
+    "originalSentHtmlSha256": "17b0146f3c283aee979561c24a8a26903dcf00a76b30cc97f62458cd335bf10b",
+    "leaseUnchanged": true,
+    "reconciliationRowsPreserved": true,
+    "newRendererHashDoesNotReplaceSentEvidence": true
+  },
+  "resolvedDevelopmentFailures": [
+    "Corrected CSV fixture literal newlines and overescaped URL/word-boundary regexes; full final-head CI passes."
+  ],
+  "restrictionsObserved": {
+    "onlyControlRepositoryChanged": true,
+    "projectLeaseAcquired": false,
+    "projectRepositoriesMutated": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "GmailSent": false
+  },
+  "operationalLimit": "Preparation returns data only and does not send or reserve delivery. The caller must persist intent atomically, reconcile SENT/message ID and recheck durable state before a real send. This tool never calls Gmail."
+}
