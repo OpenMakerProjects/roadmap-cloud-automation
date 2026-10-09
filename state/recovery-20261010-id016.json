@@ -1,10 +1,43 @@
 {
   "id": 16,
-  "status": "source_committed_image_pending",
-  "verifiedComplete": false,
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation/pull/1",
   "branch": "automation/complete-016-20261010",
-  "headCommit": "f38056ffab7716c07b7b0448c036cec222e4c843",
+  "headCommit": "25b3169c588bbb0f1363289d0ed89656e106a6a5",
+  "mainCommit": "1863a4062599e78bdc8019c3d9f07fe95bf48d86",
+  "checks": [
+    {
+      "id": 37995104640,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "conclusion": "success"
+    },
+    {
+      "id": 37995104725,
+      "event": "pull_request",
+      "name": "Validate project",
+      "conclusion": "success"
+    },
+    {
+      "id": 37995039816,
+      "event": "push",
+      "name": "Completion gates",
+      "conclusion": "success"
+    },
+    {
+      "id": 37995039832,
+      "event": "push",
+      "name": "Validate project",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "Legacy Controller, motion timing/inhibition/validity and BLE schema/status tests, 3 image tests, Python compile/Linux dependencies/CLI simulation, PNG/SVG/links/MIT/credential gates passed",
+  "hardwareTests": "Pi/PIR/servo/pigpio/BlueZ/BLE radio untested",
   "image": {
     "bytes": 1566149,
     "dimensions": [
@@ -81,6 +114,5 @@
       "project-overview.png.b64.065"
     ]
   },
-  "timestampIST": "2026-10-10T03:00:05.802+05:30",
-  "gmail": "deferred until original batch ends"
+  "timestampIST": "2026-10-10T03:14:25.857+05:30"
 }
