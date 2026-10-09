@@ -1,8 +1,46 @@
 {
   "id": 11,
-  "status": "cloud_validation_pending",
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
+  "repository": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard/pull/1",
   "branch": "automation/complete-011-20261010",
-  "transportCommit": "c9074c56512d3f6c47d15027952aee030cc47c40",
+  "headCommit": "0d3fc60eb10534e738831fe4d1a1dd0ea17cd095",
+  "mainCommit": "d58f9ce3de56b08ceff57b270b2152d970f61f65",
+  "checks": [
+    {
+      "id": 37984584269,
+      "event": "pull_request",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37984584451,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37984563538,
+      "event": "push",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37984563526,
+      "event": "push",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "9 unit tests, dependency install/import, Python compilation, live localhost HTTP dashboard, PNG/SVG/links/MIT/credential gates passed",
   "image": {
     "bytes": 1315675,
     "dimensions": [
@@ -69,5 +107,5 @@
     ]
   },
   "hardwareTests": "not performed",
-  "timestampIST": "2026-10-10T01:32:47.397+05:30"
+  "timestampIST": "2026-10-10T01:36:41.551+05:30"
 }
