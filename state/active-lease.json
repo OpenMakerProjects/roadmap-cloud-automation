@@ -26,7 +26,6 @@
     20
   ],
   "remainingIDs": [
-    18,
     19,
     20
   ],
@@ -47,11 +46,12 @@
     14,
     15,
     16,
-    17
+    17,
+    18
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 18,
-  "lastCheckpoint": "ID18 PR1 open; final exact-head push and PR ESPHome builds running",
-  "timestampIST": "2026-10-10T04:07:53.554+05:30",
+  "activeProject": 19,
+  "lastCheckpoint": "ID18 verified merged main; activate ID19",
+  "timestampIST": "2026-10-10T04:10:12.952+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483"
 }
