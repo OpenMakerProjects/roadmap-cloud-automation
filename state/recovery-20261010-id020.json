@@ -1,6 +1,6 @@
 {
   "id": 20,
-  "status": "final_push_checks",
+  "status": "pr_open_final_checks",
   "verifiedComplete": false,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
   "branch": "automation/complete-020-20261010",
@@ -99,5 +99,10 @@
   "decoderConclusion": "success",
   "decodedCommit": "fa2dc5dd16ea7ac7ebbdd18b34599267705548ce",
   "finalHead": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
-  "finalTestCoverage": "All 24 bins receive two events; every count transfers at rollover and each following hour selects the learned 60-second hold; existing warmup, boundaries, fault/reset, skipped-day, wrap and saturation coverage preserved"
+  "finalTestCoverage": "All 24 bins receive two events; every count transfers at rollover and each following hour selects the learned 60-second hold; existing warmup, boundaries, fault/reset, skipped-day, wrap and saturation coverage preserved",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling/pull/1",
+  "pushRuns": [
+    38002548777,
+    38002548784
+  ]
 }
