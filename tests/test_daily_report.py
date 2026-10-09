@@ -155,5 +155,9 @@ class DailyReportTests(unittest.TestCase):
                 "--ledger","state/run.json"],capture_output=True,text=True)
             self.assertNotEqual(second.returncode,0)
             self.assertIn("already sent",second.stderr)
+            (root/"state/sent.json").unlink()
+            (root/"state/daily-results.csv").write_text("RunDate,Id,EmailStatus\\n2026-10-11,21,sent:abc123\\n")
+            with self.assertRaisesRegex(ValidationError,"already sent"):
+                prepare(run,self.roadmap,records_from_state(root))
 
 if __name__=="__main__":unittest.main()
