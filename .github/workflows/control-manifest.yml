@@ -24,5 +24,11 @@ jobs:
           python -c 'import json; s=json.load(open("/tmp/control-selection.json")); assert [p["id"] for p in s["batch"]] == list(range(21,41)); assert s["batch_count"] == 20; print("Selector CLI: IDs21-40, count20")'
       - name: Validate historical report without preparing delivery
         run: python tools/daily_report.py --validate-history
+      - name: Prove generated pending evidence cannot count complete
+        run: |
+          python tools/completion_evidence.py --generate-pending 21 > /tmp/pending-evidence.json
+          if python tools/completion_evidence.py --validate /tmp/pending-evidence.json; then
+            exit 1
+          fi
       - name: Run offline regression tests
         run: python -m unittest discover -s tests -v
