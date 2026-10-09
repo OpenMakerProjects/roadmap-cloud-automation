@@ -1,0 +1,1127 @@
+{
+  "runId": "OMP-001-020-20261010",
+  "status": "batch_complete_report_pending",
+  "timestampIST": "2026-10-10T04:38:56.460+05:30",
+  "cloudOnly": true,
+  "authenticatedGitHub": "shrutikbalwan",
+  "leaseOwner": "cloud-resume-1791577120408",
+  "selectedIDs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "attemptedIDs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "attemptedThisContinuation": [
+    18,
+    19,
+    20
+  ],
+  "reconciledExistingIDs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard/pull/1",
+      "mainCommit": "98447bb62307e317986a3cf41677f56f3ee0a9dd",
+      "headCommit": "72c0f21f671f2a9061f1da4c517505afc2f4d66e",
+      "status": "verified_complete",
+      "tests": {
+        "nativeCpp": "passed",
+        "partialCompletion": "passed",
+        "svgRendered": "passed using Inkscape",
+        "boardBuild": "passed on GitHub Actions run 37406890175, commit 499f7450d9495d26501a2cc76d8da915a46809c4",
+        "fullCompletion": "passed final head 72c0f21f671f2a9061f1da4c517505afc2f4d66e",
+        "selectorRegressionTests": "2 passed",
+        "imageTransport": "3 regression tests passed",
+        "tokenPush": "passed with contents:write GITHUB_TOKEN; no stored credentials",
+        "finalHeadBoard": "passed"
+      }
+    },
+    {
+      "id": 2,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts/pull/1",
+      "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
+      "headCommit": "49054455bf63a539f97c8a7d79a8d475a62df33c",
+      "status": "verified_complete",
+      "tests": {
+        "host": "passed",
+        "board": "passed",
+        "metadata": "passed",
+        "requiredMainTree": "passed"
+      },
+      "checks": "authoritative recovery record plus fresh main tree/ref confirmation",
+      "validation": {
+        "host": "passed",
+        "board": "passed",
+        "metadata": "passed",
+        "requiredMainTree": "passed"
+      }
+    },
+    {
+      "id": 3,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control/pull/1",
+      "mainCommit": "cf02854a489a4aff503aec34e2a741939b205c49",
+      "headCommit": "ec7858a65bb5ed28937162f5f8bb1f39ff940cfc",
+      "status": "verified_complete",
+      "tests": {
+        "host": "11 tests passed: policy, mocked INA219, PNG transport",
+        "application": "Python compilation and synthetic command simulation passed",
+        "finalHead": "Validate project and Completion gates passed on final head",
+        "runs": [
+          37413474943,
+          37413474926,
+          37413471403,
+          37413471342
+        ],
+        "decodeRun": 37413381759,
+        "tokenPush": "success",
+        "secrets": "credential-pattern scans passed; no credentials stored",
+        "hardware": "not performed"
+      },
+      "validation": {
+        "host": "11 tests passed: policy, mocked INA219, PNG transport",
+        "application": "Python compilation and synthetic command simulation passed",
+        "finalHead": "Validate project and Completion gates passed on final head",
+        "runs": [
+          37413474943,
+          37413474926,
+          37413471403,
+          37413471342
+        ],
+        "decodeRun": 37413381759,
+        "tokenPush": "success",
+        "secrets": "credential-pattern scans passed; no credentials stored",
+        "hardware": "not performed"
+      }
+    },
+    {
+      "id": 4,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver/pull/1",
+      "mainCommit": "965afabf726eb293a0175ac21cde96b3607eff9a",
+      "headCommit": "898b63f97c056d70cf802e47cc9cbf0b729d8a26",
+      "status": "verified_complete",
+      "tests": {
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESP8266 nodemcuv2 compilation passed",
+        "completion": "PNG/SVG/local-image-links/license/credential checks passed",
+        "finalHead": "push and pull_request host/board passed",
+        "runs": [
+          37414857923,
+          37414863191
+        ],
+        "decodeRun": 37414718524,
+        "tokenPush": "success",
+        "hardware": "not performed"
+      },
+      "validation": {
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESP8266 nodemcuv2 compilation passed",
+        "completion": "PNG/SVG/local-image-links/license/credential checks passed",
+        "finalHead": "push and pull_request host/board passed",
+        "runs": [
+          37414857923,
+          37414863191
+        ],
+        "decodeRun": 37414718524,
+        "tokenPush": "success",
+        "hardware": "not performed"
+      }
+    },
+    {
+      "id": 5,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance/pull/1",
+      "mainCommit": "3f495b8f553b2b766d74471ad881899b23e156d6",
+      "headCommit": "c26ec339b56bde989ebc1aeea7df956bedcf0019",
+      "status": "verified_complete",
+      "tests": {
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESPHome config and ESP32 compilation passed",
+        "completion": "PNG/SVG/local links/license/credential checks passed",
+        "runs": [
+          37415653155,
+          37415657060
+        ],
+        "finalHead": "push and PR passed",
+        "decodeRun": 37415434963,
+        "tokenPush": "success",
+        "resolvedError": "custom MaintenancePolicy include ordering repaired with shared inline accessor",
+        "hardware": "not performed",
+        "postMergeDocumentationCI": "pending; text-only test-result update, no code changes"
+      },
+      "validation": {
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESPHome config and ESP32 compilation passed",
+        "completion": "PNG/SVG/local links/license/credential checks passed",
+        "runs": [
+          37415653155,
+          37415657060
+        ],
+        "finalHead": "push and PR passed",
+        "decodeRun": 37415434963,
+        "tokenPush": "success",
+        "resolvedError": "custom MaintenancePolicy include ordering repaired with shared inline accessor",
+        "hardware": "not performed",
+        "postMergeDocumentationCI": "passed on main commit 3f495b8f553b2b766d74471ad881899b23e156d6",
+        "postMergeDocumentationRuns": [
+          {
+            "id": 37415961393,
+            "name": "Completion checks",
+            "event": "push",
+            "head": "3f495b8f553b2b766d74471ad881899b23e156d6",
+            "conclusion": "success"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation/pull/1",
+      "mainCommit": "d747e112e33678e9eb0342c92aee3fecc1af68be",
+      "headCommit": "e09d73461bcd5b4a53260f934b1d92627eb508f6",
+      "status": "verified_complete",
+      "tests": {
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESP32 esp32dev compilation passed",
+        "completion": "PNG/SVG/local image links/MIT/credential checks passed",
+        "runs": [
+          37416655738,
+          37416659344
+        ],
+        "decodeRun": 37416498969,
+        "tokenPush": "success",
+        "finalHead": "push and PR passed",
+        "readme": "actual passed results committed by recovery workflow",
+        "hardware": "not performed"
+      },
+      "validation": {
+        "host": "policy assertions and 3 PNG transport tests passed",
+        "board": "ESP32 esp32dev compilation passed",
+        "completion": "PNG/SVG/local image links/MIT/credential checks passed",
+        "runs": [
+          37416655738,
+          37416659344
+        ],
+        "decodeRun": 37416498969,
+        "tokenPush": "success",
+        "finalHead": "push and PR passed",
+        "readme": "actual passed results committed by recovery workflow",
+        "hardware": "not performed"
+      }
+    },
+    {
+      "id": 7,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics/pull/1",
+      "mainCommit": "ce865924508f3f815ff2bb98ceb645c8775e8343",
+      "headCommit": "1be761f5ecd0bbcbc1c5b184697dcc5a5cc21f5c",
+      "status": "verified_complete",
+      "tests": {
+        "pushValidate": 37979062112,
+        "pushCompletion": 37979062115,
+        "prValidate": 37979344607,
+        "prCompletion": 37979344678,
+        "decode": 37978826055,
+        "host": "passed",
+        "nanoBoard": "passed",
+        "imageCompletion": "passed",
+        "tokenPush": "passed",
+        "hardware": "not performed"
+      }
+    },
+    {
+      "id": 8,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network/pull/1",
+      "mainCommit": "c672efafae130688dc1a91d44567bd5786d74b98",
+      "headCommit": "13da0a9b566b1c010c1df35ffe19cd4a01b191b6",
+      "status": "verified_complete",
+      "tests": "9 unit tests, Python compilation, two-node localhost HTTP simulation, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37980906178,
+          "event": "pull_request",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37980906170,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37980873003,
+          "event": "push",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37980872975,
+          "event": "push",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock/pull/1",
+      "mainCommit": "8ce4be2fa7fb672272fd032b9a92ef0b45d45de3",
+      "headCommit": "613e7ba9d01793bfb1f75f695994a6efc3640b72",
+      "status": "verified_complete",
+      "tests": "Shared C++ policy tests, 3 image tests, ESP8266 target build, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37982353877,
+          "event": "pull_request",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37982353803,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37982196903,
+          "event": "push",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37982196888,
+          "event": "push",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling/pull/1",
+      "mainCommit": "5336305a9376a2bcc663c6f6d3416094525e8862",
+      "headCommit": "4cf0cebac2bc0483ba97444061a4585465509313",
+      "status": "verified_complete",
+      "tests": "C++ schedule tests, 3 image tests, ESPHome config and ESP32 ESP-IDF compile, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37984460140,
+          "event": "pull_request",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37984460361,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37984438249,
+          "event": "push",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37984438287,
+          "event": "push",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard/pull/1",
+      "mainCommit": "d58f9ce3de56b08ceff57b270b2152d970f61f65",
+      "headCommit": "0d3fc60eb10534e738831fe4d1a1dd0ea17cd095",
+      "status": "verified_complete",
+      "tests": "9 unit tests, dependency install/import, Python compilation, live localhost HTTP dashboard, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37984584269,
+          "event": "pull_request",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37984584451,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37984563538,
+          "event": "push",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37984563526,
+          "event": "push",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-mobile-alerts",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-mobile-alerts/pull/1",
+      "mainCommit": "80b65560b6d2883cda13306e408cc01c8c0f81c1",
+      "headCommit": "9305d2febf567de9e02827c0f9a644e2d83a956b",
+      "status": "verified_complete",
+      "tests": "C++ alert policy tests, 3 image tests, NodeMCU build, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37987331518,
+          "event": "pull_request",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37987331489,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37987130333,
+          "event": "push",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37987130311,
+          "event": "push",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-voice-control",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+      "mainCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+      "headCommit": "4c583762ca5b1d86d30f592c1ec7a56d88f5e75c",
+      "status": "verified_complete",
+      "tests": "C++ OLED scaling tests, 3 image tests, ESPHome config and ESP32 ESP-IDF compile, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37989352794,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37989352870,
+          "event": "pull_request",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37988932025,
+          "event": "push",
+          "name": "Validate project",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 37988932072,
+          "event": "push",
+          "name": "Completion gates",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "prHistory": [
+        {
+          "number": 2,
+          "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+          "mergeCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+          "head": "4c583762ca5b1d86d30f592c1ec7a56d88f5e75c",
+          "mergedAt": "2026-10-09T20:53:17Z"
+        },
+        {
+          "number": 1,
+          "url": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/1",
+          "mergeCommit": "d6299cb0367c78e0613eb7bdac710e261b52d7fc",
+          "head": "d635ac1ac59829b0afbf57dca0a6a5865361b647",
+          "mergedAt": "2026-10-09T20:33:22Z"
+        }
+      ],
+      "remediation": "PR1 prematurely merged without PNG and with failed board checks. Authorized PR2 added lossless PNG, removed all stale transport files, passed all final-head checks and repaired main."
+    },
+    {
+      "id": 14,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver/pull/1",
+      "mainCommit": "33b6b1d41a33d10af6a2d140bd8f08fa8a09848c",
+      "headCommit": "8fdbae6b58a26f84ff45ce13d255647831b62c45",
+      "status": "verified_complete",
+      "tests": "C++ saver tests, 3 image tests, PNG/SVG/links/MIT/credentials and actual PlatformIO ESP32 build passed",
+      "checks": [
+        {
+          "id": 37991187871,
+          "event": "pull_request",
+          "name": "Validate project",
+          "conclusion": "success"
+        },
+        {
+          "id": 37991187806,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "conclusion": "success"
+        },
+        {
+          "id": 37990467283,
+          "event": "push",
+          "name": "Validate project",
+          "conclusion": "success"
+        },
+        {
+          "id": 37990467367,
+          "event": "push",
+          "name": "Completion gates",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance/pull/1",
+      "mainCommit": "e6e0f0fc1a4de58c5d69ba3cec979517c229147d",
+      "headCommit": "a332a4bcd7b2bf88d6694b0dd3469cc47e51d26e",
+      "status": "verified_complete",
+      "tests": "C++ debounce/cycle/open-duration/reset/saturation/wrap tests, 3 image transport tests, PNG/SVG/links/MIT/credential gates and actual Nano 33 IoT build passed",
+      "checks": [
+        {
+          "id": 37993267831,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "conclusion": "success"
+        },
+        {
+          "id": 37993267552,
+          "event": "pull_request",
+          "name": "Validate project",
+          "conclusion": "success"
+        },
+        {
+          "id": 37993148407,
+          "event": "push",
+          "name": "Completion gates",
+          "conclusion": "success"
+        },
+        {
+          "id": 37993148255,
+          "event": "push",
+          "name": "Validate project",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation/pull/1",
+      "mainCommit": "1863a4062599e78bdc8019c3d9f07fe95bf48d86",
+      "headCommit": "25b3169c588bbb0f1363289d0ed89656e106a6a5",
+      "status": "verified_complete",
+      "tests": "Legacy Controller, motion timing/inhibition/validity and BLE schema/status tests, 3 image tests, Python compile/Linux dependencies/CLI simulation, PNG/SVG/links/MIT/credential gates passed",
+      "checks": [
+        {
+          "id": 37995104640,
+          "event": "pull_request",
+          "name": "Completion gates",
+          "conclusion": "success"
+        },
+        {
+          "id": 37995104725,
+          "event": "pull_request",
+          "name": "Validate project",
+          "conclusion": "success"
+        },
+        {
+          "id": 37995039816,
+          "event": "push",
+          "name": "Completion gates",
+          "conclusion": "success"
+        },
+        {
+          "id": 37995039832,
+          "event": "push",
+          "name": "Validate project",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics/pull/1",
+      "mainCommit": "dc100069b871ea43c71461a55f4665de4485e991",
+      "headCommit": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+      "status": "verified_complete",
+      "tests": "C++ usage counter tests, three image tests, Home Assistant YAML syntax, PNG/SVG/links/MIT/credentials and actual PlatformIO NodeMCU firmware build",
+      "checks": [
+        {
+          "id": 37997638506,
+          "name": "Validate project",
+          "event": "pull_request",
+          "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+          "conclusion": "success"
+        },
+        {
+          "id": 37997638489,
+          "name": "Completion gates",
+          "event": "pull_request",
+          "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+          "conclusion": "success"
+        },
+        {
+          "id": 37997493435,
+          "name": "Validate project",
+          "event": "push",
+          "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+          "conclusion": "success"
+        },
+        {
+          "id": 37997493453,
+          "name": "Completion gates",
+          "event": "push",
+          "head": "4e28f8966d1b6891cf3d9e82ce47c211e5a2e9f8",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network/pull/1",
+      "mainCommit": "84390cccb2ee034c5a6c1c48923a685fa6086584",
+      "headCommit": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+      "status": "verified_complete",
+      "tests": "C++ microphone policy host tests; 3 PNG transport tests; PNG/SVG/links/MIT/credential gates; Home Assistant YAML; ESPHome 2026.9.1 config and ESP-IDF compile for both node-a and node-b",
+      "checks": [
+        {
+          "id": 37999926719,
+          "name": "Validate project",
+          "event": "pull_request",
+          "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+          "conclusion": "success"
+        },
+        {
+          "id": 37999926724,
+          "name": "Completion gates",
+          "event": "pull_request",
+          "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+          "conclusion": "success"
+        },
+        {
+          "id": 37999923518,
+          "name": "Validate project",
+          "event": "push",
+          "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+          "conclusion": "success"
+        },
+        {
+          "id": 37999923505,
+          "name": "Completion gates",
+          "event": "push",
+          "head": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock/pull/1",
+      "mainCommit": "81faf3ee8deef8d243d197282452b56ff4672ce6",
+      "headCommit": "1b352374cd40fff0b7f6f185603a5296549436bc",
+      "status": "verified_complete",
+      "tests": "C++ interlock qualification/fault/recovery/wrap tests; 3 image transport tests; PNG/SVG/links/MIT/credential gates; actual ESP32 Arduino PlatformIO build",
+      "checks": [
+        {
+          "id": 38001469140,
+          "name": "Validate project",
+          "event": "pull_request",
+          "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+          "conclusion": "success"
+        },
+        {
+          "id": 38001469219,
+          "name": "Completion gates",
+          "event": "pull_request",
+          "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+          "conclusion": "success"
+        },
+        {
+          "id": 38001345828,
+          "name": "Validate project",
+          "event": "push",
+          "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+          "conclusion": "success"
+        },
+        {
+          "id": 38001345820,
+          "name": "Completion gates",
+          "event": "push",
+          "head": "1b352374cd40fff0b7f6f185603a5296549436bc",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling/pull/1",
+      "mainCommit": "f25567d81ead809b42193f836815fffadd56471d",
+      "headCommit": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+      "status": "verified_complete",
+      "tests": "C++ all-24-bin adaptive schedule, warmup/hold/fault/reset/skipped-day/wrap/saturation assertions; 3 PNG transport tests; PNG/SVG/links/MIT/credential gates; actual Nano 33 IoT PlatformIO build",
+      "checks": [
+        {
+          "id": 38002663243,
+          "name": "Validate project",
+          "event": "pull_request",
+          "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+          "conclusion": "success"
+        },
+        {
+          "id": 38002663271,
+          "name": "Completion gates",
+          "event": "pull_request",
+          "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+          "conclusion": "success"
+        },
+        {
+          "id": 38002548784,
+          "name": "Validate project",
+          "event": "push",
+          "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+          "conclusion": "success"
+        },
+        {
+          "id": 38002548777,
+          "name": "Completion gates",
+          "event": "push",
+          "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "finalMainAudit": [
+    {
+      "id": 1,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard",
+      "public": true,
+      "mainCommit": "98447bb62307e317986a3cf41677f56f3ee0a9dd",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-live-dashboard/pull/1",
+      "prMerged": true,
+      "mergeCommit": "98447bb62307e317986a3cf41677f56f3ee0a9dd",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "24fa87b94555d4d27ad9eb83df7043908c97491a",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 2,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts",
+      "public": true,
+      "mainCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-mobile-alerts/pull/1",
+      "prMerged": true,
+      "mergeCommit": "c6b491d44a314f690006dcde2610b6e3fad34ed4",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "347637c9f40e7fa70a1afe234f27d577394c3b42",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 3,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control",
+      "public": true,
+      "mainCommit": "cf02854a489a4aff503aec34e2a741939b205c49",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-voice-control/pull/1",
+      "prMerged": true,
+      "mergeCommit": "cf02854a489a4aff503aec34e2a741939b205c49",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "29d2b06411687778d95ceed66d87ee2aecd627b3",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 4,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver",
+      "public": true,
+      "mainCommit": "965afabf726eb293a0175ac21cde96b3607eff9a",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-energy-saver/pull/1",
+      "prMerged": true,
+      "mergeCommit": "965afabf726eb293a0175ac21cde96b3607eff9a",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "8d6936a871bfcf5bcf97ad8a6914cb8069faab39",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 5,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance",
+      "public": true,
+      "mainCommit": "3f495b8f553b2b766d74471ad881899b23e156d6",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-predictive-maintenance/pull/1",
+      "prMerged": true,
+      "mergeCommit": "062e5341bc69a7d7fbf1574f4d7f418aacb8197b",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "46840fc54f9a5bcde982b9913389225b92c644be",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 6,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation",
+      "public": true,
+      "mainCommit": "d747e112e33678e9eb0342c92aee3fecc1af68be",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-offline-automation/pull/1",
+      "prMerged": true,
+      "mergeCommit": "d747e112e33678e9eb0342c92aee3fecc1af68be",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "a3f147dfeb6c53f9f5b697cfa762513c5f04dc20",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 7,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics",
+      "public": true,
+      "mainCommit": "ce865924508f3f815ff2bb98ceb645c8775e8343",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics/pull/1",
+      "prMerged": true,
+      "mergeCommit": "ce865924508f3f815ff2bb98ceb645c8775e8343",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "54351668eec44df5ce2955c77b9157730f2388cf",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 8,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network",
+      "public": true,
+      "mainCommit": "c672efafae130688dc1a91d44567bd5786d74b98",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network/pull/1",
+      "prMerged": true,
+      "mergeCommit": "c672efafae130688dc1a91d44567bd5786d74b98",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "5992cf4b48df89f2c59328fa04a821b6b03c7187",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 9,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock",
+      "public": true,
+      "mainCommit": "8ce4be2fa7fb672272fd032b9a92ef0b45d45de3",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-safety-interlock/pull/1",
+      "prMerged": true,
+      "mergeCommit": "8ce4be2fa7fb672272fd032b9a92ef0b45d45de3",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "2538cba2ecfdd453eaa35784686b42f492bea6c2",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 10,
+      "repository": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling",
+      "public": true,
+      "mainCommit": "5336305a9376a2bcc663c6f6d3416094525e8862",
+      "pr": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling/pull/1",
+      "prMerged": true,
+      "mergeCommit": "5336305a9376a2bcc663c6f6d3416094525e8862",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "45abb0b4fd561196c0809d26153f42160f244f56",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 11,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard",
+      "public": true,
+      "mainCommit": "d58f9ce3de56b08ceff57b270b2152d970f61f65",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-live-dashboard/pull/1",
+      "prMerged": true,
+      "mergeCommit": "d58f9ce3de56b08ceff57b270b2152d970f61f65",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "3e3e7eff795f0c339bc241a53c3deb261d6de275",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 12,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-mobile-alerts",
+      "public": true,
+      "mainCommit": "80b65560b6d2883cda13306e408cc01c8c0f81c1",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-mobile-alerts/pull/1",
+      "prMerged": true,
+      "mergeCommit": "80b65560b6d2883cda13306e408cc01c8c0f81c1",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "bf6e15691ff22f06360d71abd31b2a4be89117a7",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 13,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-voice-control",
+      "public": true,
+      "mainCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-voice-control/pull/2",
+      "prMerged": true,
+      "mergeCommit": "6faa3a4bfbaaefdbd9af367b3f0c8464e84f1ef4",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "b8fccb7f0bbf04a507483afb8934e96bc37a8d94",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 14,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver",
+      "public": true,
+      "mainCommit": "33b6b1d41a33d10af6a2d140bd8f08fa8a09848c",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver/pull/1",
+      "prMerged": true,
+      "mergeCommit": "33b6b1d41a33d10af6a2d140bd8f08fa8a09848c",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "de45ff743379cf794abc76e7d38d835df5c57973",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 15,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance",
+      "public": true,
+      "mainCommit": "e6e0f0fc1a4de58c5d69ba3cec979517c229147d",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance/pull/1",
+      "prMerged": true,
+      "mergeCommit": "e6e0f0fc1a4de58c5d69ba3cec979517c229147d",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "909d5274046d055fc177d69febe65b4d0c06f5bd",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 16,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation",
+      "public": true,
+      "mainCommit": "1863a4062599e78bdc8019c3d9f07fe95bf48d86",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-offline-automation/pull/1",
+      "prMerged": true,
+      "mergeCommit": "1863a4062599e78bdc8019c3d9f07fe95bf48d86",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "77e73cc7cee2a7c23328a5af032292fbb3f41123",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 17,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics",
+      "public": true,
+      "mainCommit": "dc100069b871ea43c71461a55f4665de4485e991",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-usage-analytics/pull/1",
+      "prMerged": true,
+      "mergeCommit": "dc100069b871ea43c71461a55f4665de4485e991",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "b8b556695da71cfbe41799cee6abaaa914355e44",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 18,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
+      "public": true,
+      "mainCommit": "84390cccb2ee034c5a6c1c48923a685fa6086584",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network/pull/1",
+      "prMerged": true,
+      "mergeCommit": "84390cccb2ee034c5a6c1c48923a685fa6086584",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "5b2926e97a380b9408e4277813cab120bfbacb15",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 19,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock",
+      "public": true,
+      "mainCommit": "81faf3ee8deef8d243d197282452b56ff4672ce6",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-safety-interlock/pull/1",
+      "prMerged": true,
+      "mergeCommit": "81faf3ee8deef8d243d197282452b56ff4672ce6",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "ef08a0ff2ce583025708d2e192b2419a00d7d220",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    },
+    {
+      "id": 20,
+      "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
+      "public": true,
+      "mainCommit": "f25567d81ead809b42193f836815fffadd56471d",
+      "pr": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling/pull/1",
+      "prMerged": true,
+      "mergeCommit": "f25567d81ead809b42193f836815fffadd56471d",
+      "requiredMainTreeVerified": true,
+      "sourceTestsCI": true,
+      "imageGitBlob": "9e086a0c5bb8258e4d4f1ad89539145ad141a669",
+      "transportChunksRemaining": 0,
+      "timestampIST": "2026-10-10T04:37:59.311+05:30"
+    }
+  ],
+  "errors": [
+    {
+      "id": 13,
+      "resolved": true,
+      "detail": "PR1 prematurely merged without PNG and with failed board checks. Authorized PR2 added lossless PNG, removed all stale transport files, passed all final-head checks and repaired main."
+    },
+    {
+      "id": 18,
+      "resolved": true,
+      "detail": "Reserved all-zero CI example API key replaced with a public non-zero example; custom MicWindow device global replaced by equivalent primitive globals and lambdas, preserving host coverage; both node builds and all exact-head checks passed."
+    }
+  ],
+  "unresolvedBlockers": [],
+  "totals": {
+    "roadmap": 2200,
+    "verifiedComplete": 20,
+    "remainingToVerifyAndComplete": 2180,
+    "nextStartingID": 21
+  },
+  "nextStartingAudit": {
+    "id": 21,
+    "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-live-dashboard",
+    "main": "cffd64ecf4c9e2c66b2e0312e38058f1d5c22caa",
+    "missing": [
+      "docs/circuit-diagram.svg",
+      "docs/images/project-overview.png"
+    ],
+    "timestampIST": "2026-10-10T04:20:30.937+05:30"
+  },
+  "gmail": {
+    "status": "pending_send",
+    "to": "me",
+    "resolvedProfile": "balwanshrutik@gmail.com",
+    "subject": "OpenMakerProjects daily build report - 2026-10-10",
+    "reportReference": "OMP-001-020-20261010",
+    "htmlSha256": "17b0146f3c283aee979561c24a8a26903dcf00a76b30cc97f62458cd335bf10b",
+    "messageId": null
+  },
+  "recurringTaskEnabled": true,
+  "publicationHistoryPolicy": "Historical seed publication and blocked audit rows preserved; verified completion counted separately."
+}
