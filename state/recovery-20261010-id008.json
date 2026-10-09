@@ -1,6 +1,6 @@
 {
   "id": 8,
-  "status": "cloud_validation_pending",
+  "status": "verified_complete",
   "branch": "automation/complete-008-20261010",
   "transportCommit": "205509dc3f679aaf4fae3f3370d87d6c88303cae",
   "image": {
@@ -65,5 +65,42 @@
   },
   "credentialsStored": false,
   "hardwareTests": "not performed",
-  "timestampIST": "2026-10-10T00:56:57.366+05:30"
+  "timestampIST": "2026-10-10T01:03:49.660+05:30",
+  "verified": true,
+  "publication": "published",
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network",
+  "prURL": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network/pull/1",
+  "mainCommit": "c672efafae130688dc1a91d44567bd5786d74b98",
+  "headCommit": "13da0a9b566b1c010c1df35ffe19cd4a01b191b6",
+  "checks": [
+    {
+      "id": 37980906178,
+      "event": "pull_request",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37980906170,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37980873003,
+      "event": "push",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37980872975,
+      "event": "push",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "9 unit tests, Python compilation, two-node localhost HTTP simulation, PNG/SVG/links/MIT/credential gates passed"
 }
