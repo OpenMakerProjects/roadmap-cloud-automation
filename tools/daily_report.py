@@ -36,6 +36,7 @@ def sha(value,path):
     require(type(value) is str and bool(re.fullmatch("[0-9a-f]{40}",value)),path)
 
 def link(url,repo,kind="repo"):
+    require(type(repo) is str and bool(re.fullmatch(r"https://github\\.com/OpenMakerProjects/[a-z0-9]+(?:-[a-z0-9]+)*",repo)),"invalid expected repository")
     expected=re.escape(repo)
     suffix={"repo":"","pr":r"/pull/[1-9][0-9]*","commit":r"/commit/[0-9a-f]{40}"}[kind]
     require(type(url) is str and bool(re.fullmatch(expected+suffix,url)),"unexpected GitHub URL: "+str(url))
@@ -120,6 +121,13 @@ def validate_ledger(run,roadmap):
             obj(hardware,"hardwareTesting")
             require(hardware.get("status") in ("not_performed","performed"),"hardwareTesting.status")
             if hardware["status"]=="performed":text(hardware.get("evidence"),"hardwareTesting.evidence")
+        test_data=p.get("tests")
+        if type(test_data) is dict:
+            hardware_claim=test_data.get("hardware")
+            if hardware_claim is not None and not re.search(r"not performed|not tested|untested",str(hardware_claim),re.I):
+                require(hardware is not None and hardware["status"]=="performed","hardware claim lacks evidence")
+        if type(test_data) is str and re.search(r"\\b(?:physical|hardware) (?:tests?|testing) (?:passed|performed|completed)\\b",test_data,re.I):
+            require(hardware is not None and hardware["status"]=="performed","hardware claim lacks evidence")
         if p["status"] in COMPLETE:
             successes.append(ident);require(ident in attempted,"complete not attempted/reconciled")
             require(p.get("pr"),"complete PR missing")
