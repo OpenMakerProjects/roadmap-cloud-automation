@@ -1,11 +1,11 @@
 {
   "id": 20,
-  "status": "original_image_transport_complete_decoder_running",
+  "status": "final_push_checks",
   "verifiedComplete": false,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
   "branch": "automation/complete-020-20261010",
   "headCommit": "7692371f75ed9db3020183f202371e2c454aef2e",
-  "timestampIST": "2026-10-10T04:31:58.573+05:30",
+  "timestampIST": "2026-10-10T04:34:36.903+05:30",
   "gmail": "deferred until original batch ends",
   "image": {
     "bytes": 1857386,
@@ -95,5 +95,9 @@
       "project-overview.png.b64.077"
     ]
   },
-  "decoderRun": 38002319381
+  "decoderRun": 38002319381,
+  "decoderConclusion": "success",
+  "decodedCommit": "fa2dc5dd16ea7ac7ebbdd18b34599267705548ce",
+  "finalHead": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+  "finalTestCoverage": "All 24 bins receive two events; every count transfers at rollover and each following hour selects the learned 60-second hold; existing warmup, boundaries, fault/reset, skipped-day, wrap and saturation coverage preserved"
 }
