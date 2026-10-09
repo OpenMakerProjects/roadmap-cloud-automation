@@ -26,8 +26,6 @@
     20
   ],
   "remainingIDs": [
-    10,
-    11,
     12,
     13,
     14,
@@ -47,9 +45,11 @@
     6,
     7,
     8,
-    9
+    9,
+    10,
+    11
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 10,
-  "lastCheckpoint": "ID9 merged and main verified; ID10 source and original image prepared"
+  "activeProject": 12,
+  "lastCheckpoint": "IDs1–11 merged and verified; ID12 bounded image transfer underway"
 }
