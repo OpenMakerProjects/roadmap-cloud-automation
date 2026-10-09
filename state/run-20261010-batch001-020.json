@@ -1,6 +1,6 @@
 {
   "runId": "OMP-001-020-20261010",
-  "status": "batch_complete_report_pending",
+  "status": "completed",
   "timestampIST": "2026-10-10T04:38:56.460+05:30",
   "cloudOnly": true,
   "authenticatedGitHub": "shrutikbalwan",
@@ -1114,14 +1114,24 @@
     "timestampIST": "2026-10-10T04:20:30.937+05:30"
   },
   "gmail": {
-    "status": "pending_send",
+    "status": "sent",
     "to": "me",
     "resolvedProfile": "balwanshrutik@gmail.com",
     "subject": "OpenMakerProjects daily build report - 2026-10-10",
     "reportReference": "OMP-001-020-20261010",
     "htmlSha256": "17b0146f3c283aee979561c24a8a26903dcf00a76b30cc97f62458cd335bf10b",
-    "messageId": null
+    "messageId": "1a122ede51e469fe",
+    "threadId": "1a122ede51e469fe",
+    "labelIds": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "sentAtIST": "2026-10-10T04:39:49.425+05:30",
+    "cc": [],
+    "bcc": []
   },
   "recurringTaskEnabled": true,
-  "publicationHistoryPolicy": "Historical seed publication and blocked audit rows preserved; verified completion counted separately."
+  "publicationHistoryPolicy": "Historical seed publication and blocked audit rows preserved; verified completion counted separately.",
+  "completedAtIST": "2026-10-10T04:39:49.425+05:30"
 }
