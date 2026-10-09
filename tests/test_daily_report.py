@@ -109,10 +109,13 @@ class DailyReportTests(unittest.TestCase):
         self.reject(lambda r:r["totals"].__setitem__("verifiedComplete",19))
         self.reject(lambda r:r["gmail"].__setitem__("cc",["someone"]))
         self.reject(lambda r:r["gmail"].__setitem__("subject","wrong"))
+        self.reject(lambda r:r.update(runId="OMP-other",gmail=dict(r["gmail"],reportReference="OMP-other")))
+        self.reject(lambda r:r.__setitem__("status","failed"))
         self.reject(lambda r:r["timestampIST"].__class__ if False else r.__setitem__("timestampIST","2026-10-10T00:00:00Z"))
         self.reject(lambda r:r["projects"][0].__setitem__("hardwareTesting",{"status":"performed"}))
 
     def test_no_credentials(self):
+        self.reject(lambda r:r["projects"][0].__setitem__("tests",{"wifi_password":"example-private-value"}))
         self.reject(lambda r:r["projects"][0].__setitem__("tests","ghp_"+"a"*30))
 
     def test_zero_success_failure_and_not_attempted_rows(self):
