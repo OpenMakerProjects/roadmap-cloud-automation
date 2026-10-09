@@ -1,6 +1,6 @@
 {
   "id": 7,
-  "status": "cloud_validation_pending",
+  "status": "verified_complete",
   "branch": "automation/complete-007-20261006",
   "transportCommit": "b424cbaae61646dc078f3a6d35883f907a979161",
   "image": {
@@ -93,5 +93,25 @@
   "transportChunkBytes": 32000,
   "credentialsStored": false,
   "hardwareTests": "not performed",
-  "timestampIST": "2026-10-10T00:44:08.703+05:30"
+  "timestampIST": "2026-10-10T00:44:08.703+05:30",
+  "publicationStatus": "published",
+  "verifiedComplete": true,
+  "requiredMainTreeVerified": true,
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics",
+  "pr": "https://github.com/OpenMakerProjects/room-climate-hub-usage-analytics/pull/1",
+  "headCommit": "1be761f5ecd0bbcbc1c5b184697dcc5a5cc21f5c",
+  "mainCommit": "ce865924508f3f815ff2bb98ceb645c8775e8343",
+  "merged": true,
+  "tests": {
+    "pushValidate": 37979062112,
+    "pushCompletion": 37979062115,
+    "prValidate": 37979344607,
+    "prCompletion": 37979344678,
+    "decode": 37978826055,
+    "host": "passed",
+    "nanoBoard": "passed",
+    "imageCompletion": "passed",
+    "tokenPush": "passed",
+    "hardware": "not performed"
+  }
 }
