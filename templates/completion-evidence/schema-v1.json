@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/blob/main/templates/completion-evidence/schema-v1.json",
+  "title": "Project completion evidence v1",
+  "description": "Structural envelope. Mandatory offline semantic validator tools/completion_evidence.py binds roadmap/plan, gates and asset evidence; JSON Schema alone never grants completion.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "kind",
+    "identity",
+    "runReference",
+    "baseMain",
+    "repository",
+    "branch",
+    "pr",
+    "finalHead",
+    "checks",
+    "main",
+    "assets",
+    "validation",
+    "hardware",
+    "result",
+    "gmail",
+    "legacyRemediation"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "project_completion_evidence"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "category",
+        "platform",
+        "connectivity",
+        "components",
+        "scope",
+        "deliverable"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2200
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "slug": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "connectivity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deliverable": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "runReference": {
+      "type": "string",
+      "pattern": "^OMP-[A-Za-z0-9-]+$"
+    },
+    "baseMain": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "repository": {
+      "type": "object",
+      "required": [
+        "url",
+        "owner",
+        "public",
+        "defaultBranch",
+        "observedAtIST"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "pattern": "^https://github\\.com/OpenMakerProjects/[a-z0-9-]+$"
+        },
+        "owner": {
+          "const": "OpenMakerProjects"
+        },
+        "public": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "defaultBranch": {
+          "const": "main"
+        },
+        "observedAtIST": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "branch": {
+      "type": "string",
+      "pattern": "^automation/"
+    },
+    "pr": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "finalHead": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event",
+          "name",
+          "runId",
+          "url",
+          "head",
+          "status",
+          "conclusion",
+          "completedAtIST"
+        ]
+      }
+    },
+    "main": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "assets": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "validation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "hardware": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not_performed",
+            "performed"
+          ]
+        },
+        "evidence": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "status",
+        "blocker",
+        "timestampIST"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "blocked",
+            "failed",
+            "verified_complete"
+          ]
+        },
+        "blocker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestampIST": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "gmail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "messageId"
+      ],
+      "properties": {
+        "status": {
+          "const": "deferred_batch_report"
+        },
+        "messageId": {
+          "type": "null"
+        }
+      }
+    },
+    "legacyRemediation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "result": {
+            "properties": {
+              "status": {
+                "const": "verified_complete"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "repository": {
+            "properties": {
+              "public": {
+                "const": true
+              },
+              "observedAtIST": {
+                "type": "string"
+              }
+            }
+          },
+          "pr": {
+            "type": "object"
+          },
+          "finalHead": {
+            "type": "string"
+          },
+          "checks": {
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "main": {
+            "type": "object"
+          },
+          "assets": {
+            "type": "object"
+          },
+          "validation": {
+            "type": "object"
+          },
+          "result": {
+            "properties": {
+              "blocker": {
+                "type": "null"
+              },
+              "timestampIST": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
