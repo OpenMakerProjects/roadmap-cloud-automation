@@ -1,6 +1,6 @@
 {
   "id": 18,
-  "status": "decoded_image_build_repair",
+  "status": "pr_open_final_checks",
   "verifiedComplete": false,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network",
   "branch": "automation/complete-018-20261010",
@@ -103,5 +103,7 @@
       "change": "Equivalent primitive mic_low/mic_high/mic_count/mic_clean globals and lambdas; header retained only for host tests",
       "timestampIST": "2026-10-10T03:57:43.788+05:30"
     }
-  ]
+  ],
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-multi-room-network/pull/1",
+  "finalHead": "af70ee41e4b2b35c3d20078f7b1f44323ffe6d85"
 }
