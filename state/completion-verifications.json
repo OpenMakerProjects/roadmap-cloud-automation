@@ -1737,5 +1737,59 @@
     "transportChunksRemaining": 0,
     "timestampIST": "2026-10-10T04:23:29.168+05:30",
     "gmail": "deferred until original batch ends"
+  },
+  "20": {
+    "id": 20,
+    "status": "merged_verified",
+    "verifiedComplete": true,
+    "repository": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling",
+    "pr": "https://github.com/OpenMakerProjects/smart-entryway-adaptive-scheduling/pull/1",
+    "mainCommit": "f25567d81ead809b42193f836815fffadd56471d",
+    "headCommit": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+    "tests": "C++ all-24-bin adaptive schedule, warmup/hold/fault/reset/skipped-day/wrap/saturation assertions; 3 PNG transport tests; PNG/SVG/links/MIT/credential gates; actual Nano 33 IoT PlatformIO build",
+    "checks": [
+      {
+        "id": 38002663243,
+        "name": "Validate project",
+        "event": "pull_request",
+        "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+        "conclusion": "success"
+      },
+      {
+        "id": 38002663271,
+        "name": "Completion gates",
+        "event": "pull_request",
+        "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+        "conclusion": "success"
+      },
+      {
+        "id": 38002548784,
+        "name": "Validate project",
+        "event": "push",
+        "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+        "conclusion": "success"
+      },
+      {
+        "id": 38002548777,
+        "name": "Completion gates",
+        "event": "push",
+        "head": "69a3a333c3fa1e947a519c6bccd2f3c58765cd74",
+        "conclusion": "success"
+      }
+    ],
+    "requiredMainFiles": [
+      "README.md",
+      "LICENSE",
+      "docs/circuit-diagram.svg",
+      "docs/images/project-overview.png",
+      "firmware/main.cpp",
+      "firmware/adaptive.h",
+      "platformio.ini",
+      "tests/adaptive_test.cpp",
+      ".github/workflows/completion.yml"
+    ],
+    "transportChunksRemaining": 0,
+    "timestampIST": "2026-10-10T04:36:56.386+05:30",
+    "gmail": "pending final original batch report"
   }
 }
