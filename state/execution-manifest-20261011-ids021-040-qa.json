@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "kind": "read_only_project_qa_control_only_corrections",
+  "observedAtIST": "2026-10-10T05:05:32.806+05:30",
+  "manifestPath": "state/execution-manifest-20261011-ids021-040.json",
+  "manifestCommit": "4dd09d9dcbf01bcb39ce8fe675c48986b8d705b6",
+  "selectedIDs": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "readiness": {
+    "readyForUnattendedImplementation": true,
+    "readyForMerge": false,
+    "condition": "Implementation-time module facts, pinned dependency installation, actual recognition/transport gates and exact-head push+PR checks remain mandatory; no builds or hardware validation occurred."
+  },
+  "comparison": {
+    "roadmapEntries": 20,
+    "exactRoadmapFieldsPreserved": true,
+    "preflightHeadEntrypointMatches": 20,
+    "seedEntrypointsRead": 20,
+    "allSeedsGeneric": true,
+    "existingESPHomeTarget": "ESP32 esp32dev / Arduino",
+    "piSeeds": "Controller exists; --iterations/--interval/--threshold present; --simulate must be implemented"
+  },
+  "projects": [
+    {
+      "id": 21,
+      "slug": "kitchen-safety-node-live-dashboard",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Added relay driver, input-voltage and boot-OFF requirements.",
+        "Qualified servo supply rating against stall current and backfeed.",
+        "Corrected assumed ESP-IDF migration to observed ESP32 Arduino target."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 22,
+      "slug": "kitchen-safety-node-mobile-alerts",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Removed ambiguous local-only fallback; specified LAN-only foreground delivery."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 23,
+      "slug": "kitchen-safety-node-voice-control",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Added relay driver, input-voltage and boot-OFF requirements.",
+        "Required real WAV-to-recognizer-to-command coverage; retained transport mocks and physical-link limitations."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver.",
+        "Verify Vosk model license/hash/download availability, audio sample format and actual recognition fixture; model/fixture failure leaves Voice Control unfinished."
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "kitchen-safety-node-energy-saver",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Strengthened versioned Matter bridge/entity gates and commissioning limitations."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver.",
+        "Confirm bridge entity support and read/write semantics; keep telemetry read-only where appropriate and locally authorize all actuator commands. Commissioning credentials remain outside Git."
+      ]
+    },
+    {
+      "id": 25,
+      "slug": "kitchen-safety-node-predictive-maintenance",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Added relay driver, input-voltage and boot-OFF requirements.",
+        "Qualified servo supply rating against stall current and backfeed."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 26,
+      "slug": "kitchen-safety-node-offline-automation",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Corrected assumed ESP-IDF migration to observed ESP32 Arduino target.",
+        "Prevented default disconnect reboots from invalidating offline autonomy."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 27,
+      "slug": "kitchen-safety-node-usage-analytics",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 28,
+      "slug": "kitchen-safety-node-multi-room-network",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 29,
+      "slug": "kitchen-safety-node-safety-interlock",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Qualified servo supply rating against stall current and backfeed.",
+        "Strengthened versioned Matter bridge/entity gates and commissioning limitations.",
+        "Resolved presence/clear contradiction to motion-inhibited, explicitly requested permit."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver.",
+        "Confirm bridge entity support and read/write semantics; keep telemetry read-only where appropriate and locally authorize all actuator commands. Commissioning credentials remain outside Git."
+      ]
+    },
+    {
+      "id": 30,
+      "slug": "kitchen-safety-node-adaptive-scheduling",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 31,
+      "slug": "bathroom-comfort-monitor-live-dashboard",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Strengthened versioned Matter bridge/entity gates and commissioning limitations."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver.",
+        "Confirm bridge entity support and read/write semantics; keep telemetry read-only where appropriate and locally authorize all actuator commands. Commissioning credentials remain outside Git."
+      ]
+    },
+    {
+      "id": 32,
+      "slug": "bathroom-comfort-monitor-mobile-alerts",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Added relay driver, input-voltage and boot-OFF requirements."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 33,
+      "slug": "bathroom-comfort-monitor-voice-control",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Required real WAV-to-recognizer-to-command coverage; retained transport mocks and physical-link limitations."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver.",
+        "Verify Vosk model license/hash/download availability, audio sample format and actual recognition fixture; model/fixture failure leaves Voice Control unfinished."
+      ]
+    },
+    {
+      "id": 34,
+      "slug": "bathroom-comfort-monitor-energy-saver",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Qualified servo supply rating against stall current and backfeed.",
+        "Corrected assumed ESP-IDF migration to observed ESP32 Arduino target.",
+        "Required independent local timeout/fault behavior despite API disconnect."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 35,
+      "slug": "bathroom-comfort-monitor-predictive-maintenance",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 36,
+      "slug": "bathroom-comfort-monitor-offline-automation",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Added relay driver, input-voltage and boot-OFF requirements.",
+        "Qualified servo supply rating against stall current and backfeed.",
+        "Strengthened versioned Matter bridge/entity gates and commissioning limitations."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver.",
+        "Confirm bridge entity support and read/write semantics; keep telemetry read-only where appropriate and locally authorize all actuator commands. Commissioning credentials remain outside Git."
+      ]
+    },
+    {
+      "id": 37,
+      "slug": "bathroom-comfort-monitor-usage-analytics",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Selected explicit IST calendar bins with UTC records and monotonic duration handling."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 38,
+      "slug": "bathroom-comfort-monitor-multi-room-network",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 39,
+      "slug": "bathroom-comfort-monitor-safety-interlock",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Corrected assumed ESP-IDF migration to observed ESP32 Arduino target.",
+        "Required independent local timeout/fault behavior despite API disconnect."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    },
+    {
+      "id": 40,
+      "slug": "bathroom-comfort-monitor-adaptive-scheduling",
+      "disposition": "corrected",
+      "corrections": [
+        "Preserved complete exact roadmap entry; retained pinned preflight HEAD and entrypoint.",
+        "Made production-linked C++ host gate explicit alongside target build.",
+        "Added relay driver, input-voltage and boot-OFF requirements."
+      ],
+      "residualFacts": [
+        "Pin library/tool/runtime versions and install from official sources; declared candidate pins are not hardware-test evidence.",
+        "Choose exact module/controller variants and verify datasheets, supply ranges, signal levels, I2C addresses and reserved pins before final SVG/README.",
+        "Final generated overview must show every roadmap component; circuit SVG must label actual pins, rails, grounds and each auxiliary supply/driver."
+      ]
+    }
+  ],
+  "commonResidualFacts": [
+    "Hardware signal/power/addresses/endpoints require selected-module datasheets; do not claim hardware tests.",
+    "Resolve official compatible versions for board libraries, Python services, Vosk models and Matter bridge; installation/compile/schema gates may block individual completion.",
+    "Bridged Matter requires HA, broker, bridge/controller and private runtime credentials outside Git; no native Matter/Thread claim.",
+    "Pi gates validate Linux Python policy/adapters/loopback services; no ARM firmware build or physical GPIO claim.",
+    "All overview briefs and SVG topologies retain listed components; auxiliary modules/supplies explicitly distinguished from roadmap fields."
+  ],
+  "entrypointEvidence": [
+    {
+      "id": 22,
+      "path": "firmware/kitchen-safety-node-mobile-alerts/kitchen-safety-node-mobile-alerts.ino",
+      "sha": "df98be0f8236904ced639e8d4e81c6f7dae1e9d7",
+      "bytes": 2993,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 23,
+      "path": "firmware/kitchen-safety-node-voice-control/kitchen-safety-node-voice-control.ino",
+      "sha": "c624fd0610ff5f34e06ae4e21f7a7bc2c82a5084",
+      "bytes": 2993,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 25,
+      "path": "firmware/kitchen-safety-node-predictive-maintenance/kitchen-safety-node-predictive-maintenance.ino",
+      "sha": "4ae0cd04a76e7159c3d0aa0878d3e2f2ba2200f6",
+      "bytes": 3002,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 27,
+      "path": "firmware/kitchen-safety-node-usage-analytics/kitchen-safety-node-usage-analytics.ino",
+      "sha": "45147a4c058d569adffe31a52abbff9a7d39a197",
+      "bytes": 2995,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 28,
+      "path": "firmware/kitchen-safety-node-multi-room-network/kitchen-safety-node-multi-room-network.ino",
+      "sha": "c110a69c1a3f5be2a41364be13f1971525c6aa00",
+      "bytes": 2998,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 30,
+      "path": "firmware/kitchen-safety-node-adaptive-scheduling/kitchen-safety-node-adaptive-scheduling.ino",
+      "sha": "052ea05ed71260b45a7b5afff528924f84e58c19",
+      "bytes": 2998,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 31,
+      "path": "firmware/bathroom-comfort-monitor-live-dashboard/bathroom-comfort-monitor-live-dashboard.ino",
+      "sha": "d6bd86e4f65467b6dbebf5279895409279371fab",
+      "bytes": 2993,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 32,
+      "path": "src/main.py",
+      "sha": "271007fffd85d13b4b5dc69e15953f58ec2d903e",
+      "bytes": 2564,
+      "seedGeneric": true,
+      "controllerCompatibility": true,
+      "cli": [
+        "add_argument(\"--iterations\", type=int, default=10)",
+        "add_argument(\"--interval\", type=float, default=0.5)",
+        "add_argument(\"--threshold\", type=float, default=DEFAULT_THRESHOLD)"
+      ]
+    },
+    {
+      "id": 33,
+      "path": "firmware/bathroom-comfort-monitor-voice-control/bathroom-comfort-monitor-voice-control.ino",
+      "sha": "b77fa3aad6d779dde0f9980a473d2f4564b3964d",
+      "bytes": 3012,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 35,
+      "path": "firmware/bathroom-comfort-monitor-predictive-maintenance/bathroom-comfort-monitor-predictive-maintenance.ino",
+      "sha": "65cecdd2f37b9778e03a36158e637c450b6016fa",
+      "bytes": 3021,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 36,
+      "path": "firmware/bathroom-comfort-monitor-offline-automation/bathroom-comfort-monitor-offline-automation.ino",
+      "sha": "19570c15e351af7962e2e0a8d23c1dbd0a8f10a3",
+      "bytes": 3016,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 37,
+      "path": "src/main.py",
+      "sha": "321957bfade97d6fee95934823caffb069893a09",
+      "bytes": 2562,
+      "seedGeneric": true,
+      "controllerCompatibility": true,
+      "cli": [
+        "add_argument(\"--iterations\", type=int, default=10)",
+        "add_argument(\"--interval\", type=float, default=0.5)",
+        "add_argument(\"--threshold\", type=float, default=DEFAULT_THRESHOLD)"
+      ]
+    },
+    {
+      "id": 38,
+      "path": "firmware/bathroom-comfort-monitor-multi-room-network/bathroom-comfort-monitor-multi-room-network.ino",
+      "sha": "989a7dca8a7d407043f33c35849a31f3c9cdfe17",
+      "bytes": 2997,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    },
+    {
+      "id": 40,
+      "path": "firmware/bathroom-comfort-monitor-adaptive-scheduling/bathroom-comfort-monitor-adaptive-scheduling.ino",
+      "sha": "4f63fa13fa2574303d9f4f82b0f7994c923dcc28",
+      "bytes": 3018,
+      "seedGeneric": true,
+      "controllerCompatibility": false,
+      "cli": []
+    }
+  ],
+  "references": [
+    "https://esphome.io/components/mqtt/",
+    "https://esphome.io/components/wifi/",
+    "https://docs.arduino.cc/hardware/nano-33-iot/",
+    "https://github.com/arduino-libraries/ArduinoBLE",
+    "https://github.com/Luligu/matterbridge-hass",
+    "https://github.com/alphacep/vosk-api",
+    "https://arduino-esp8266.readthedocs.io/en/latest/reference.html",
+    "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html"
+  ],
+  "restrictionsObserved": {
+    "buildLeaseAcquired": false,
+    "projectRepositoryMutations": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "buildsRun": false,
+    "emailSent": false,
+    "onlyControlRepositoryChanged": true,
+    "activeLeaseUnchanged": true
+  }
+}
