@@ -183,6 +183,9 @@ def validate(record,entry,plan,allow_legacy=False):
     text(host.get("command"),"host command")
     expected_host=plan["actualTargetGate"].get("hostPolicyCommand","python -m unittest discover -s tests -v")
     same(host["command"],expected_host,"project host command")
+    if plan["actualTargetGate"]["catalogRef"]=="piPython":
+        require(any(p.endswith(".py") and not p.endswith("__init__.py") for p in main["testFiles"]),"Pi Python test material")
+    else:require(any(p.endswith(".cpp") for p in main["testFiles"]),"C++ host test material")
     cases=host.get("cases");require(type(cases) is list and len(cases)>=3,"meaningful behavior cases")
     for case in cases:text(case,"host case")
     require(len(set(cases))==len(cases),"generic duplicate test cases")
