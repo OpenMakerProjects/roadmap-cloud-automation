@@ -1,10 +1,43 @@
 {
   "id": 15,
-  "status": "source_committed_image_pending",
-  "verifiedComplete": false,
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
   "repository": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-predictive-maintenance/pull/1",
   "branch": "automation/complete-015-20261010",
-  "headCommit": "f0249ebed9a3d8f7b90ca077ff346310b9e51177",
+  "headCommit": "a332a4bcd7b2bf88d6694b0dd3469cc47e51d26e",
+  "mainCommit": "e6e0f0fc1a4de58c5d69ba3cec979517c229147d",
+  "checks": [
+    {
+      "id": 37993267831,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "conclusion": "success"
+    },
+    {
+      "id": 37993267552,
+      "event": "pull_request",
+      "name": "Validate project",
+      "conclusion": "success"
+    },
+    {
+      "id": 37993148407,
+      "event": "push",
+      "name": "Completion gates",
+      "conclusion": "success"
+    },
+    {
+      "id": 37993148255,
+      "event": "push",
+      "name": "Validate project",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "C++ debounce/cycle/open-duration/reset/saturation/wrap tests, 3 image transport tests, PNG/SVG/links/MIT/credential gates and actual Nano 33 IoT build passed",
+  "hardwareTests": "not performed",
   "image": {
     "bytes": 2326203,
     "dimensions": [
@@ -112,7 +145,5 @@
       "project-overview.png.b64.096"
     ]
   },
-  "transport": "Original native image bytes staged in bounded 32KB UTF-8 chunks, then decoded losslessly by Actions",
-  "timestampIST": "2026-10-10T02:38:26.459+05:30",
-  "gmail": "deferred until original batch ends"
+  "timestampIST": "2026-10-10T02:56:27.749+05:30"
 }
