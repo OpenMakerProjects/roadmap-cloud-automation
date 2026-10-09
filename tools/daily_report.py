@@ -20,6 +20,14 @@ PROFILE="balwanshrutik@gmail.com"
 SECRET=re.compile(r"(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|ya29\.[A-Za-z0-9_-]{20,})")
 
 def clean(value):
+    def inspect(node):
+        if type(node) is dict:
+            for key,item in node.items():
+                require(str(key).lower() not in {"password","wifi_password","api_key","access_token","refresh_token","authorization","private_key"},"credential field in report")
+                inspect(item)
+        elif type(node) is list:
+            for item in node:inspect(item)
+    inspect(value)
     rendered=value if type(value) is str else json.dumps(value,sort_keys=True,ensure_ascii=False)
     require(not SECRET.search(rendered),"credential pattern in report text")
     return html.escape(rendered,quote=True)
@@ -82,6 +90,9 @@ def validate_ledger(run,roadmap):
     ids=run.get("selectedIDs")
     require(type(ids) is list and 1<=len(ids)<=20 and all(type(i) is int for i in ids),"selectedIDs")
     require(ids==sorted(set(ids)) and ids==list(range(ids[0],ids[0]+len(ids))),"selectedIDs contiguous unique")
+    date_key=report_date.replace("-","")
+    expected_reference=f"OMP-{ids[0]:03d}-{ids[-1]:03d}-{date_key}"
+    same(ref,expected_reference,"canonical stable reportReference")
     rmap=unique_index(roadmap,"roadmap")
     require(all(i in rmap for i in ids),"selected roadmap IDs")
     attempted=run.get("attemptedIDs")
@@ -134,6 +145,7 @@ def validate_ledger(run,roadmap):
             require(p.get("merged") is not True,"blocked project claims merge")
             if p["status"]=="not_attempted":require(ident not in attempted,"not_attempted conflict")
     if run["status"]=="completed":same(successes,ids,"completed batch has failures")
+    if successes==ids:same(run["status"],"completed","all-success ledger status")
     if not successes:require(run["status"] in ("failed","blocked"),"zero-success report status")
     totals=run.get("totals");obj(totals,"totals")
     same(totals.get("roadmap"),len(roadmap),"totals.roadmap")
