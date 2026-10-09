@@ -26,7 +26,6 @@
     20
   ],
   "remainingIDs": [
-    12,
     13,
     14,
     15,
@@ -47,11 +46,12 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 12,
-  "lastCheckpoint": "IDs1–11 verified. ID12 source safely committed; image transport interrupted before final commit. Recovery details state/recovery-20261010-id012.json. No ID12 PR exists. Gmail report deferred until original batch ends or genuine blocker.",
+  "activeProject": 13,
+  "lastCheckpoint": "ID12 merged and main verified; ID13 source and image checkpointed",
   "timestampIST": "2026-10-10T01:47:06.023+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483"
 }
