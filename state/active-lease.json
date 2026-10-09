@@ -25,9 +25,7 @@
     19,
     20
   ],
-  "remainingIDs": [
-    20
-  ],
+  "remainingIDs": [],
   "completedIDs": [
     1,
     2,
@@ -47,12 +45,13 @@
     16,
     17,
     18,
-    19
+    19,
+    20
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
-  "activeProject": 20,
-  "lastCheckpoint": "IDs1–19 verified; ID20 lossless decoder committed PNG and full Nano host/target gates running",
-  "timestampIST": "2026-10-10T04:32:43.128+05:30",
+  "activeProject": 21,
+  "lastCheckpoint": "ID20 verified merged main; activate ID21",
+  "timestampIST": "2026-10-10T04:36:56.386+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483",
   "recurringTaskEnabled": true
 }
