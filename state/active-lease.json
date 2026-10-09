@@ -2,7 +2,7 @@
   "owner": "cloud-resume-1791577120408",
   "status": "active",
   "acquiredAtIST": "2026-10-10T01:48:40.408+05:30",
-  "expiresAt": "2026-10-10T00:18:40.408Z",
+  "expiresAt": "2026-10-10T01:37:53.554Z",
   "originalSelectedIDs": [
     1,
     2,
@@ -51,7 +51,7 @@
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
   "activeProject": 18,
-  "lastCheckpoint": "ID17 verified merged main; activate ID18",
-  "timestampIST": "2026-10-10T03:43:09.226+05:30",
+  "lastCheckpoint": "ID18 PR1 open; final exact-head push and PR ESPHome builds running",
+  "timestampIST": "2026-10-10T04:07:53.554+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483"
 }
