@@ -1,8 +1,43 @@
 {
   "id": 14,
-  "status": "image_transport_pending",
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "repository": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver",
+  "pr": "https://github.com/OpenMakerProjects/smart-entryway-energy-saver/pull/1",
   "branch": "automation/complete-014-20261010",
-  "sourceCommit": "62bc738d349121aa5d23a17965a4a9e4fac60d90",
+  "headCommit": "8fdbae6b58a26f84ff45ce13d255647831b62c45",
+  "mainCommit": "33b6b1d41a33d10af6a2d140bd8f08fa8a09848c",
+  "requiredMainTreeVerified": true,
+  "merged": true,
+  "checks": [
+    {
+      "id": 37991187871,
+      "event": "pull_request",
+      "name": "Validate project",
+      "conclusion": "success"
+    },
+    {
+      "id": 37991187806,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "conclusion": "success"
+    },
+    {
+      "id": 37990467283,
+      "event": "push",
+      "name": "Validate project",
+      "conclusion": "success"
+    },
+    {
+      "id": 37990467367,
+      "event": "push",
+      "name": "Completion gates",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "C++ saver tests, 3 image tests, PNG/SVG/links/MIT/credentials and actual PlatformIO ESP32 build passed",
+  "hardwareTests": "not performed; live MQTT and energy savings untested",
   "image": {
     "bytes": 1352184,
     "dimensions": [
@@ -70,7 +105,5 @@
       "project-overview.png.b64.056"
     ]
   },
-  "verifiedComplete": false,
-  "hardwareTests": "not performed",
-  "timestampIST": "2026-10-10T02:16:56.039+05:30"
+  "timestampIST": "2026-10-10T02:36:49.525+05:30"
 }
