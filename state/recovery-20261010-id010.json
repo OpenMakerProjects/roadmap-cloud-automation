@@ -1,8 +1,46 @@
 {
   "id": 10,
-  "status": "cloud_validation_pending",
+  "status": "verified_complete",
+  "verifiedComplete": true,
+  "publicationStatus": "published",
+  "requiredMainTreeVerified": true,
+  "merged": true,
+  "repository": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling",
+  "pr": "https://github.com/OpenMakerProjects/room-climate-hub-adaptive-scheduling/pull/1",
   "branch": "automation/complete-010-20261010",
-  "transportCommit": "0f40349e7dac48e1fe6a8871e043a92fc01bead3",
+  "headCommit": "4cf0cebac2bc0483ba97444061a4585465509313",
+  "mainCommit": "5336305a9376a2bcc663c6f6d3416094525e8862",
+  "checks": [
+    {
+      "id": 37984460140,
+      "event": "pull_request",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37984460361,
+      "event": "pull_request",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37984438249,
+      "event": "push",
+      "name": "Validate project",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 37984438287,
+      "event": "push",
+      "name": "Completion gates",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "tests": "C++ schedule tests, 3 image tests, ESPHome config and ESP32 ESP-IDF compile, PNG/SVG/links/MIT/credential gates passed",
   "image": {
     "bytes": 1256263,
     "dimensions": [
@@ -66,6 +104,6 @@
       "project-overview.png.b64.052"
     ]
   },
-  "hardwareTests": "not performed",
-  "timestampIST": "2026-10-10T01:22:59.128+05:30"
+  "hardwareTests": "not performed; HA/Matter untested",
+  "timestampIST": "2026-10-10T01:40:12.607+05:30"
 }
