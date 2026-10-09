@@ -1133,5 +1133,7 @@
   },
   "recurringTaskEnabled": true,
   "publicationHistoryPolicy": "Historical seed publication and blocked audit rows preserved; verified completion counted separately.",
-  "completedAtIST": "2026-10-10T04:39:49.425+05:30"
+  "completedAtIST": "2026-10-10T04:39:49.425+05:30",
+  "leaseStatus": "completed",
+  "leaseReleasedAtIST": "2026-10-10T04:41:24.801+05:30"
 }
