@@ -30,7 +30,7 @@ def select(projects, verifications, limit=20):
     # Agents must still reconfirm public main trees. Audit blocked is not a
     # publication status change and verified records are never inferred from it.
     return [p for p in projects if verifications.get(str(p['id']), {}).get('status')
-            != 'verified_complete'][:limit]
+            not in {'verified_complete', 'merged_verified'}][:limit]
 
 def main():
     parser = argparse.ArgumentParser()
