@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "control_state_validation",
+  "observedAtIST": "2026-10-10T05:14:55.292+05:30",
+  "testedCommit": "0bc4953a858bbe39632e564941dd980d83e22ab4",
+  "changes": [
+    "Added tools/validate_control_state.py and tests/test_control_state.py; integrated state and selector CLI gates into existing control CI.",
+    "Fixed select_batch.py to recognize existing merged_verified status alongside verified_complete; completion history unchanged."
+  ],
+  "commands": [
+    {
+      "command": "python tools/validate_execution_manifest.py",
+      "exitCode": 0,
+      "projectCount": 20
+    },
+    {
+      "command": "python tools/validate_control_state.py",
+      "exitCode": 0,
+      "roadmapCount": 2200,
+      "verifiedComplete": 20,
+      "remaining": 2180,
+      "nextID": 21,
+      "selectedIDs": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "historicalLedgerRows": 62,
+      "uniqueBatchGmailMessages": 1
+    },
+    {
+      "command": "python scripts/select_batch.py > /tmp/control-selection.json; assert batch IDs == list(range(21,41)) and batch_count == 20",
+      "exitCode": 0,
+      "result": "IDs21–40 in ascending order; no unfinished item skipped"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exitCode": 0,
+      "tests": 20,
+      "newControlStateTests": 9,
+      "failures": 0,
+      "errors": 0,
+      "offline": true
+    }
+  ],
+  "cloudCI": {
+    "runID": 38005878073,
+    "jobID": 114074428110,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38005878073",
+    "conclusion": "success"
+  },
+  "history": {
+    "existingStateFilesPreserved": 35,
+    "roadmapUnchanged": true,
+    "appendOnlyRowsPreserved": true,
+    "reconciliationRowsDeduplicatedByMessageID": true
+  },
+  "restrictionsObserved": {
+    "onlyControlRepositoryChanged": true,
+    "projectLeaseAcquired": false,
+    "projectRepositoriesMutated": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false
+  },
+  "limitations": [
+    "Offline validation checks durable evidence and scheduler readback, not fresh GitHub/Gmail/scheduler service state.",
+    "The current checkpoint gate intentionally pins completed IDs1–20 and planned IDs21–40; explicitly update it as authorized batches advance."
+  ]
+}
