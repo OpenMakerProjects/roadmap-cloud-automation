@@ -1,8 +1,8 @@
 {
   "owner": "cloud-resume-1791577120408",
-  "status": "active",
+  "status": "completed",
   "acquiredAtIST": "2026-10-10T01:48:40.408+05:30",
-  "expiresAt": "2026-10-10T01:37:53.554Z",
+  "expiresAt": "2026-10-09T23:11:24.801Z",
   "originalSelectedIDs": [
     1,
     2,
@@ -50,11 +50,30 @@
   ],
   "previousExpiredOwner": "cloud-20261008-1791412414546",
   "activeProject": null,
-  "lastCheckpoint": "Original IDs1–20 complete; single HTML report delivery pending; next daily starting ID21",
+  "lastCheckpoint": "Original IDs1–20 verified; report sent and reconciled; next daily batch begins with first unfinished ID21",
   "timestampIST": "2026-10-10T04:38:56.460+05:30",
   "previousOwner": "cloud-resume-20261010-1791572169483",
   "recurringTaskEnabled": true,
   "verifiedTotal": 20,
   "remainingTotal": 2180,
-  "nextStartingID": 21
+  "nextStartingID": 21,
+  "releasedAtIST": "2026-10-10T04:41:24.801+05:30",
+  "gmail": {
+    "status": "sent",
+    "to": "me",
+    "resolvedProfile": "balwanshrutik@gmail.com",
+    "subject": "OpenMakerProjects daily build report - 2026-10-10",
+    "reportReference": "OMP-001-020-20261010",
+    "htmlSha256": "17b0146f3c283aee979561c24a8a26903dcf00a76b30cc97f62458cd335bf10b",
+    "messageId": "1a122ede51e469fe",
+    "threadId": "1a122ede51e469fe",
+    "labelIds": [
+      "UNREAD",
+      "SENT",
+      "INBOX"
+    ],
+    "sentAtIST": "2026-10-10T04:39:49.425+05:30",
+    "cc": [],
+    "bcc": []
+  }
 }
