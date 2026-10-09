@@ -434,5 +434,115 @@
       "tokenPush": "passed",
       "hardware": "not performed"
     }
+  },
+  "8": {
+    "id": 8,
+    "status": "verified_complete",
+    "branch": "automation/complete-008-20261010",
+    "transportCommit": "205509dc3f679aaf4fae3f3370d87d6c88303cae",
+    "image": {
+      "bytes": 1191116,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "aa9a2c380846c6f71c426f852072d9559ef907c55ae276ed7d4a9bdd1e9d6ab0",
+      "chunks": [
+        "project-overview.png.b64.000",
+        "project-overview.png.b64.001",
+        "project-overview.png.b64.002",
+        "project-overview.png.b64.003",
+        "project-overview.png.b64.004",
+        "project-overview.png.b64.005",
+        "project-overview.png.b64.006",
+        "project-overview.png.b64.007",
+        "project-overview.png.b64.008",
+        "project-overview.png.b64.009",
+        "project-overview.png.b64.010",
+        "project-overview.png.b64.011",
+        "project-overview.png.b64.012",
+        "project-overview.png.b64.013",
+        "project-overview.png.b64.014",
+        "project-overview.png.b64.015",
+        "project-overview.png.b64.016",
+        "project-overview.png.b64.017",
+        "project-overview.png.b64.018",
+        "project-overview.png.b64.019",
+        "project-overview.png.b64.020",
+        "project-overview.png.b64.021",
+        "project-overview.png.b64.022",
+        "project-overview.png.b64.023",
+        "project-overview.png.b64.024",
+        "project-overview.png.b64.025",
+        "project-overview.png.b64.026",
+        "project-overview.png.b64.027",
+        "project-overview.png.b64.028",
+        "project-overview.png.b64.029",
+        "project-overview.png.b64.030",
+        "project-overview.png.b64.031",
+        "project-overview.png.b64.032",
+        "project-overview.png.b64.033",
+        "project-overview.png.b64.034",
+        "project-overview.png.b64.035",
+        "project-overview.png.b64.036",
+        "project-overview.png.b64.037",
+        "project-overview.png.b64.038",
+        "project-overview.png.b64.039",
+        "project-overview.png.b64.040",
+        "project-overview.png.b64.041",
+        "project-overview.png.b64.042",
+        "project-overview.png.b64.043",
+        "project-overview.png.b64.044",
+        "project-overview.png.b64.045",
+        "project-overview.png.b64.046",
+        "project-overview.png.b64.047",
+        "project-overview.png.b64.048",
+        "project-overview.png.b64.049"
+      ]
+    },
+    "credentialsStored": false,
+    "hardwareTests": "not performed",
+    "timestampIST": "2026-10-10T01:03:49.660+05:30",
+    "verified": true,
+    "publication": "published",
+    "repository": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network",
+    "prURL": "https://github.com/OpenMakerProjects/room-climate-hub-multi-room-network/pull/1",
+    "mainCommit": "c672efafae130688dc1a91d44567bd5786d74b98",
+    "headCommit": "13da0a9b566b1c010c1df35ffe19cd4a01b191b6",
+    "checks": [
+      {
+        "id": 37980906178,
+        "event": "pull_request",
+        "name": "Validate project",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 37980906170,
+        "event": "pull_request",
+        "name": "Completion gates",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 37980873003,
+        "event": "push",
+        "name": "Validate project",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 37980872975,
+        "event": "push",
+        "name": "Completion gates",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "tests": "9 unit tests, Python compilation, two-node localhost HTTP simulation, PNG/SVG/links/MIT/credential gates passed",
+    "verifiedComplete": true,
+    "publicationStatus": "published",
+    "requiredMainTreeVerified": true,
+    "merged": true
   }
 }
