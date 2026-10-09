@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "project_completion_evidence",
+  "identity": {
+    "id": 21,
+    "title": "Kitchen Safety Node Live Dashboard",
+    "slug": "kitchen-safety-node-live-dashboard",
+    "category": "Smart Home",
+    "platform": "Home Assistant + ESPHome",
+    "connectivity": "MQTT",
+    "components": [
+      "relay module",
+      "microphone module",
+      "servo motor"
+    ],
+    "scope": "Build a smart home prototype that uses relay module, microphone module, servo motor to display live measurements and status. Include setup instructions, a circuit diagram, tested firmware, and sample output.",
+    "deliverable": "Live Dashboard demonstration with repeatable test steps"
+  },
+  "runReference": "OMP-021-040-20261011",
+  "baseMain": "cffd64ecf4c9e2c66b2e0312e38058f1d5c22caa",
+  "repository": {
+    "url": "https://github.com/OpenMakerProjects/kitchen-safety-node-live-dashboard",
+    "owner": "OpenMakerProjects",
+    "public": null,
+    "defaultBranch": "main",
+    "observedAtIST": null
+  },
+  "branch": "automation/omp-021-040-20261011-id021",
+  "pr": null,
+  "finalHead": null,
+  "checks": [],
+  "main": null,
+  "assets": null,
+  "validation": null,
+  "hardware": {
+    "status": "not_performed",
+    "evidence": null
+  },
+  "result": {
+    "status": "pending",
+    "blocker": null,
+    "timestampIST": null
+  },
+  "gmail": {
+    "status": "deferred_batch_report",
+    "messageId": null
+  },
+  "legacyRemediation": null
+}
