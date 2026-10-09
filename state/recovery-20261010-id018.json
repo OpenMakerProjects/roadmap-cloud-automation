@@ -93,5 +93,15 @@
       "error": "ESPHome 2026.9.1 rejected reserved all-zero API example key; host/image/artifact gates passed, target config failed",
       "remediation": "Public non-zero example key substituted, both actual node builds rerunning"
     }
+  ],
+  "verified": false,
+  "repairs": [
+    {
+      "failedRun": 37998206882,
+      "error": "ESPHome generated GlobalsComponent<MicWindow> before custom header; MicWindow undeclared",
+      "repairCommit": "284133a84aae78e88c16d10a5b6e26da60183990",
+      "change": "Equivalent primitive mic_low/mic_high/mic_count/mic_clean globals and lambdas; header retained only for host tests",
+      "timestampIST": "2026-10-10T03:57:43.788+05:30"
+    }
   ]
 }
