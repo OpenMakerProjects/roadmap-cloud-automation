@@ -103,2078 +103,890 @@
     {
       "id": 21,
       "slug": "kitchen-safety-node-live-dashboard",
-      "title": "Kitchen Safety Node Live Dashboard",
-      "platform": "Home Assistant + ESPHome",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-live-dashboard",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-live-dashboard",
-      "observedAtIST": "2026-10-10T04:49:58.424+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Home Assistant + ESPHome",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "cffd64ecf4c9e2c66b2e0312e38058f1d5c22caa",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 21,
-        "entrypoint": "firmware/device.yaml"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "f34871ec06d88d748538fe2af406eeb2e28ed2e4",
-          "bytes": 1592
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "073ee92eeb0a44dd47deb4e30f80fb649d8896b6",
-          "bytes": 821
-        },
-        "entrypoint": {
-          "path": "firmware/device.yaml",
-          "present": true,
-          "blobSha": "8a9cd91bb0a5eaddf8e4443b1c3d5aa5a7632195",
-          "bytes": 827
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/device.yaml",
-            "firmware/secrets.example.yaml"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/device.yaml",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 22,
       "slug": "kitchen-safety-node-mobile-alerts",
-      "title": "Kitchen Safety Node Mobile Alerts",
-      "platform": "ESP32",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-mobile-alerts",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-mobile-alerts",
-      "observedAtIST": "2026-10-10T04:49:58.424+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP32",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "574ce5b9b579f045f218fdf92c574ce05c0c5a70",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 22,
-        "entrypoint": "firmware/kitchen-safety-node-mobile-alerts/kitchen-safety-node-mobile-alerts.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "71cebde05e67d8f88170799424507f92d90a101c",
-          "bytes": 1636
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "7379b950a795f4e527fe5ed17848ef3f3a786fa8",
-          "bytes": 815
-        },
-        "entrypoint": {
-          "path": "firmware/kitchen-safety-node-mobile-alerts/kitchen-safety-node-mobile-alerts.ino",
-          "present": true,
-          "blobSha": "df98be0f8236904ced639e8d4e81c6f7dae1e9d7",
-          "bytes": 2993
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/kitchen-safety-node-mobile-alerts/kitchen-safety-node-mobile-alerts.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/kitchen-safety-node-mobile-alerts/kitchen-safety-node-mobile-alerts.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 23,
       "slug": "kitchen-safety-node-voice-control",
-      "title": "Kitchen Safety Node Voice Control",
-      "platform": "Arduino Nano 33 IoT",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-voice-control",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-voice-control",
-      "observedAtIST": "2026-10-10T04:49:58.424+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Arduino Nano 33 IoT",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "c33d851a19c60d9ac2688d689474b42d8b3c68f4",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 23,
-        "entrypoint": "firmware/kitchen-safety-node-voice-control/kitchen-safety-node-voice-control.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "ed467db861d1c55015b7b0bf1c25a15f31014fb1",
-          "bytes": 1684
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "d42944e4e1ef715e84b68afa0a808d1b388a270b",
-          "bytes": 855
-        },
-        "entrypoint": {
-          "path": "firmware/kitchen-safety-node-voice-control/kitchen-safety-node-voice-control.ino",
-          "present": true,
-          "blobSha": "c624fd0610ff5f34e06ae4e21f7a7bc2c82a5084",
-          "bytes": 2993
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/kitchen-safety-node-voice-control/kitchen-safety-node-voice-control.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/kitchen-safety-node-voice-control/kitchen-safety-node-voice-control.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 24,
       "slug": "kitchen-safety-node-energy-saver",
-      "title": "Kitchen Safety Node Energy Saver",
-      "platform": "Raspberry Pi Zero 2 W",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-energy-saver",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-energy-saver",
-      "observedAtIST": "2026-10-10T04:49:58.424+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Raspberry Pi Zero 2 W",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "72ddc1a170a1f8f2c1b709dea572d41e3e03aec5",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 24,
-        "entrypoint": "src/main.py"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": true,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "fb497a00597d090559d6b77cf2e39be793580174",
-          "bytes": 1516
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "8329c94b55063d89d8a69b7e33337e65f5c6a1e9",
-          "bytes": 736
-        },
-        "entrypoint": {
-          "path": "src/main.py",
-          "present": true,
-          "blobSha": "165d2893c2d857eb05d2524282b8ef562ee0ac38",
-          "bytes": 2555
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": true,
-          "paths": [
-            "tests/__init__.py",
-            "tests/test_controller.py"
-          ]
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "src/__init__.py",
-            "src/main.py"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "src/main.py",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [
+        "tests/__init__.py",
+        "tests/test_controller.py"
+      ],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png"
       ],
-      "existingValidationOnly": false,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 25,
       "slug": "kitchen-safety-node-predictive-maintenance",
-      "title": "Kitchen Safety Node Predictive Maintenance",
-      "platform": "ESP8266",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-predictive-maintenance",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-predictive-maintenance",
-      "observedAtIST": "2026-10-10T04:50:00.658+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP8266",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "aefee7f8a9a76a4d19b434a28dea6f27e4add3e7",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 25,
-        "entrypoint": "firmware/kitchen-safety-node-predictive-maintenance/kitchen-safety-node-predictive-maintenance.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "dfb2b2ea0fdb1236b4adea59ee074840168ef2f9",
-          "bytes": 1737
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "c7e35c8304bd913b776164b59bb8c8d3c7847465",
-          "bytes": 911
-        },
-        "entrypoint": {
-          "path": "firmware/kitchen-safety-node-predictive-maintenance/kitchen-safety-node-predictive-maintenance.ino",
-          "present": true,
-          "blobSha": "4ae0cd04a76e7159c3d0aa0878d3e2f2ba2200f6",
-          "bytes": 3002
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/kitchen-safety-node-predictive-maintenance/kitchen-safety-node-predictive-maintenance.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/kitchen-safety-node-predictive-maintenance/kitchen-safety-node-predictive-maintenance.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 26,
       "slug": "kitchen-safety-node-offline-automation",
-      "title": "Kitchen Safety Node Offline Automation",
-      "platform": "Home Assistant + ESPHome",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-offline-automation",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-offline-automation",
-      "observedAtIST": "2026-10-10T04:50:00.658+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Home Assistant + ESPHome",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "c8b5a4055bfeb56f963abf71e1ec988816b40275",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 26,
-        "entrypoint": "firmware/device.yaml"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "a0b52a38fcf026b05c6948a7be1de79edf55c337",
-          "bytes": 1564
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "0d4239666795bad652aa4517e8f333d18c9c5cd8",
-          "bytes": 797
-        },
-        "entrypoint": {
-          "path": "firmware/device.yaml",
-          "present": true,
-          "blobSha": "aada0e880d6a7aaf75212ce07a1240457b9a4615",
-          "bytes": 831
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/device.yaml",
-            "firmware/secrets.example.yaml"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/device.yaml",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 27,
       "slug": "kitchen-safety-node-usage-analytics",
-      "title": "Kitchen Safety Node Usage Analytics",
-      "platform": "ESP32",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-usage-analytics",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-usage-analytics",
-      "observedAtIST": "2026-10-10T04:50:00.658+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP32",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "171cca8f099a24900761fa9a381b3ace3bcd7e5c",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 27,
-        "entrypoint": "firmware/kitchen-safety-node-usage-analytics/kitchen-safety-node-usage-analytics.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "103bf506aec1873219eb6521931fe05aa4a7d307",
-          "bytes": 1662
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "fa9eefdb33bde757b5c501f74b1b563075d0ffd0",
-          "bytes": 839
-        },
-        "entrypoint": {
-          "path": "firmware/kitchen-safety-node-usage-analytics/kitchen-safety-node-usage-analytics.ino",
-          "present": true,
-          "blobSha": "45147a4c058d569adffe31a52abbff9a7d39a197",
-          "bytes": 2995
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/kitchen-safety-node-usage-analytics/kitchen-safety-node-usage-analytics.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/kitchen-safety-node-usage-analytics/kitchen-safety-node-usage-analytics.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 28,
       "slug": "kitchen-safety-node-multi-room-network",
-      "title": "Kitchen Safety Node Multi-Room Network",
-      "platform": "Arduino Nano 33 IoT",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-multi-room-network",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-multi-room-network",
-      "observedAtIST": "2026-10-10T04:50:00.658+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Arduino Nano 33 IoT",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "744589a5ded49a8c17f538ab30e12dc9a73a55aa",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 28,
-        "entrypoint": "firmware/kitchen-safety-node-multi-room-network/kitchen-safety-node-multi-room-network.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "234f607e99647a6b7d5e6109bf187da0c6c443ee",
-          "bytes": 1708
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "c55f1d2890d3907e70beb57110674841719e48c0",
-          "bytes": 874
-        },
-        "entrypoint": {
-          "path": "firmware/kitchen-safety-node-multi-room-network/kitchen-safety-node-multi-room-network.ino",
-          "present": true,
-          "blobSha": "c110a69c1a3f5be2a41364be13f1971525c6aa00",
-          "bytes": 2998
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/kitchen-safety-node-multi-room-network/kitchen-safety-node-multi-room-network.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/kitchen-safety-node-multi-room-network/kitchen-safety-node-multi-room-network.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 29,
       "slug": "kitchen-safety-node-safety-interlock",
-      "title": "Kitchen Safety Node Safety Interlock",
-      "platform": "Raspberry Pi Zero 2 W",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-safety-interlock",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-safety-interlock",
-      "observedAtIST": "2026-10-10T04:50:03.487+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Raspberry Pi Zero 2 W",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "2b1e57193f681277fac3dff88dfbd4083cc6e39b",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 29,
-        "entrypoint": "src/main.py"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": true,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "9b04ef4a9e0c6195aecd46f44130e1bb08dc9612",
-          "bytes": 1537
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "761de059098101d74550dee1baa7ee8b12fd87ec",
-          "bytes": 761
-        },
-        "entrypoint": {
-          "path": "src/main.py",
-          "present": true,
-          "blobSha": "71ab4c9c70beab48297e038663b7a9a3dc4b95ed",
-          "bytes": 2559
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": true,
-          "paths": [
-            "tests/__init__.py",
-            "tests/test_controller.py"
-          ]
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "src/__init__.py",
-            "src/main.py"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "src/main.py",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [
+        "tests/__init__.py",
+        "tests/test_controller.py"
+      ],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png"
       ],
-      "existingValidationOnly": false,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 30,
       "slug": "kitchen-safety-node-adaptive-scheduling",
-      "title": "Kitchen Safety Node Adaptive Scheduling",
-      "platform": "ESP8266",
       "repository": "https://github.com/OpenMakerProjects/kitchen-safety-node-adaptive-scheduling",
-      "repositoryFullName": "OpenMakerProjects/kitchen-safety-node-adaptive-scheduling",
-      "observedAtIST": "2026-10-10T04:50:03.487+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP8266",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "25eb82929352275ced45e74b2b49f7b3f60dff32",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 30,
-        "entrypoint": "firmware/kitchen-safety-node-adaptive-scheduling/kitchen-safety-node-adaptive-scheduling.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "f84a167d07560baeeea9e69794814ab31fcee657",
-          "bytes": 1689
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "10e9bc1d51aec7f1e16ad0520c90f94a6297e867",
-          "bytes": 866
-        },
-        "entrypoint": {
-          "path": "firmware/kitchen-safety-node-adaptive-scheduling/kitchen-safety-node-adaptive-scheduling.ino",
-          "present": true,
-          "blobSha": "052ea05ed71260b45a7b5afff528924f84e58c19",
-          "bytes": 2998
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/kitchen-safety-node-adaptive-scheduling/kitchen-safety-node-adaptive-scheduling.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/kitchen-safety-node-adaptive-scheduling/kitchen-safety-node-adaptive-scheduling.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 31,
       "slug": "bathroom-comfort-monitor-live-dashboard",
-      "title": "Bathroom Comfort Monitor Live Dashboard",
-      "platform": "Arduino Nano 33 IoT",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-live-dashboard",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-live-dashboard",
-      "observedAtIST": "2026-10-10T04:50:03.487+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Arduino Nano 33 IoT",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "e36bd80b62cd5ed48e896a7826c35d47edf4ea5f",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 31,
-        "entrypoint": "firmware/bathroom-comfort-monitor-live-dashboard/bathroom-comfort-monitor-live-dashboard.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "5a4b949b144c7d9e702019a68d8e76a8e9bf85d4",
-          "bytes": 1698
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "40239cf12f8ae2bed672ffd8af2d300622032c66",
-          "bytes": 863
-        },
-        "entrypoint": {
-          "path": "firmware/bathroom-comfort-monitor-live-dashboard/bathroom-comfort-monitor-live-dashboard.ino",
-          "present": true,
-          "blobSha": "d6bd86e4f65467b6dbebf5279895409279371fab",
-          "bytes": 2993
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/bathroom-comfort-monitor-live-dashboard/bathroom-comfort-monitor-live-dashboard.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/bathroom-comfort-monitor-live-dashboard/bathroom-comfort-monitor-live-dashboard.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 32,
       "slug": "bathroom-comfort-monitor-mobile-alerts",
-      "title": "Bathroom Comfort Monitor Mobile Alerts",
-      "platform": "Raspberry Pi Zero 2 W",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-mobile-alerts",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-mobile-alerts",
-      "observedAtIST": "2026-10-10T04:50:03.487+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Raspberry Pi Zero 2 W",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "ab9faa0936c15243cd1c9124ce379cfcc23f0520",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 32,
-        "entrypoint": "src/main.py"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": true,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "938119b3c3ba1b9398af48d3c459c25bec26560a",
-          "bytes": 1575
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "68f279037bf3a5569322ccc2a337f29c7e2ccff3",
-          "bytes": 807
-        },
-        "entrypoint": {
-          "path": "src/main.py",
-          "present": true,
-          "blobSha": "271007fffd85d13b4b5dc69e15953f58ec2d903e",
-          "bytes": 2564
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": true,
-          "paths": [
-            "tests/__init__.py",
-            "tests/test_controller.py"
-          ]
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "src/__init__.py",
-            "src/main.py"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "src/main.py",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [
+        "tests/__init__.py",
+        "tests/test_controller.py"
+      ],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png"
       ],
-      "existingValidationOnly": false,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 33,
       "slug": "bathroom-comfort-monitor-voice-control",
-      "title": "Bathroom Comfort Monitor Voice Control",
-      "platform": "ESP8266",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-voice-control",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-voice-control",
-      "observedAtIST": "2026-10-10T04:50:05.937+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP8266",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "92386ca3c6d437a723fce68e792814730e323b41",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 33,
-        "entrypoint": "firmware/bathroom-comfort-monitor-voice-control/bathroom-comfort-monitor-voice-control.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "2c7b00e5904c5b8e81b973b115a5471f5116dcd8",
-          "bytes": 1659
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "9534533408f00a8379448cdb9f3421025020dd61",
-          "bytes": 831
-        },
-        "entrypoint": {
-          "path": "firmware/bathroom-comfort-monitor-voice-control/bathroom-comfort-monitor-voice-control.ino",
-          "present": true,
-          "blobSha": "b77fa3aad6d779dde0f9980a473d2f4564b3964d",
-          "bytes": 3012
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/bathroom-comfort-monitor-voice-control/bathroom-comfort-monitor-voice-control.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/bathroom-comfort-monitor-voice-control/bathroom-comfort-monitor-voice-control.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 34,
       "slug": "bathroom-comfort-monitor-energy-saver",
-      "title": "Bathroom Comfort Monitor Energy Saver",
-      "platform": "Home Assistant + ESPHome",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-energy-saver",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-energy-saver",
-      "observedAtIST": "2026-10-10T04:50:05.937+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Home Assistant + ESPHome",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "fc6f357bde1520540a12dbffe3b23d1e20f38f28",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 34,
-        "entrypoint": "firmware/device.yaml"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "f4efde279f0159dc39dbf8d9ade236995e44e2f3",
-          "bytes": 1564
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "638c8bf324340e8178b57ffa5a6a5f286475cf83",
-          "bytes": 790
-        },
-        "entrypoint": {
-          "path": "firmware/device.yaml",
-          "present": true,
-          "blobSha": "1080736aded356d379e790a64b62c76e1ffe0c51",
-          "bytes": 830
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/device.yaml",
-            "firmware/secrets.example.yaml"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/device.yaml",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 35,
       "slug": "bathroom-comfort-monitor-predictive-maintenance",
-      "title": "Bathroom Comfort Monitor Predictive Maintenance",
-      "platform": "ESP32",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-predictive-maintenance",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-predictive-maintenance",
-      "observedAtIST": "2026-10-10T04:50:05.937+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP32",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "e950d54d47a85a92caaf887caaa8fdd33b911b7f",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 35,
-        "entrypoint": "firmware/bathroom-comfort-monitor-predictive-maintenance/bathroom-comfort-monitor-predictive-maintenance.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "f8ec6f5780bead96a2eb7bb01b0c20335f0d0130",
-          "bytes": 1743
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "be82ab71303938f9eb0dd3951bcf8f62cd976402",
-          "bytes": 914
-        },
-        "entrypoint": {
-          "path": "firmware/bathroom-comfort-monitor-predictive-maintenance/bathroom-comfort-monitor-predictive-maintenance.ino",
-          "present": true,
-          "blobSha": "65cecdd2f37b9778e03a36158e637c450b6016fa",
-          "bytes": 3021
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/bathroom-comfort-monitor-predictive-maintenance/bathroom-comfort-monitor-predictive-maintenance.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/bathroom-comfort-monitor-predictive-maintenance/bathroom-comfort-monitor-predictive-maintenance.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 36,
       "slug": "bathroom-comfort-monitor-offline-automation",
-      "title": "Bathroom Comfort Monitor Offline Automation",
-      "platform": "Arduino Nano 33 IoT",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-offline-automation",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-offline-automation",
-      "observedAtIST": "2026-10-10T04:50:05.937+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Arduino Nano 33 IoT",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "eb47b6b8ac5f79c8736d49e42af25ee13f577df6",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 36,
-        "entrypoint": "firmware/bathroom-comfort-monitor-offline-automation/bathroom-comfort-monitor-offline-automation.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "6b0c698ee7228b8f1eba42b15f17e2e505bf1ef7",
-          "bytes": 1756
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "53e28ba43ea0a416f20b4527b030a847bdef3c6a",
-          "bytes": 917
-        },
-        "entrypoint": {
-          "path": "firmware/bathroom-comfort-monitor-offline-automation/bathroom-comfort-monitor-offline-automation.ino",
-          "present": true,
-          "blobSha": "19570c15e351af7962e2e0a8d23c1dbd0a8f10a3",
-          "bytes": 3016
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/bathroom-comfort-monitor-offline-automation/bathroom-comfort-monitor-offline-automation.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/bathroom-comfort-monitor-offline-automation/bathroom-comfort-monitor-offline-automation.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 37,
       "slug": "bathroom-comfort-monitor-usage-analytics",
-      "title": "Bathroom Comfort Monitor Usage Analytics",
-      "platform": "Raspberry Pi Zero 2 W",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-usage-analytics",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-usage-analytics",
-      "observedAtIST": "2026-10-10T04:50:08.578+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Raspberry Pi Zero 2 W",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "f17e96abfe384d6a596c291ce1e5eec89e9dce45",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 37,
-        "entrypoint": "src/main.py"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": true,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "2fc23a15e58a66dd6fa733f087006a7d9163858e",
-          "bytes": 1563
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "dd5fc6911bfe8a6fee65b83597a4ff35311f0927",
-          "bytes": 797
-        },
-        "entrypoint": {
-          "path": "src/main.py",
-          "present": true,
-          "blobSha": "321957bfade97d6fee95934823caffb069893a09",
-          "bytes": 2562
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": true,
-          "paths": [
-            "tests/__init__.py",
-            "tests/test_controller.py"
-          ]
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "src/__init__.py",
-            "src/main.py"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "src/main.py",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [
+        "tests/__init__.py",
+        "tests/test_controller.py"
+      ],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png"
       ],
-      "existingValidationOnly": false,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 38,
       "slug": "bathroom-comfort-monitor-multi-room-network",
-      "title": "Bathroom Comfort Monitor Multi-Room Network",
-      "platform": "ESP8266",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-multi-room-network",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-multi-room-network",
-      "observedAtIST": "2026-10-10T04:50:08.578+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP8266",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "cea34b9355afc09b502a2804dd596356ef325a61",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 38,
-        "entrypoint": "firmware/bathroom-comfort-monitor-multi-room-network/bathroom-comfort-monitor-multi-room-network.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "53eb952c9102607e8c3088f79a0fdcca436b59e5",
-          "bytes": 1693
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "7556f4349da996bc5eeb67db499fb379d3f919eb",
-          "bytes": 860
-        },
-        "entrypoint": {
-          "path": "firmware/bathroom-comfort-monitor-multi-room-network/bathroom-comfort-monitor-multi-room-network.ino",
-          "present": true,
-          "blobSha": "989a7dca8a7d407043f33c35849a31f3c9cdfe17",
-          "bytes": 2997
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/bathroom-comfort-monitor-multi-room-network/bathroom-comfort-monitor-multi-room-network.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/bathroom-comfort-monitor-multi-room-network/bathroom-comfort-monitor-multi-room-network.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 39,
       "slug": "bathroom-comfort-monitor-safety-interlock",
-      "title": "Bathroom Comfort Monitor Safety Interlock",
-      "platform": "Home Assistant + ESPHome",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-safety-interlock",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-safety-interlock",
-      "observedAtIST": "2026-10-10T04:50:08.578+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "Home Assistant + ESPHome",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "69c0cee509e3e0e149d7400a6f02ad49dec4dfd6",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 39,
-        "entrypoint": "firmware/device.yaml"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "f657f7ac6ebf1e1c85fdb95bce36294e0c3de288",
-          "bytes": 1556
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "c68c57b930a3929794737af909c6781c18610091",
-          "bytes": 786
-        },
-        "entrypoint": {
-          "path": "firmware/device.yaml",
-          "present": true,
-          "blobSha": "ae8aabc0f6f78ff852999440051f34f4f6656555",
-          "bytes": 834
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/device.yaml",
-            "firmware/secrets.example.yaml"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/device.yaml",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     },
     {
       "id": 40,
       "slug": "bathroom-comfort-monitor-adaptive-scheduling",
-      "title": "Bathroom Comfort Monitor Adaptive Scheduling",
-      "platform": "ESP32",
       "repository": "https://github.com/OpenMakerProjects/bathroom-comfort-monitor-adaptive-scheduling",
-      "repositoryFullName": "OpenMakerProjects/bathroom-comfort-monitor-adaptive-scheduling",
-      "observedAtIST": "2026-10-10T04:50:08.578+05:30",
-      "repositoryExistence": "confirmed_exists",
-      "errors": [],
-      "permissionRisks": [],
-      "organizationOwner": "OpenMakerProjects",
-      "ownerType": "Organization",
+      "platform": "ESP32",
+      "organization": "OpenMakerProjects",
+      "exists": "confirmed_exists",
       "public": true,
-      "visibility": "public",
       "defaultBranch": "main",
-      "archived": false,
-      "disabled": false,
-      "reportedPermissions": {
-        "admin": true,
-        "maintain": true,
-        "push": true,
-        "triage": true,
-        "pull": true
-      },
-      "mainBranchExists": true,
       "mainHead": "3865b9ddcdd222efe7a2e9ed8fd3c39ca970f810",
-      "mainProtected": false,
-      "projectMetadata": {
-        "parsed": true,
-        "id": 40,
-        "entrypoint": "firmware/bathroom-comfort-monitor-adaptive-scheduling/bathroom-comfort-monitor-adaptive-scheduling.ino"
+      "artifactMatrix": {
+        "readme": true,
+        "license": true,
+        "projectJson": true,
+        "codeEntrypoint": true,
+        "circuitSvg": false,
+        "overviewPng": false,
+        "ci": true,
+        "dedicatedTests": false,
+        "validationMaterial": true
       },
-      "artifacts": {
-        "readme": {
-          "path": "README.md",
-          "present": true,
-          "blobSha": "f9f26b7d636a8d4a1df469640e4756487634a065",
-          "bytes": 1737
-        },
-        "license": {
-          "path": "LICENSE",
-          "present": true,
-          "blobSha": "76348a9b91063b7c7b70ffd6e7072645e25faa10",
-          "bytes": 1087
-        },
-        "projectJson": {
-          "path": "project.json",
-          "present": true,
-          "blobSha": "de9acb57bd016192db4ca47998faa196234a930d",
-          "bytes": 911
-        },
-        "entrypoint": {
-          "path": "firmware/bathroom-comfort-monitor-adaptive-scheduling/bathroom-comfort-monitor-adaptive-scheduling.ino",
-          "present": true,
-          "blobSha": "4f63fa13fa2574303d9f4f82b0f7994c923dcc28",
-          "bytes": 3018
-        },
-        "circuitSvg": {
-          "path": "docs/circuit-diagram.svg",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "overviewPng": {
-          "path": "docs/images/project-overview.png",
-          "present": false,
-          "blobSha": null,
-          "bytes": null
-        },
-        "ci": {
-          "present": true,
-          "paths": [
-            ".github/workflows/validate.yml"
-          ]
-        },
-        "tests": {
-          "present": false,
-          "paths": []
-        },
-        "validationMaterial": {
-          "present": true,
-          "paths": [
-            "tools/validate.py"
-          ]
-        },
-        "sourceMaterial": {
-          "present": true,
-          "paths": [
-            "firmware/bathroom-comfort-monitor-adaptive-scheduling/bathroom-comfort-monitor-adaptive-scheduling.ino"
-          ]
-        }
-      },
-      "missingItems": [
+      "entrypoint": "firmware/bathroom-comfort-monitor-adaptive-scheduling/bathroom-comfort-monitor-adaptive-scheduling.ino",
+      "ciPaths": [
+        ".github/workflows/validate.yml"
+      ],
+      "testPaths": [],
+      "validationPaths": [
+        "tools/validate.py"
+      ],
+      "missing": [
         "docs/circuit-diagram.svg",
         "docs/images/project-overview.png",
         "tests"
       ],
-      "existingValidationOnly": true,
-      "preflightCompletion": "tree presence only; no build, content quality, circuit correctness, PNG bytes or behavioral validation performed",
-      "readyForExistingRepositoryProcessing": true,
-      "repositoryCreationRequired": false
+      "access": {
+        "push": true,
+        "admin": true,
+        "mainProtected": false,
+        "archived": false,
+        "disabled": false
+      },
+      "permissionRisks": [],
+      "errors": []
     }
   ],
   "restrictionsObserved": {
@@ -2189,5 +1001,6 @@
     "priorLeaseStatusObserved": "completed",
     "emailSent": false,
     "schedulerChanged": false
-  }
+  },
+  "observationScope": "Main tree and project.json presence inspected at each recorded main HEAD. Contents/build correctness, PNG integrity and test quality were not validated."
 }
