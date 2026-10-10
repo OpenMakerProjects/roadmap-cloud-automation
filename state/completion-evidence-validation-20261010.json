@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "kind": "completion_evidence_validation",
+  "observedAtIST": "2026-10-10T05:33:12.185+05:30",
+  "testedCommit": "5932557d783b85a90d08f40e437981255f335583",
+  "filesAdded": [
+    "tools/completion_evidence.py",
+    "tests/test_completion_evidence.py",
+    "templates/completion-evidence/schema-v1.json",
+    "templates/completion-evidence/pending-id021.json",
+    "templates/completion-evidence/README.md"
+  ],
+  "ciExtended": ".github/workflows/control-manifest.yml",
+  "commands": [
+    {
+      "command": "python tools/completion_evidence.py --generate-pending 21 > /tmp/pending-evidence.json",
+      "exitCode": 0,
+      "result": "Pending template generated in cloud CI only; no project action."
+    },
+    {
+      "command": "python tools/completion_evidence.py --validate /tmp/pending-evidence.json",
+      "exitCode": 1,
+      "expected": true,
+      "result": "Rejected missing verified public-repository evidence; pending cannot count complete."
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exitCode": 0,
+      "tests": 40,
+      "newEvidenceTests": 11,
+      "failures": 0,
+      "errors": 0,
+      "networkFree": true
+    }
+  ],
+  "coverage": {
+    "projectPlatformFixtures": 20,
+    "fixturesAreSynthetic": true,
+    "fullBatchAggregationTest": true,
+    "exactHeadPushAndPRGateMutations": true,
+    "duplicatePRAndRunIDGuards": true,
+    "mainTreeAndAssets": true,
+    "SVGParseAndSecurity": true,
+    "projectSpecificHostAndActualTarget": true,
+    "truthfulHardwareEvidence": true,
+    "legacyHistoricalOptIn": true,
+    "deferredGmail": true
+  },
+  "aggregationNotes": "Only valid supplied schema-v1 records count. Pending/invalid records never count; duplicate IDs fail closed. Fixture aggregation of IDs21–40 yields 20/2180/next1 because historical IDs1–20 were deliberately not converted or supplied. This is a fixture result, not a change to durable project totals.",
+  "cloudCI": {
+    "runID": 38007267928,
+    "jobID": 114078824302,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38007267928",
+    "conclusion": "success"
+  },
+  "history": {
+    "existingStateFilesPreserved": 37,
+    "roadmapUnchanged": true,
+    "completionVerificationsUnchanged": true,
+    "sentReportEvidenceUnchanged": true,
+    "durableVerifiedTotalUnchanged": 20,
+    "nextStartingIDUnchanged": 21
+  },
+  "restrictionsObserved": {
+    "onlyControlRepositoryChanged": true,
+    "projectLeaseAcquired": false,
+    "projectRepositoriesMutated": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false
+  },
+  "limitations": "Offline consistency and required attestations do not replace current connected GitHub observations, actual target build logs, source/circuit review, image verification or truthful hardware evidence. No historical checks were invented or migrated."
+}
