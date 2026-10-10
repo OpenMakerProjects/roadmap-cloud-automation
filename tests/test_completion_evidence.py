@@ -128,7 +128,8 @@ class CompletionEvidenceTests(unittest.TestCase):
         with self.assertRaises(ValidationError):validate(r,e,p,allow_legacy=True)
         e=self.roadmap[12];p=dict(p,id=13)
         r["identity"]={k:e[k] for k in FIELDS}
-        r["branch"]=r["branch"].replace("id021","id013");r["pr"]["branch"]=r["branch"]
+        r["runReference"]="OMP-001-020-20261011"
+        r["branch"]=r["branch"].replace("id021","id013").replace("omp-021-040-20261011","omp-001-020-20261011");r["pr"]["branch"]=r["branch"]
         repo="https://github.com/OpenMakerProjects/"+e["slug"]
         r["repository"]["url"]=repo;r["pr"]["url"]=repo+"/pull/1"
         r["main"]["repository"]=repo
@@ -185,6 +186,7 @@ class CompletionEvidenceTests(unittest.TestCase):
         copied=copy.deepcopy(records[:2])
         copied[1]["checks"][0]["runId"]=copied[0]["checks"][0]["runId"]
         copied[1]["checks"][0]["url"]=copied[1]["repository"]["url"]+"/actions/runs/"+str(copied[1]["checks"][0]["runId"])
+        copied[1]["assets"]["image"]["decoder"]["validationRunId"]=copied[1]["checks"][0]["runId"]
         summary=aggregate(copied,self.roadmap,self.plans)
         self.assertEqual(summary["verifiedTotal"],1)
         self.assertIn("22",summary["invalidOrPending"])
