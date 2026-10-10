@@ -117,13 +117,7 @@ def validate_inputs(data,snapshot):
     while historic and historic.get("kind")=="batch_lifecycle_proposal":
         historic=historic.get("previousStateSnapshot")
     if historic is None:
-        historic=observed[BATCH] # Absence is permitted only with an independently valid completed baseline.
-        historic={"owner":"baseline","status":"completed","originalSelectedIDs":list(range(1,21)),
-            "completedIDs":list(range(1,21)),"remainingIDs":[],"activeProject":None,
-            "expiresAt":"2026-10-10T00:00:00+05:30","verifiedTotal":20,"remainingTotal":2180,"nextStartingID":21}
-        # Mail fields are needed by the legacy snapshot validator.
-        historic=copy.deepcopy(observed[BATCH].get("lease",historic))
-        raise ValidationError("absent lease requires explicit validated baseline adapter; planning refuses synthetic lease")
+        raise ValidationError("absent historical baseline; do not synthesize completion evidence")
     validate_state(context["roadmap"],context["historicalCompletions"],historic,
         observed[BATCH],observed["state/scheduler-readback-20261010.json"],
         observed["state/cloud-schedule-setup-20261006.json"],observed["state/daily-results.csv"])
@@ -161,7 +155,7 @@ def validate_inputs(data,snapshot):
             require(proposed.get("report") is not None,"ledger before report intent")
             same(new,proposed["report"]["ledger"],"ledger differs from transition")
             render(new,context["roadmap"])
-            require(path==f"state/run-{new['runDateIST'].replace('-','')}-batch{new['selectedIDs'][0]:03d}-{new['selectedIDs'][-1]:03d}.json","ledger filename identity")
+            require(path==f"state/run-{new['timestampIST'][:10].replace('-','')}-batch{new['selectedIDs'][0]:03d}-{new['selectedIDs'][-1]:03d}.json","ledger filename identity")
             if old:same(new,old_value,"historical ledger immutable")
         else:
             same(new,proposed.get("report"),"report-intent differs from transition")
