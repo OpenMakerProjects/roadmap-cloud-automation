@@ -30,12 +30,13 @@ class CompletionEvidenceTests(unittest.TestCase):
             "head":final,"status":"completed","conclusion":"success",
             "completedAtIST":"2026-10-11T04:59:00+05:30"}
             for index,(event,name) in enumerate(sorted(GATES))]
+        testfile="tests/test_policy.py" if plan["actualTargetGate"]["catalogRef"]=="piPython" else "tests/policy_test.cpp"
         files=["README.md","LICENSE",".gitignore","project.json",plan["intendedEntrypoint"],
-            "docs/circuit-diagram.svg","docs/images/project-overview.png","tests/policy_test.cpp",
+            "docs/circuit-diagram.svg","docs/images/project-overview.png",testfile,
             "tools/validate.py",".github/workflows/completion.yml","config/example.json"]
         r["main"]={"branch":"main","commit":main,"public":True,
             "reverifiedAtIST":"2026-10-11T05:01:00+05:30","files":files,
-            "testFiles":["tests/policy_test.cpp"],"validationFiles":["tools/validate.py"],
+            "testFiles":[testfile],"validationFiles":["tools/validate.py"],
             "ciFiles":[".github/workflows/completion.yml"],"configurationFiles":["config/example.json"],
             "metadataEntrypoint":plan["intendedEntrypoint"],"realSource":True,"fullMITLicense":True}
         svg='<svg xmlns="http://www.w3.org/2000/svg"><text x="1" y="2">Synthetic topology fixture</text></svg>'
