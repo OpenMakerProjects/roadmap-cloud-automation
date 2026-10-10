@@ -195,7 +195,8 @@ def transition(state,context,request):
         prior_owners=set()
         def owners(node):
             if type(node) is dict:
-                if type(node.get("owner")) is str:prior_owners.add(node["owner"])
+                for field in ("owner","previousOwner","previousExpiredOwner"):
+                    if type(node.get(field)) is str:prior_owners.add(node[field])
                 for value in node.values():owners(value)
             elif type(node) is list:
                 for value in node:owners(value)
