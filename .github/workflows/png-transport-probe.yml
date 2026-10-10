@@ -1,10 +1,10 @@
-name: Read-only PNG transport probe
+name: Direct PNG Git-blob transport probe
 on:
   push:
     branches: [main]
     paths: ['.github/workflows/png-transport-probe.yml']
 permissions:
-  contents: read
+  contents: write
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -14,29 +14,63 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Read immutable public blob and validate original bytes
+      - name: Validate public PNG and create an unattached content-addressed blob
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REPOSITORY: ${{ github.repository }}
         run: |
           python - <<'PY'
-          import base64,hashlib,importlib.util,json,urllib.request
+          import base64,hashlib,importlib.util,json,os,urllib.request
           from pathlib import Path
+
           source="OpenMakerProjects/smart-entryway-adaptive-scheduling"
-          sha="9e086a0c5bb8258e4d4f1ad89539145ad141a669"
-          request=urllib.request.Request("https://api.github.com/repos/"+source+"/git/blobs/"+sha,
-              headers={"Accept":"application/vnd.github+json","User-Agent":"OpenMakerProjects-read-only-PNG-validation"})
-          with urllib.request.urlopen(request,timeout=60) as response:
-              blob=json.load(response)
-          assert blob["sha"]==sha and blob["encoding"]=="base64" and blob["size"]==1857386
-          encoded="".join(blob["content"].splitlines())
+          expected_blob="9e086a0c5bb8258e4d4f1ad89539145ad141a669"
+          expected_size=1857386
+          source_request=urllib.request.Request(
+              "https://api.github.com/repos/"+source+"/git/blobs/"+expected_blob,
+              headers={"Accept":"application/vnd.github+json","User-Agent":"OpenMakerProjects-PNG-transport-probe"},
+          )
+          with urllib.request.urlopen(source_request,timeout=60) as response:
+              source_blob=json.load(response)
+          assert source_blob["sha"]==expected_blob
+          assert source_blob["encoding"]=="base64"
+          assert source_blob["size"]==expected_size
+          encoded="".join(source_blob["content"].splitlines())
           data=base64.b64decode(encoded,validate=True)
-          assert base64.b64encode(data).decode()==encoded and len(data)==1857386
-          assert hashlib.sha1(b"blob "+str(len(data)).encode()+b"\0"+data).hexdigest()==sha
-          spec=importlib.util.spec_from_file_location("strict",Path("templates/image-transport/decode_project_image.py"))
-          module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          assert base64.b64encode(data).decode("ascii")==encoded
+          assert len(data)==expected_size
+          assert hashlib.sha1(b"blob "+str(len(data)).encode()+b"\0"+data).hexdigest()==expected_blob
+
+          spec=importlib.util.spec_from_file_location(
+              "strict",Path("templates/image-transport/decode_project_image.py"))
+          module=importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
           dimensions=module.validate_png(data)
-          print("PNG_PROBE_JSON="+json.dumps({"source":source,"blobSHA":sha,"bytes":len(data),"dimensions":dimensions,
-              "sha256":hashlib.sha256(data).hexdigest(),"signatureChunksCRCPixelStreamCredentials":"passed"}))
-          # Public existing image only; no credentials/URLs are printed. Bounded log records allow a
-          # text-only cloud connector to retrieve unchanged bytes without a scratch executor.
-          for index,start in enumerate(range(0,len(encoded),16000)):
-              print("PNG_PROBE_B64_"+str(index).zfill(3)+"="+encoded[start:start+16000])
+
+          payload=json.dumps({"content":encoded,"encoding":"base64"}).encode()
+          target_request=urllib.request.Request(
+              "https://api.github.com/repos/"+os.environ["TARGET_REPOSITORY"]+"/git/blobs",
+              data=payload,
+              method="POST",
+              headers={
+                  "Accept":"application/vnd.github+json",
+                  "Authorization":"Bearer "+os.environ["GH_TOKEN"],
+                  "Content-Type":"application/json",
+                  "User-Agent":"OpenMakerProjects-PNG-transport-probe",
+                  "X-GitHub-Api-Version":"2022-11-28",
+              },
+          )
+          with urllib.request.urlopen(target_request,timeout=90) as response:
+              created=json.load(response)
+          assert created["sha"]==expected_blob
+          print("PNG_BLOB_CANARY="+json.dumps({
+              "source":source,
+              "target":os.environ["TARGET_REPOSITORY"],
+              "blobSHA":created["sha"],
+              "bytes":len(data),
+              "dimensions":dimensions,
+              "sha256":hashlib.sha256(data).hexdigest(),
+              "validation":"signature/chunks/CRC/pixel-stream/credential-scan passed",
+              "attachedToTreeOrRef":False,
+          },sort_keys=True))
           PY
