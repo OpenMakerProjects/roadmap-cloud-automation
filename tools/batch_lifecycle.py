@@ -296,6 +296,7 @@ def transition(state,context,request):
             if report["reportReference"] in sent:same(sent[report["reportReference"]],{receipt["messageId"]},"conflicting sent message")
             if report["status"]=="sent":same(report["receipt"],receipt,"second receipt differs")
             else:out["report"].update(status="sent",messageId=receipt["messageId"],receipt=copy.deepcopy(receipt))
+            if "deliveryPending" in out:out["deliveryPending"]=False
         elif action=="release":
             same(state["activeProject"],None,"release active project")
             same(set(map(int,state["results"])),set(state["originalSelectedIDs"]),"release before all terminal")
