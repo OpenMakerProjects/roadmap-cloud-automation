@@ -111,7 +111,8 @@
     "afterPromptSHA256": "d106a84388b74eb80d4f4175fe7ff5071f9e29696f4a7f92aaa8ee5b50eefef8",
     "promptChanged": false,
     "duplicateCreated": false,
-    "notificationBehavior": "No schedule update issued; all settings preserved"
+    "notificationBehavior": "No schedule update issued; all settings preserved",
+    "readbackTimestampIST": "2026-10-10T06:02:56.291+05:30"
   },
   "preservation": {
     "leaseChanged": false,
@@ -124,11 +125,29 @@
     "batchStarted": false,
     "operationalStateChanged": false,
     "stagedRecordsCreated": false,
-    "scheduleUpdateCalled": false
+    "scheduleUpdateCalled": false,
+    "existingStateBlobsUnchanged": true
   },
   "ci": {
-    "status": "pending",
-    "reason": "Audit/documentation commit triggers existing read-only cloud control CI"
+    "status": "passed",
+    "runId": 38009513391,
+    "head": "578a942935a6074757195818709b07da125fa052",
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38009513391",
+    "testCount": 62,
+    "summary": [
+      "2026-10-10T00:33:15.7656836Z Ran 62 tests in 24.818s",
+      "2026-10-10T00:33:15.7657286Z OK"
+    ],
+    "commands": [
+      "python tools/validate_execution_manifest.py",
+      "python tools/validate_control_state.py",
+      "python scripts/select_batch.py",
+      "python tools/daily_report.py --validate-history",
+      "python tools/completion_evidence.py --generate-pending 21 (pending must fail complete validation)",
+      "python tools/propose_batch.py (non-authoritative dry-run only)",
+      "python -m py_compile tools/control_persistence.py",
+      "python -m unittest discover -s tests -v"
+    ]
   },
   "limitations": [
     "Read-only audit cannot establish hidden connector implementation or live write permissions/protection success.",
