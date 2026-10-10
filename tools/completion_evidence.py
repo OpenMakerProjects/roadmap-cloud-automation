@@ -64,7 +64,11 @@ def validate(record,entry,plan,allow_legacy=False):
     sha(record.get("baseMain"),"baseMain")
     same(record["baseMain"],plan["currentMainSHA"],"observed current base main")
     ref=record.get("runReference")
-    require(type(ref) is str and bool(re.fullmatch(r"OMP-[A-Za-z0-9-]+",ref)),"runReference")
+    require(type(ref) is str,"runReference")
+    match=re.fullmatch(r"OMP-([0-9]{3,4})-([0-9]{3,4})-([0-9]{8})",ref)
+    require(match is not None,"canonical runReference")
+    first,last=int(match.group(1)),int(match.group(2))
+    require(first<=entry["id"]<=last and 1<=last-first+1<=20,"project belongs to planned run")
     repo="https://github.com/OpenMakerProjects/"+entry["slug"]
     repository=record.get("repository");obj(repository,"repository")
     for key,value in (("url",repo),("owner","OpenMakerProjects"),("public",True),("defaultBranch","main")):
