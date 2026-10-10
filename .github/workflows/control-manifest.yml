@@ -33,6 +33,6 @@ jobs:
       - name: Validate non-authoritative tomorrow proposal
         run: |
           python tools/propose_batch.py --root . --now-ist 2026-10-11T04:00:00+05:30 --owner dry-run-20261011-ids021-040 > /tmp/batch-proposal.json
-          python -c 'import json; p=json.load(open("/tmp/batch-proposal.json")); assert p["planningOnly"] and p["actualLeaseUnchanged"]; assert p["proposal"]["state"]["originalSelectedIDs"] == list(range(21,41)); print("Dry-run proposal valid; no lease acquired")'
+          python -c 'import json; p=json.load(open("/tmp/batch-proposal.json")); assert p["planningOnly"] and p["actualLeaseUnchanged"]; assert p["proposal"]["state"]["originalSelectedIDs"] == list(range(21,41)); print("Dry-run proposal valid; no lease acquired"); print("BATCH_PROPOSAL_JSON="+json.dumps(p,sort_keys=True))'
       - name: Run offline regression tests
         run: python -m unittest discover -s tests -v
