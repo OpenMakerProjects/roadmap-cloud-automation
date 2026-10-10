@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "existing_cloud_schedule_safeguards_update",
+  "status": "verified",
+  "scheduleId": "6ac3fd99bfc88191b9cefd5ea5c04359",
+  "source": "authoritative cloud automations.update followed by automations.peek",
+  "enabled": true,
+  "paused": false,
+  "timezone": "Asia/Kolkata",
+  "recurrence": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Kolkata:20261006T040000\nRRULE:FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
+  "timingMode": "exact_schedule",
+  "nextRunTime": null,
+  "updateTimestampIST": "2026-10-10T05:58:25.276+05:30",
+  "readbackTimestampIST": "2026-10-10T05:58:45.986+05:30",
+  "serverUpdatedAt": "2026-10-10T00:28:44.832293+00:00",
+  "beforePromptSHA256": "87219bcfef25fd1a34f6a7a76720400327fe1e8513de00105b2158a6835c845a",
+  "afterPromptSHA256": "d106a84388b74eb80d4f4175fe7ff5071f9e29696f4a7f92aaa8ee5b50eefef8",
+  "promptStoredInAudit": false,
+  "controlRepository": "https://github.com/OpenMakerProjects/roadmap-cloud-automation",
+  "referencedControlCommit": "e8d9c452a0de6e23c55db43f2e31721da37aa8c3",
+  "referencedTools": [
+    "scripts/select_batch.py",
+    "tools/validate_control_state.py",
+    "tools/validate_execution_manifest.py",
+    "tools/batch_lifecycle.py",
+    "tools/control_persistence.py",
+    "tools/completion_evidence.py",
+    "tools/daily_report.py",
+    "templates/image-transport/"
+  ],
+  "contracts": [
+    "AGENTS.md",
+    "docs/cloud-scheduled-execution.md",
+    "templates/control-persistence/README.md",
+    "state/execution-manifest-20261011-ids021-040.json",
+    "state/execution-manifest-20261011-ids021-040-qa.json",
+    "state/preflight-20261010-ids021-040.json"
+  ],
+  "readback": {
+    "sameScheduleID": true,
+    "sameRecurrence": true,
+    "sameTimezone": true,
+    "sameTitle": true,
+    "sameConversation": true,
+    "sameTimingMode": true,
+    "onlyChangedFields": [
+      "prompt",
+      "updated_at"
+    ],
+    "observedScheduleCount": 1,
+    "duplicateCreated": false,
+    "notificationSettingsExposed": false,
+    "notificationBehavior": "Preserved by prompt-only update; no notification fields supplied; all exposed non-prompt settings unchanged"
+  },
+  "ci": {
+    "runId": 38009192833,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38009192833",
+    "head": "e8d9c452a0de6e23c55db43f2e31721da37aa8c3",
+    "conclusion": "success",
+    "testCount": 62,
+    "summary": [
+      "2026-10-10T00:28:57.1188406Z Ran 62 tests in 27.165s",
+      "2026-10-10T00:28:57.1188729Z OK"
+    ],
+    "commands": [
+      "python tools/validate_execution_manifest.py",
+      "python tools/validate_control_state.py",
+      "python scripts/select_batch.py",
+      "python tools/daily_report.py --validate-history",
+      "python tools/completion_evidence.py --generate-pending 21 (pending must fail complete validation)",
+      "python tools/propose_batch.py (non-authoritative cloud planning only)",
+      "python -m py_compile tools/control_persistence.py",
+      "python -m unittest discover -s tests -v"
+    ]
+  },
+  "preservation": {
+    "existingStateUnchanged": true,
+    "activeLeaseUnchanged": true,
+    "activeLeaseBlob": "995fa246c57a498a09ad033800bce0a46ec8d66e",
+    "batchStarted": false,
+    "projectLeaseAcquired": false,
+    "projectRepositoriesChanged": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false,
+    "runNowCalled": false,
+    "scheduleCreateCalled": false,
+    "onlyControlRepoAndExistingScheduleChanged": true
+  },
+  "runtimeLimitation": "control_persistence emits a connector-equivalent atomic expectedHeadOid plan; no authenticated production adapter was installed or exercised. The schedule now explicitly fails closed before projects when protected atomic CAS is unavailable. Offline planning markers are never treated as a real lease.",
+  "completionPolicy": "Keep enabled through transient/capability failures; disable this same schedule only after all2200 live verified plus final audit/report/state."
+}
