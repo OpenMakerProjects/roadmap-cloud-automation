@@ -7,3 +7,5 @@ cache/
 .env
 .env.*
 secrets/
+__pycache__/
+*.py[cod]

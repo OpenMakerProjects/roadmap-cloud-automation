@@ -148,14 +148,32 @@ def validate(record,entry,plan,allow_legacy=False):
     sha(image.get("sha256"),"image SHA256",64);sha(image.get("gitBlob"),"image blob")
     for key in ("pngSignatureValid","crcValid","losslessHashVerified"):
         same(image.get(key),True,"image."+key)
+    transport=image.get("transport")
     decoder=image.get("decoder")
-    obj(decoder,"image decoder");integer(decoder.get("runId"),"decoder run")
-    same(decoder.get("conclusion"),"success","decoder success")
-    sha(decoder.get("head"),"decoder source head")
-    same(decoder.get("finalHeadVerified"),final,"final PNG evidence head")
-    if decoder["head"]!=final:same(decoder.get("sourceAncestorOfFinal"),True,"decoder ancestry")
-    require(any(c["runId"]==decoder.get("validationRunId") and c["name"]=="Completion gates" for c in checks),"image final-check completion run evidence")
-    same(decoder.get("decodedSHA256"),image["sha256"],"decoder hash")
+    require((transport is None)!=(decoder is None),"exactly one image transport evidence path")
+    if transport is not None:
+        obj(transport,"image transport")
+        same(set(transport),{"method","encoding","returnedGitBlob","attachedToFinalTree",
+            "finalHeadVerified","validationRunId","validatedSHA256",
+            "largePayloadRelayedThroughModel","uncertainCreateRetried"},"direct image transport keys")
+        same(transport.get("method"),"direct_git_blob","direct image transport method")
+        same(transport.get("encoding"),"base64","direct image transport encoding")
+        same(transport.get("returnedGitBlob"),image["gitBlob"],"direct returned blob")
+        same(transport.get("attachedToFinalTree"),True,"direct blob final-tree attachment")
+        same(transport.get("finalHeadVerified"),final,"direct PNG evidence head")
+        require(any(c["runId"]==transport.get("validationRunId") and c["name"]=="Completion gates" for c in checks),
+                "direct image final-check completion run evidence")
+        same(transport.get("validatedSHA256"),image["sha256"],"direct image hash")
+        same(transport.get("largePayloadRelayedThroughModel"),False,"large image payload relay prohibited")
+        same(transport.get("uncertainCreateRetried"),False,"uncertain direct blob retry prohibited")
+    else:
+        obj(decoder,"image decoder");integer(decoder.get("runId"),"decoder run")
+        same(decoder.get("conclusion"),"success","decoder success")
+        sha(decoder.get("head"),"decoder source head")
+        same(decoder.get("finalHeadVerified"),final,"final PNG evidence head")
+        if decoder["head"]!=final:same(decoder.get("sourceAncestorOfFinal"),True,"decoder ancestry")
+        require(any(c["runId"]==decoder.get("validationRunId") and c["name"]=="Completion gates" for c in checks),"image final-check completion run evidence")
+        same(decoder.get("decodedSHA256"),image["sha256"],"decoder hash")
     svg=assets.get("svg");obj(svg,"SVG")
     same(svg.get("path"),"docs/circuit-diagram.svg","SVG path")
     for key in ("xmlParsed","selfContained","noScriptsOrExternalResources","pinsPowerMatchSourceREADME"):

@@ -43,8 +43,10 @@ class CompletionEvidenceTests(unittest.TestCase):
         r["assets"]={"image":{"path":"docs/images/project-overview.png","originalGenerated":True,
             "bytes":12345,"dimensions":[1536,1024],"sha256":"d"*64,"gitBlob":"e"*40,
             "pngSignatureValid":True,"crcValid":True,"losslessHashVerified":True,
-            "decoder":{"runId":99,"conclusion":"success","head":"a"*40,"finalHeadVerified":final,
-                "sourceAncestorOfFinal":True,"validationRunId":ident*1000,"decodedSHA256":"d"*64}},
+            "transport":{"method":"direct_git_blob","encoding":"base64","returnedGitBlob":"e"*40,
+                "attachedToFinalTree":True,"finalHeadVerified":final,"validationRunId":ident*1000,
+                "validatedSHA256":"d"*64,"largePayloadRelayedThroughModel":False,
+                "uncertainCreateRetried":False}},
             "svg":{"path":"docs/circuit-diagram.svg","xmlParsed":True,"selfContained":True,
                 "noScriptsOrExternalResources":True,"pinsPowerMatchSourceREADME":True,"gitBlob":"f"*40,
                 "content":svg,"sha256":hashlib.sha256(svg.encode()).hexdigest()},
@@ -151,9 +153,25 @@ class CompletionEvidenceTests(unittest.TestCase):
             self.reject(lambda r:r["main"].__setitem__(key,False))
         for key in ("pngSignatureValid","crcValid","losslessHashVerified","originalGenerated"):
             self.reject(lambda r:r["assets"]["image"].__setitem__(key,False))
-        self.reject(lambda r:r["assets"]["image"]["decoder"].__setitem__("decodedSHA256","0"*64))
+        self.reject(lambda r:r["assets"]["image"]["transport"].__setitem__("validatedSHA256","0"*64))
+        self.reject(lambda r:r["assets"]["image"]["transport"].__setitem__("returnedGitBlob","0"*40))
+        self.reject(lambda r:r["assets"]["image"]["transport"].__setitem__("attachedToFinalTree",False))
+        self.reject(lambda r:r["assets"]["image"]["transport"].__setitem__("largePayloadRelayedThroughModel",True))
+        self.reject(lambda r:r["assets"]["image"]["transport"].__setitem__("uncertainCreateRetried",True))
         self.reject(lambda r:r["assets"]["readme"].__setitem__("checkedRelativeLinks",["../missing"]))
         self.reject(lambda r:r["assets"]["readme"].__setitem__("imageAlt",""))
+
+    def test_bounded_chunk_decoder_fallback_and_exclusive_transport(self):
+        r,e,p=self.fixture()
+        r["assets"]["image"].pop("transport")
+        r["assets"]["image"]["decoder"]={"runId":99,"conclusion":"success","head":"a"*40,
+            "finalHeadVerified":r["finalHead"],"sourceAncestorOfFinal":True,
+            "validationRunId":r["checks"][0]["runId"],"decodedSHA256":"d"*64}
+        self.assertEqual(validate(r,e,p),21)
+        r["assets"]["image"]["transport"]={"method":"direct_git_blob"}
+        with self.assertRaises(ValidationError):validate(r,e,p)
+        r["assets"]["image"].pop("transport");r["assets"]["image"].pop("decoder")
+        with self.assertRaises(ValidationError):validate(r,e,p)
 
     def test_svg_security_parse_and_hash(self):
         for svg in ("<svg>",'<svg xmlns="http://www.w3.org/2000/svg"><script/></svg>',
@@ -186,7 +204,7 @@ class CompletionEvidenceTests(unittest.TestCase):
         copied=copy.deepcopy(records[:2])
         copied[1]["checks"][0]["runId"]=copied[0]["checks"][0]["runId"]
         copied[1]["checks"][0]["url"]=copied[1]["repository"]["url"]+"/actions/runs/"+str(copied[1]["checks"][0]["runId"])
-        copied[1]["assets"]["image"]["decoder"]["validationRunId"]=copied[1]["checks"][0]["runId"]
+        copied[1]["assets"]["image"]["transport"]["validationRunId"]=copied[1]["checks"][0]["runId"]
         summary=aggregate(copied,self.roadmap,self.plans)
         self.assertEqual(summary["verifiedTotal"],1)
         self.assertIn("22",summary["invalidOrPending"])

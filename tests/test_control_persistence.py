@@ -46,7 +46,7 @@ class PersistenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         lifecycle_fixtures.BatchLifecycleTests.setUpClass()
-        cls.source={p:(ROOT/p).read_text() for p in (*READ_PATHS,LEASE)}
+        cls.source={p:(ROOT/p).read_text(encoding="utf-8") for p in (*READ_PATHS,LEASE)}
 
     def setUp(self):
         self.helper=lifecycle_fixtures.BatchLifecycleTests();self.helper.setUp()
@@ -84,7 +84,7 @@ class PersistenceTests(unittest.TestCase):
         self.assertEqual(plan["atomicConnectorOperation"]["variables"]["input"]["expectedHeadOid"],"a"*40)
         self.assertFalse(plan["force"]);self.assertFalse(plan["authorOverride"])
         self.assertEqual(plan["deletions"],[])
-        self.assertEqual((ROOT/LEASE).read_text(),self.source[LEASE])
+        self.assertEqual((ROOT/LEASE).read_text(encoding="utf-8"),self.source[LEASE])
 
     def test_stale_ref_blob_digest_revision_and_absence(self):
         for key,value in (("expectedBlobSHA","0"*40),("expectedDigest","0"*64),("expectedRevision",8),
@@ -197,7 +197,9 @@ class PersistenceTests(unittest.TestCase):
             self.assertEqual(result.returncode,0,result.stderr);self.assertTrue(json.loads(result.stdout)["dryRun"])
             # Inspect refusal guard; never invoke the CLI --apply flag in this task.
             self.assertIn('require(not args.apply', (ROOT/"tools/control_persistence.py").read_text())
-            link=Path(temp)/"symlink.json";link.symlink_to(path)
+            link=Path(temp)/"symlink.json"
+            try:link.symlink_to(path)
+            except OSError:self.skipTest("symlink creation unavailable on this host")
             result=subprocess.run(command[:-1]+[str(link)],capture_output=True,text=True)
             self.assertNotEqual(result.returncode,0)
 
