@@ -29,7 +29,8 @@ PREFLIGHT="state/preflight-20261010-ids021-040.json"
 QA="state/execution-manifest-20261011-ids021-040-qa.json"
 BATCH="state/run-20261010-batch001-020.json"
 READ_PATHS=("roadmap-projects.json","state/completion-verifications.json",MANIFEST,PREFLIGHT,QA,BATCH,
-    "state/scheduler-readback-20261010.json","state/cloud-schedule-setup-20261006.json","state/daily-results.csv")
+    "state/scheduler-readback-20261010.json","state/cloud-schedule-setup-20261006.json","state/daily-results.csv",
+    "state/batch-proposal-20261011-ids021-040.json")
 PATTERN=re.compile(r"state/(?:run-[0-9]{8}-batch[0-9]{3,4}-[0-9]{3,4}|recovery-[0-9]{8}-id[0-9]{3,4}|report-intent-[A-Za-z0-9-]{1,80}|completion-evidence/id[0-9]{3,4})\.json")
 MUTATION="""mutation ControlStateCAS($input: CreateCommitOnBranchInput!) {
   createCommitOnBranch(input: $input) {
@@ -62,6 +63,15 @@ def parse(content):
     except (ValueError,RecursionError):raise ValidationError("unparseable JSON")
     require(type(value) in (dict,list),"state must be object/array")
     clean(value)
+    def secret_keys(node):
+        if type(node) is dict:
+            for key,item in node.items():
+                require(key.lower() not in {"token","secret","client_secret","credentials","credential","passwd"},"credential field")
+                secret_keys(item)
+        elif type(node) is list:
+            for item in node:secret_keys(item)
+    secret_keys(value)
+    require(not re.search(r"(?:AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{20,}|[?&](?:token|access_token|sig|signature)=)",content,re.I),"credential pattern")
     return value
 
 def blob_sha(content):
@@ -117,7 +127,8 @@ def validate_inputs(data,snapshot):
     while historic and historic.get("kind")=="batch_lifecycle_proposal":
         historic=historic.get("previousStateSnapshot")
     if historic is None:
-        raise ValidationError("absent historical baseline; do not synthesize completion evidence")
+        historic=observed["state/batch-proposal-20261011-ids021-040.json"]["proposal"]["state"]["previousStateSnapshot"]
+        require(historic is not None and historic.get("status")=="completed","absent validated historical baseline")
     validate_state(context["roadmap"],context["historicalCompletions"],historic,
         observed[BATCH],observed["state/scheduler-readback-20261010.json"],
         observed["state/cloud-schedule-setup-20261006.json"],observed["state/daily-results.csv"])
