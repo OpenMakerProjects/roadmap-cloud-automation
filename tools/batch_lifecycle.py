@@ -13,6 +13,7 @@ from tools.validate_execution_manifest import ValidationError,load_json,require,
 from tools.completion_evidence import validate as validate_evidence,aggregate as aggregate_evidence
 from tools.daily_report import render,sent_index
 from scripts.select_batch import select
+from tools.non_authoritative import reject_canary_inputs
 
 IST=timezone(timedelta(hours=5,minutes=30))
 
@@ -169,6 +170,7 @@ def report_ledger(state,context,now):
                  "to":"me","resolvedProfile":"balwanshrutik@gmail.com","cc":[],"bcc":[]}}
 
 def transition(state,context,request):
+    reject_canary_inputs([state,context,request])
     obj(context,"context");obj(request,"request")
     request_id=request.get("requestId");text(request_id,"requestId")
     now=stamp(request.get("nowIST"));action=request.get("action")

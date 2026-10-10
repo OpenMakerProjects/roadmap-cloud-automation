@@ -54,6 +54,8 @@ def pending(entry,plan,run_reference):
         "gmail":{"status":"deferred_batch_report","messageId":None},"legacyRemediation":None}
 
 def validate(record,entry,plan,allow_legacy=False):
+    from tools.non_authoritative import reject_canary_inputs
+    reject_canary_inputs([record,entry,plan])
     obj(record,"record")
     same(set(record),ROOT_KEYS,"record schema keys")
     same(record.get("schemaVersion"),1,"schemaVersion")

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "control_cas_canary_result",
+  "canary": true,
+  "nonAuthoritative": true,
+  "status": "live_readback_verified_ci_pending",
+  "observedAtIST": "2026-10-10T06:06:46.849+05:30",
+  "authenticatedLogin": "shrutikbalwan",
+  "canaryPath": "state/control-cas-canary-20261010.json",
+  "liveEvidence": {
+    "commitSHA": "114cb26daf047d0eeb6b2b28864c99e99dc8b8f7",
+    "priorHead": "be0a51c0057535f1055ae7986b3eccbec6d4e690",
+    "refSHA": "114cb26daf047d0eeb6b2b28864c99e99dc8b8f7",
+    "treeSHA": "ce3942e77a384a0defe306ff9f90786a52db3e83",
+    "blobSHA": "99d865ce1ce56abd24cddddd52760c2d6275d0bb",
+    "parents": [
+      "be0a51c0057535f1055ae7986b3eccbec6d4e690"
+    ],
+    "unrelatedNonTreePathsUnchanged": 84,
+    "activeLeaseBlobUnchanged": "995fa246c57a498a09ad033800bce0a46ec8d66e",
+    "readbackAtIST": "2026-10-10T06:06:15.941+05:30",
+    "readbackVerified": true
+  },
+  "operations": [
+    "mcp__codex_apps__github_create_blob",
+    "mcp__codex_apps__github_create_tree",
+    "mcp__codex_apps__github_create_commit",
+    "mcp__codex_apps__github_update_ref"
+  ],
+  "refUpdate": {
+    "branch": "main",
+    "force": false,
+    "expected_sha": "be0a51c0057535f1055ae7986b3eccbec6d4e690",
+    "returnedSuccess": true
+  },
+  "limitations": [
+    "Successful non-force expected_sha canary and exact readback; no deliberately stale/competing-writer live probe was executed.",
+    "Does not install a production lifecycle adapter or prove arbitrary future protection/permission conditions."
+  ],
+  "nonAuthorityRule": {
+    "module": "tools/non_authoritative.py",
+    "enforcedBy": [
+      "tools/batch_lifecycle.py:transition",
+      "tools/completion_evidence.py:validate"
+    ],
+    "tests": "tests/test_canary_non_authoritative.py",
+    "countsMayNotAdvance": true
+  },
+  "ci": {
+    "status": "pending"
+  },
+  "preservation": {
+    "activeLeaseUnchanged": true,
+    "runLedgersUnchanged": true,
+    "completionTotalsUnchanged": true,
+    "projectAction": false,
+    "emailSent": false,
+    "scheduleChanged": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "batchStarted": false,
+    "mutationRetries": 0
+  }
+}
