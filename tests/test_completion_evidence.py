@@ -26,7 +26,7 @@ class CompletionEvidenceTests(unittest.TestCase):
         r.update(finalHead=final,pr={"number":1,"url":repo+"/pull/1","base":"main",
             "branch":r["branch"],"head":final,"state":"closed","merged":True,
             "runPRNumbers":[1],"mergedAtIST":"2026-10-11T05:00:00+05:30","mergeCommit":main})
-        r["checks"]=[{"event":event,"name":name,"runId":index+100,"url":repo+"/actions/runs/"+str(index+100),
+        r["checks"]=[{"event":event,"name":name,"runId":ident*1000+index,"url":repo+"/actions/runs/"+str(ident*1000+index),
             "head":final,"status":"completed","conclusion":"success",
             "completedAtIST":"2026-10-11T04:59:00+05:30"}
             for index,(event,name) in enumerate(sorted(GATES))]
@@ -44,7 +44,7 @@ class CompletionEvidenceTests(unittest.TestCase):
             "bytes":12345,"dimensions":[1536,1024],"sha256":"d"*64,"gitBlob":"e"*40,
             "pngSignatureValid":True,"crcValid":True,"losslessHashVerified":True,
             "decoder":{"runId":99,"conclusion":"success","head":"a"*40,"finalHeadVerified":final,
-                "sourceAncestorOfFinal":True,"validationRunId":100,"decodedSHA256":"d"*64}},
+                "sourceAncestorOfFinal":True,"validationRunId":ident*1000,"decodedSHA256":"d"*64}},
             "svg":{"path":"docs/circuit-diagram.svg","xmlParsed":True,"selfContained":True,
                 "noScriptsOrExternalResources":True,"pinsPowerMatchSourceREADME":True,"gitBlob":"f"*40,
                 "content":svg,"sha256":hashlib.sha256(svg.encode()).hexdigest()},
@@ -125,7 +125,17 @@ class CompletionEvidenceTests(unittest.TestCase):
         r,e,p=self.fixture();r["legacyRemediation"]={"legacy":True,"reason":"Synthetic remediation",
             "priorPRs":[{"number":2,"url":r["repository"]["url"]+"/pull/2","diagnostic":"Failed legacy gate"}]}
         with self.assertRaises(ValidationError):validate(r,e,p)
-        self.assertEqual(validate(r,e,p,allow_legacy=True),21)
+        with self.assertRaises(ValidationError):validate(r,e,p,allow_legacy=True)
+        e=self.roadmap[12];p=dict(p,id=13)
+        r["identity"]={k:e[k] for k in FIELDS}
+        r["branch"]=r["branch"].replace("id021","id013");r["pr"]["branch"]=r["branch"]
+        repo="https://github.com/OpenMakerProjects/"+e["slug"]
+        r["repository"]["url"]=repo;r["pr"]["url"]=repo+"/pull/1"
+        r["main"]["repository"]=repo
+        for check in r["checks"]:check["url"]=repo+"/actions/runs/"+str(check["runId"])
+        r["legacyRemediation"]["priorPRs"][0]["url"]=repo+"/pull/2"
+        r["validation"]["host"]["projectID"]=13
+        self.assertEqual(validate(r,e,p,allow_legacy=True),13)
         r["legacyRemediation"]["priorPRs"].append(r["legacyRemediation"]["priorPRs"][0])
         with self.assertRaises(ValidationError):validate(r,e,p,allow_legacy=True)
 
@@ -166,6 +176,18 @@ class CompletionEvidenceTests(unittest.TestCase):
             self.reject(lambda r:r["result"].__setitem__(key,value))
         self.reject(lambda r:r["gmail"].__setitem__("status","sent"))
         self.reject(lambda r:r["gmail"].__setitem__("messageId","abc123"))
+
+    def test_complete_batch_aggregation_and_cross_project_run_guard(self):
+        records=[self.fixture(i)[0] for i in range(21,41)]
+        summary=aggregate(records,self.roadmap,self.plans)
+        self.assertEqual(summary["verifiedIDs"],list(range(21,41)))
+        self.assertEqual((summary["verifiedTotal"],summary["remainingTotal"],summary["nextStartingID"]),(20,2180,1))
+        copied=copy.deepcopy(records[:2])
+        copied[1]["checks"][0]["runId"]=copied[0]["checks"][0]["runId"]
+        copied[1]["checks"][0]["url"]=copied[1]["repository"]["url"]+"/actions/runs/"+str(copied[1]["checks"][0]["runId"])
+        summary=aggregate(copied,self.roadmap,self.plans)
+        self.assertEqual(summary["verifiedTotal"],1)
+        self.assertIn("22",summary["invalidOrPending"])
 
     def test_aggregation_only_valid_records_and_duplicate_guard(self):
         good,e,p=self.fixture();bad=copy.deepcopy(good);bad["checks"][0]["head"]="a"*40
