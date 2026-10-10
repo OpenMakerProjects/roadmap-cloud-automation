@@ -86,7 +86,7 @@ def validate(record,entry,plan,allow_legacy=False):
     sha(pr.get("mergeCommit"),"pr.mergeCommit")
     legacy=record.get("legacyRemediation")
     if legacy is not None:
-        require(allow_legacy,"legacy remediation requires explicit opt-in")
+        require(allow_legacy and entry["id"]<=20,"legacy remediation restricted to historical IDs1–20 with explicit opt-in")
         obj(legacy,"legacyRemediation");same(legacy.get("legacy"),True,"legacy marker")
         text(legacy.get("reason"),"legacy reason")
         historical=legacy.get("priorPRs")
@@ -231,7 +231,7 @@ def aggregate(records,roadmap,plans,allow_legacy=False):
     same(sorted(rmap),list(range(1,2201)),"roadmap exactly 2200")
     pmap=unique_index(plans,"plans")
     require(type(records) is list,"records")
-    seen=set();verified=set();branches=set();invalid={}
+    seen=set();verified=set();branches=set();check_runs=set();invalid={}
     for record in records:
         obj(record,"record")
         ident=record.get("identity",{}).get("id")
@@ -241,6 +241,9 @@ def aggregate(records,roadmap,plans,allow_legacy=False):
             require(ident in pmap,"missing authoritative plan")
             validate(record,rmap[ident],pmap[ident],allow_legacy)
             require(record["branch"] not in branches,"duplicate automation branch")
+            record_runs={check["runId"] for check in record["checks"]}
+            require(not record_runs & check_runs,"workflow run IDs reused across projects")
+            check_runs.update(record_runs)
             branches.add(record["branch"]);verified.add(ident)
         except (ValidationError,KeyError,TypeError,ValueError) as exc:
             invalid[str(ident)]=str(exc)
