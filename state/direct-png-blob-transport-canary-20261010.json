@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "kind": "direct_png_git_blob_transport_canary",
+  "observedAtIST": "2026-10-10T07:08:22+05:30",
+  "status": "passed",
+  "source": {
+    "repository": "OpenMakerProjects/smart-entryway-adaptive-scheduling",
+    "ref": "main",
+    "path": "docs/images/project-overview.png",
+    "blobSHA": "9e086a0c5bb8258e4d4f1ad89539145ad141a669",
+    "bytes": 1857386,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "sha256": "df7bf6128e80a2810accedf2bf9b10fc5c98519bcefdce731231c930513c62a4"
+  },
+  "target": {
+    "repository": "OpenMakerProjects/roadmap-cloud-automation",
+    "returnedBlobSHA": "9e086a0c5bb8258e4d4f1ad89539145ad141a669",
+    "attachedToTreeOrRef": false
+  },
+  "validation": [
+    "canonical base64 round-trip",
+    "Git blob SHA identity",
+    "PNG signature/chunks/CRC/pixel stream",
+    "bounded dimensions and size",
+    "credential-pattern scan"
+  ],
+  "cloudRun": {
+    "workflow": "Direct PNG Git-blob transport probe",
+    "runID": 38013940781,
+    "jobID": 114099975926,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38013940781",
+    "conclusion": "success",
+    "durationSeconds": 5,
+    "workflowCommit": "e5c971d94ae1f7e8b0df81710dd1f9eb28cdfd1c"
+  },
+  "operationalDecision": {
+    "preferred": "Validate generated PNG, upload directly as base64 Git blob, include returned blob in the intended project tree/commit, then guarded branch ref update and exact readback.",
+    "fallback": "Use the existing bounded text-chunk decoder only if direct blob creation is rejected or uncertain; never retry an uncertain blob call; remove all chunks before final gates.",
+    "modelPayloadRelayProhibited": true
+  },
+  "preservation": {
+    "activeLeaseBlob": "995fa246c57a498a09ad033800bce0a46ec8d66e",
+    "leaseChanged": false,
+    "projectRepositoriesChanged": false,
+    "projectBranchesOrPRsCreated": false,
+    "newImageGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false,
+    "scheduleChanged": false,
+    "completionTotalsChanged": false
+  },
+  "limitations": [
+    "The canary reused an already generated public project PNG; it did not generate a new image.",
+    "The blob is content-addressed and unreferenced; future project publication still requires guarded tree/commit/ref update and final main-tree verification."
+  ]
+}
