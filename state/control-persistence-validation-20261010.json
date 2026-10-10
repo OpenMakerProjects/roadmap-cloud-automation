@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "kind": "control_persistence_validation",
+  "observedAtIST": "2026-10-10T05:55:39.251+05:30",
+  "status": "passed",
+  "repository": "https://github.com/OpenMakerProjects/roadmap-cloud-automation",
+  "scope": "Control repository reliability only",
+  "validatedHead": "625a6a44df6756e8ff877a01ba36e52936472599",
+  "runId": 38008948271,
+  "runURL": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38008948271",
+  "commands": [
+    "python tools/validate_execution_manifest.py",
+    "python tools/validate_control_state.py",
+    "python scripts/select_batch.py",
+    "python tools/daily_report.py --validate-history",
+    "python tools/completion_evidence.py --generate-pending 21 (pending cannot validate as complete)",
+    "python tools/propose_batch.py --root . --now-ist 2026-10-11T04:00:00+05:30 --owner dry-run-20261011-ids021-040",
+    "python -m py_compile tools/control_persistence.py",
+    "python -m unittest discover -s tests -v"
+  ],
+  "results": {
+    "totalTests": 62,
+    "persistenceTests": 12,
+    "passed": true,
+    "roadmap": 2200,
+    "verifiedComplete": 20,
+    "remaining": 2180,
+    "nextID": 21,
+    "selectedPlanningIDs": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "physicalHardwareTests": "not performed",
+    "targetBuilds": "not performed"
+  },
+  "capability": {
+    "implementation": "Deterministic connector-equivalent GraphQL createCommitOnBranch plan with expectedHeadOid, explicit protected adapter boundary and offline mocked atomic apply",
+    "default": "prepare/validate only",
+    "cliApply": "refuses; no built-in authenticated adapter; --apply never invoked",
+    "liveCASMutationExecuted": false,
+    "restExpectedOldSHASupported": false,
+    "gitDataPlanIncluded": true,
+    "productionAdapterInstalled": false,
+    "sources": [
+      "https://docs.github.com/en/rest/git/refs#update-a-reference",
+      "https://docs.github.com/en/graphql/reference/commits#createcommitonbranch"
+    ]
+  },
+  "coverage": [
+    "exact allowlisted owner/repo/main and approved JSON paths",
+    "expected main/blob/canonical digest/revision and explicit absence",
+    "current roadmap/control/manifest/QA baseline validation",
+    "lifecycle/evidence/report validation before planning",
+    "duplicate keys, binary/oversize/nonfinite JSON, credential patterns, symlink/traversal rejection",
+    "multi-file single atomic expected-head commit without force/deletions/author override",
+    "mocked competing writer and stale inputs",
+    "mutation failure/uncertain readback: no retry and no credential exception echo",
+    "post-write exact ref/parent/blob/content readback",
+    "zero-success report-intent/ledger atomic transaction",
+    "dry-run and real manifest fixtures; temporary inputs; network mocked"
+  ],
+  "preservation": {
+    "existingStateBlobsUnchanged": true,
+    "activeLeaseUnchanged": true,
+    "activeLeaseBlob": "995fa246c57a498a09ad033800bce0a46ec8d66e",
+    "changedOnly": [
+      "tools/control_persistence.py",
+      "tests/test_control_persistence.py",
+      "templates/control-persistence/README.md",
+      ".github/workflows/control-manifest.yml",
+      "state/control-persistence-validation-20261010.json"
+    ],
+    "projectLeaseAcquired": false,
+    "projectRepositoriesMutated": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false,
+    "scheduleChanged": false
+  },
+  "limitations": [
+    "Offline plans and mocked transport tests are not live GitHub write evidence.",
+    "Production adapter must securely authenticate shrutikbalwan, obtain complete immutable snapshots and execute the emitted atomic expectedHeadOid operation; ordinary REST update_ref is insufficient.",
+    "Current baseline/manifest validator intentionally binds IDs1–20 historical completion and IDs21–40 planning; future planning bundles require an explicit validated update."
+  ]
+}
