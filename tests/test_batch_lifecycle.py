@@ -107,7 +107,7 @@ class BatchLifecycleTests(unittest.TestCase):
     def test_selection_plan_and_unique_owner_guards(self):
         for extra in ({"selectedIDs":list(range(22,42))},
                       {"selectorOutput":list(range(22,42))},
-                      {"owner":self.prior["owner"]}):
+                      {"owner":self.prior["owner"]},{"owner":self.prior["previousOwner"]}):
             request=self.request(self.prior,"begin",nowIST="2026-10-11T04:00:00+05:30",
                 expiresAtIST="2026-10-11T08:00:00+05:30",selectedIDs=list(range(21,41)),
                 selectorOutput=list(range(21,41)),runReference="OMP-021-040-20261011")
