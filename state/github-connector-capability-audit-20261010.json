@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "live_cloud_github_connector_capability_audit",
+  "observedAtIST": "2026-10-10T06:02:35.031+05:30",
+  "status": "audited",
+  "scope": "Read-only operational capability inspection; only control audit/documentation persistence",
+  "repository": {
+    "fullName": "OpenMakerProjects/roadmap-cloud-automation",
+    "defaultBranch": "main",
+    "private": false,
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    }
+  },
+  "authenticatedLogin": "shrutikbalwan",
+  "controlBaseCommit": "796334d8948a5742118132f2d0b46c209814e347",
+  "source": "Actual callable ALL_TOOLS operation declarations plus harmless GitHub account/repository reads",
+  "capability": {
+    "guardedMultiFilePathExposed": true,
+    "directGraphQLCreateCommitOnBranchExposed": false,
+    "genericGraphQLMutationExposed": false,
+    "fetchIsGETOnly": true,
+    "conditionalRefOperation": "mcp__codex_apps__github_update_ref",
+    "expectedBranchHeadParameter": "expected_sha",
+    "requiredForce": false,
+    "requiredCommitParent": "exactly expected main head; no additional parents",
+    "publication": "One final ref movement publishes one commit containing all validated files; unattached Git objects are non-authoritative.",
+    "atomicityEvidence": "Exposed connector contract rejects mismatched expected_sha; single-parent force=false protects against concurrent append by non-fast-forward rejection.",
+    "verificationLevel": "Operation contract plus read-only account/access verification; no live write/race probe or backend implementation inspection.",
+    "productionAdapterInstalled": false,
+    "liveOperationalCASExecuted": false
+  },
+  "singleFileGuards": {
+    "create": {
+      "operation": "mcp__codex_apps__github_create_file",
+      "expectedAbsence": true,
+      "expectedHeadSHA": false,
+      "branch": "explicit main; existing branch",
+      "basis": "Declared path must not already exist; no replacement blob SHA is supplied."
+    },
+    "update": {
+      "operation": "mcp__codex_apps__github_update_file",
+      "expectedBlobSHA": true,
+      "expectedHeadSHA": false,
+      "parameter": "sha",
+      "returns": [
+        "commit_sha",
+        "content_sha"
+      ],
+      "basis": "Declared current file blob SHA through GitHub Contents API."
+    }
+  },
+  "exactOperationDeclarations": [
+    {
+      "name": "mcp__codex_apps__github_create_blob",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nCreate a blob in the repository and return its SHA.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_create_blob(args: {\n  // Blob content to store in the repository.\n  content: string;\n  // One of utf-8 or base64. Default is utf-8.\n  encoding?: \"utf-8\" | \"base64\";\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_create_commit",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nCreate a commit pointing to tree_sha with one or more parents.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_create_commit(args: {\n  // Additional ordered commit parent SHAs. Defaults to no additional parents.\n  additional_parent_shas?: Array<string> | null;\n  // Commit message to use for the new commit.\n  message: string;\n  // Parent commit SHA for the new commit.\n  parent_sha: string;\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n  // Tree SHA to point the new commit at.\n  tree_sha: string;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_create_file",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nCreate a new UTF-8 text file through GitHub's contents API. Returns only the resulting commit SHA, not GitHub's full content/commit payload. Docs: https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#create-or-update-file-contents\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_create_file(args: {\n  // Optional existing branch to create the file on. Leave null to use the default branch. This action never creates a branch; use create_branch first when needed.\n  branch?: string | null;\n  // Complete UTF-8 text contents to write. This wrapper base64-encodes the text for GitHub's contents API.\n  content: string;\n  // Commit message for the new file.\n  message: string;\n  // New file path within the repository. The path must not already exist on the target branch. To replace an existing file, call fetch_file first and pass its current blob SHA to update_file.\n  path: string;\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_create_tree",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nCreate a tree object in the repository from the given elements.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_create_tree(args: {\n  // Optional base tree SHA to build on. Leave null to create from scratch.\n  base_tree_sha?: string | null;\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n  // Tree entries to include in the new tree object.\n  tree_elements: Array<{ [key: string]: unknown; }>;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_fetch",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nFetch approved public GitHub repository resources and repository files. Supports repositories, directories, code and issue search, and blob or raw file URLs. Pull requests, issues, commits, branches, workflow runs, releases, Git data, commit statuses, and rulesets include their collections and subresources via GET only, including branch-protection and ruleset reads. The active connection's repository permissions still apply. Managed GitHub App installation connections exclude administration access, so they cannot read branch-protection endpoints that require that permission. Unlisted API endpoints and non-public-GitHub hosts are rejected. Sensitive endpoint families, such as user, organization, and secrets APIs, are not supported. Contents URLs without a ref use the repository's default branch. JSON responses are returned unchanged; oversized or non-UTF-8 responses are rejected, so binary downloads are not supported.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_fetch(args: {\n  // Approved public GitHub repository, file, directory, issue, pull request, commit, branch, blob, README, workflow run, release, Git data, commit status, ruleset, code-search, or issue-search URL. Includes collections and subresources of pull requests, issues, commits, branches, workflow runs, releases, Git data, statuses, and rulesets. Responses must contain UTF-8 text. Supports github.com, GitHub REST API (api.github.com), and raw.githubusercontent.com URLs. Examples: https://github.com/owner/repo/blob/main/README.md, https://api.github.com/repos/owner/repo/contents/README.md, and https://raw.githubusercontent.com/owner/repo/main/README.md. Contents URLs without a ref use the repository's default branch.\n  url: string;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_fetch_file",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nFetch file content by repository path, using the default branch when ref is omitted.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_fetch_file(args: {\n  // One of utf-8 or base64. Default is utf-8.\n  encoding?: \"utf-8\" | \"base64\";\n  // Optional 1-based last line to return.\n  end_line?: number | null;\n  // Repository path for the file to fetch.\n  path: string;\n  // Optional branch, tag, or commit ref to read from. Omit this unless the ref is known; the repository default branch will be used when omitted.\n  ref?: string | null;\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n  // Optional 1-based first line to return.\n  start_line?: number | null;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_get_user_login",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nReturn the GitHub login for the authenticated user.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_get_user_login(args: { [key: string]: unknown; }): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_update_file",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nReplace a UTF-8 text file through GitHub's contents API. Returns the resulting commit SHA and content blob SHA. Use `content_sha` for a subsequent sequential update. Do not run update/delete writes for the same path in parallel. Docs: https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#create-or-update-file-contents\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_update_file(args: {\n  // Optional branch to update. Leave null to use the default branch.\n  branch?: string | null;\n  // Complete replacement UTF-8 text contents. This wrapper base64-encodes the text for GitHub's contents API.\n  content: string;\n  // Commit message for the file update.\n  message: string;\n  // Path for the existing file within the repository.\n  path: string;\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n  // Current blob SHA of the file being updated, usually from `fetch_file`.\n  sha: string;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__github_update_ref",
+      "description": "Access repositories, issues, and pull requests. Required for some features such as Codex\n\nMove a branch ref to a commit, rejecting a mismatched expected_sha. Inspect the new branch head before retrying a rejected lease.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__github_update_ref(args: {\n  // Branch name to create or update.\n  branch_name: string;\n  // Expected branch head SHA; combine with force=true for force-with-lease.\n  expected_sha?: string | null;\n  // Force the ref update even if it is not a fast-forward.\n  force?: boolean;\n  // Repository in `owner/name` form, such as `openai/openai`. This maps to GitHub REST `owner` and `repo` path parameters: https://docs.github.com/en/rest/repos/repos#get-a-repository\n  repository_full_name: string;\n  // Commit SHA.\n  sha: string;\n}): Promise<CallToolResult>; };\n```"
+    }
+  ],
+  "decision": {
+    "stagedFallbackNeeded": false,
+    "stagedFallbackImplemented": false,
+    "schedulePromptChanged": false,
+    "failClosedRequirementPreserved": true,
+    "rationale": "The exposed guarded update_ref plus blob/tree/single-parent commit operations provide the connector-equivalent Git-data publication path. No unguarded or sequential lease fallback is authorized. A future adapter must enforce all control_persistence validation and readback requirements; adapter absence is not claimed resolved."
+  },
+  "schedule": {
+    "id": "6ac3fd99bfc88191b9cefd5ea5c04359",
+    "enabled": true,
+    "paused": false,
+    "timezone": "Asia/Kolkata",
+    "recurrence": "BEGIN:VEVENT\nDTSTART;TZID=Asia/Kolkata:20261006T040000\nRRULE:FREQ=DAILY;BYHOUR=4;BYMINUTE=0;BYSECOND=0\nEND:VEVENT",
+    "timingMode": "exact_schedule",
+    "nextRunTime": null,
+    "beforePromptSHA256": "d106a84388b74eb80d4f4175fe7ff5071f9e29696f4a7f92aaa8ee5b50eefef8",
+    "afterPromptSHA256": "d106a84388b74eb80d4f4175fe7ff5071f9e29696f4a7f92aaa8ee5b50eefef8",
+    "promptChanged": false,
+    "duplicateCreated": false,
+    "notificationBehavior": "No schedule update issued; all settings preserved"
+  },
+  "preservation": {
+    "leaseChanged": false,
+    "activeLeaseBlob": "995fa246c57a498a09ad033800bce0a46ec8d66e",
+    "projectRepositoriesChanged": false,
+    "projectPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false,
+    "batchStarted": false,
+    "operationalStateChanged": false,
+    "stagedRecordsCreated": false,
+    "scheduleUpdateCalled": false
+  },
+  "ci": {
+    "status": "pending",
+    "reason": "Audit/documentation commit triggers existing read-only cloud control CI"
+  },
+  "limitations": [
+    "Read-only audit cannot establish hidden connector implementation or live write permissions/protection success.",
+    "No production persistence adapter or live CAS transaction was installed/exercised.",
+    "Guarded Contents writes lack branch-head preconditions and cannot by themselves satisfy multi-file atomic persistence."
+  ]
+}
