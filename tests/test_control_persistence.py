@@ -116,6 +116,33 @@ class PersistenceTests(unittest.TestCase):
         bad["changes"][0]["content"]=json.dumps(new);self.reject(bad)
         bad=copy.deepcopy(self.operation);bad["transition"]["request"]["expectedStateDigest"]="0"*64;self.reject(bad)
 
+    def test_absent_lease_uses_durable_validated_baseline(self):
+        request=self.helper.request(None,"begin",nowIST="2026-10-11T04:00:00+05:30",
+            expiresAtIST="2026-10-11T08:00:00+05:30",selectedIDs=list(range(21,41)),
+            selectorOutput=list(range(21,41)),runReference="OMP-021-040-20261011")
+        del self.snapshot["files"][LEASE]
+        self.operation["transition"]["state"]=None
+        self.operation["transition"]["request"]=request
+        new=transition(None,self.helper.context,request)["state"]
+        self.operation["changes"]=[self.change(LEASE,new)]
+        self.assertTrue(prepare(self.operation,self.snapshot)["dryRun"])
+
+    def test_report_intent_and_ledger_atomic_and_invalid_ledger(self):
+        terminal=self.helper.terminal_batch(False)
+        operation=self.make(terminal,"report-intent")
+        new=json.loads(operation["changes"][0]["content"])
+        report=new["report"]
+        intent="state/report-intent-"+report["reportReference"]+".json"
+        ledger="state/run-20261011-batch021-040.json"
+        operation["changes"] += [self.change(intent,report),self.change(ledger,report["ledger"])]
+        plan=prepare(operation,self.snapshot)
+        self.assertEqual(len(plan["changes"]),3)
+        adapter=MockAdapter(self.snapshot)
+        self.assertTrue(execute(operation,adapter,apply=True,protected_runtime=True)["readbackVerified"])
+        bad=copy.deepcopy(operation);value=json.loads(bad["changes"][2]["content"]);value["totals"]["verifiedComplete"]=100
+        bad["changes"][2]["content"]=json.dumps(value);self.reject(bad)
+        bad=copy.deepcopy(operation);bad["changes"][1]["path"]="state/report-intent-WRONG.json";self.reject(bad)
+
     def test_multifile_atomic_evidence_plan(self):
         active=self.helper.apply(self.helper.begin(),"activate",projectID=21)
         evidence=self.helper.helper.fixture(21)[0]
@@ -161,15 +188,15 @@ class PersistenceTests(unittest.TestCase):
             with self.assertRaises(ValidationError):execute(self.operation,adapter,apply=True,protected_runtime=True)
             self.assertEqual(len(adapter.writes),1)
 
-    def test_cli_defaults_plan_and_apply_refuses_without_adapter(self):
+    def test_cli_defaults_plan_symlink_and_no_builtin_apply_adapter(self):
         with tempfile.TemporaryDirectory() as temp:
             path=Path(temp)/"request.json"
             path.write_text(json.dumps({"operation":self.operation,"snapshot":self.snapshot}))
             command=[sys.executable,str(ROOT/"tools/control_persistence.py"),"--input",str(path)]
             result=subprocess.run(command,capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stderr);self.assertTrue(json.loads(result.stdout)["dryRun"])
-            result=subprocess.run(command+["--apply"],capture_output=True,text=True)
-            self.assertNotEqual(result.returncode,0);self.assertNotIn("ghp_",result.stderr)
+            # Inspect refusal guard; never invoke the CLI --apply flag in this task.
+            self.assertIn('require(not args.apply', (ROOT/"tools/control_persistence.py").read_text())
             link=Path(temp)/"symlink.json";link.symlink_to(path)
             result=subprocess.run(command[:-1]+[str(link)],capture_output=True,text=True)
             self.assertNotEqual(result.returncode,0)
