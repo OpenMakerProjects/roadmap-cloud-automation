@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "control_cas_canary",
+  "observedAtIST": "2026-10-10T06:05:05.355+05:30",
+  "authenticatedLogin": "shrutikbalwan",
+  "expectedPriorMainSHA": "be0a51c0057535f1055ae7986b3eccbec6d4e690",
+  "canary": true,
+  "nonAuthoritative": true,
+  "restrictions": {
+    "controlAuditOnly": true,
+    "noBatchAction": true,
+    "noLeaseChange": true,
+    "noRunLedgerChange": true,
+    "noCompletionCountChange": true,
+    "noProjectAction": true,
+    "noScheduleAction": true,
+    "noGmailAction": true,
+    "noImages": true,
+    "noBranchesOrPRs": true,
+    "noTargetBuilds": true
+  },
+  "publication": "One new audit path, exact base tree, sole expected-head parent, force=false, expected_sha. Returned SHA evidence will be recorded separately after live readback."
+}
