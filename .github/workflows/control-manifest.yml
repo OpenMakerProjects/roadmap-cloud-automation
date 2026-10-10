@@ -30,5 +30,9 @@ jobs:
           if python tools/completion_evidence.py --validate /tmp/pending-evidence.json; then
             exit 1
           fi
+      - name: Validate non-authoritative tomorrow proposal
+        run: |
+          python tools/propose_batch.py --root . --now-ist 2026-10-11T04:00:00+05:30 --owner dry-run-20261011-ids021-040 > /tmp/batch-proposal.json
+          python -c 'import json; p=json.load(open("/tmp/batch-proposal.json")); assert p["planningOnly"] and p["actualLeaseUnchanged"]; assert p["proposal"]["state"]["originalSelectedIDs"] == list(range(21,41)); print("Dry-run proposal valid; no lease acquired")'
       - name: Run offline regression tests
         run: python -m unittest discover -s tests -v
