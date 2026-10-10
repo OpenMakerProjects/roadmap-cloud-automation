@@ -40,3 +40,7 @@ After each run, send one HTML Gmail message to `me` with no cc or bcc. Subject: 
 ## Finish condition
 
 After all 2,200 projects are verified, perform a manifest-to-GitHub audit, send one final completion email, commit final state, and disable the recurring schedule if possible. Future invocations must exit without changes or duplicate email.
+
+## Scheduled execution safeguards
+
+Follow [docs/cloud-scheduled-execution.md](docs/cloud-scheduled-execution.md) for the existing cloud schedule and the exact selector, control/manifest validators, batch_lifecycle, control_persistence expectedHeadOid CAS, completion_evidence and daily_report contracts. Planning proposals and mocked transports are not live leases or completion evidence. If protected atomic CAS is unavailable, fail closed before project execution; never bypass it with sequential writes. Keep the existing schedule enabled unless all 2,200 projects are verified and final audit/report/state are complete.
