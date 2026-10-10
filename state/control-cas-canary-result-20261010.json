@@ -3,7 +3,7 @@
   "kind": "control_cas_canary_result",
   "canary": true,
   "nonAuthoritative": true,
-  "status": "live_readback_verified_ci_pending",
+  "status": "live_readback_and_control_ci_verified",
   "observedAtIST": "2026-10-10T06:06:46.849+05:30",
   "authenticatedLogin": "shrutikbalwan",
   "canaryPath": "state/control-cas-canary-20261010.json",
@@ -44,10 +44,29 @@
       "tools/completion_evidence.py:validate"
     ],
     "tests": "tests/test_canary_non_authoritative.py",
-    "countsMayNotAdvance": true
+    "countsMayNotAdvance": true,
+    "testsPassed": 5
   },
   "ci": {
-    "status": "pending"
+    "status": "passed",
+    "runId": 38009901737,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38009901737",
+    "head": "ff1e8b62b1a771efe72a7ed6f10358eb6091e409",
+    "totalTests": 67,
+    "summary": [
+      "2026-10-10T00:38:56.9566310Z Ran 67 tests in 32.408s",
+      "2026-10-10T00:38:56.9566639Z OK"
+    ],
+    "commands": [
+      "python tools/validate_execution_manifest.py",
+      "python tools/validate_control_state.py",
+      "python scripts/select_batch.py",
+      "python tools/daily_report.py --validate-history",
+      "python tools/completion_evidence.py --generate-pending 21 (must fail complete validation)",
+      "python tools/propose_batch.py (non-authoritative planning only)",
+      "python -m py_compile tools/control_persistence.py",
+      "python -m unittest discover -s tests -v"
+    ]
   },
   "preservation": {
     "activeLeaseUnchanged": true,
@@ -61,5 +80,20 @@
     "targetBuildsRun": false,
     "batchStarted": false,
     "mutationRetries": 0
-  }
+  },
+  "followupEvidence": {
+    "ruleAndInitialResultCommit": "ff1e8b62b1a771efe72a7ed6f10358eb6091e409",
+    "parent": "114cb26daf047d0eeb6b2b28864c99e99dc8b8f7",
+    "refReadbackVerified": true,
+    "changedFilesBytesAndBlobsVerified": true,
+    "finalResultPublication": "This record will be published by one single-parent expected_sha, force=false audit-only commit; returned final SHA is intentionally not guessed in its own content."
+  },
+  "changedPaths": [
+    "state/control-cas-canary-20261010.json",
+    "state/control-cas-canary-result-20261010.json",
+    "tools/non_authoritative.py",
+    "tools/batch_lifecycle.py",
+    "tools/completion_evidence.py",
+    "tests/test_canary_non_authoritative.py"
+  ]
 }
