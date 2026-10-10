@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "kind": "batch_lifecycle_validation",
+  "observedAtIST": "2026-10-10T05:45:47.986+05:30",
+  "testedCommit": "6d298fb8c35ddba348f8936fcf90bff938c6b65a",
+  "filesAdded": [
+    "tools/batch_lifecycle.py",
+    "tools/propose_batch.py",
+    "templates/batch-lifecycle/README.md",
+    "tests/test_batch_lifecycle.py"
+  ],
+  "ciExtended": ".github/workflows/control-manifest.yml",
+  "commands": [
+    {
+      "command": "python tools/propose_batch.py --root . --now-ist 2026-10-11T04:00:00+05:30 --owner dry-run-20261011-ids021-040",
+      "exitCode": 0,
+      "result": {
+        "planningOnly": true,
+        "actualLeaseUnchanged": true,
+        "selectedIDs": [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "verifiedTotal": 20,
+        "remainingTotal": 2180,
+        "nextStartingID": 21
+      }
+    },
+    {
+      "command": "python tools/batch_lifecycle.py --input <temporary fixture JSON>",
+      "exitCode": 0,
+      "source": "offline CLI fixture test; JSON output only"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exitCode": 0,
+      "tests": 50,
+      "newLifecycleTests": 10,
+      "failures": 0,
+      "errors": 0,
+      "offline": true
+    }
+  ],
+  "coverage": [
+    "Competing writers; expected state/context digest and revision; exact-request crash/retry idempotency",
+    "Completed/absent/expired begin; reject unexpired active lease and reused owners; preserve interrupted batch selection",
+    "One active project; schema-v1 evidence-only completion; terminal blocker semantics and non-regressing counts",
+    "Valid batch aggregation; stable safe report intent; duplicate/unresolved intent refusal",
+    "Explicit sent receipt/hash/recipient/message-ID reconciliation; release only after terminal items",
+    "Validated zero-success failure report can release project work with deliveryPending; new begin remains blocked until reconciliation"
+  ],
+  "cloudCI": {
+    "runID": 38008144142,
+    "jobID": 114081636060,
+    "url": "https://github.com/OpenMakerProjects/roadmap-cloud-automation/actions/runs/38008144142",
+    "conclusion": "success"
+  },
+  "dryRunProposal": {
+    "path": "state/batch-proposal-20261011-ids021-040.json",
+    "nonAuthoritative": true,
+    "persistedAsActiveLease": false,
+    "inputStateDigest": "3cd2907b0cfa7a9220a33edd2a6eabcccecb32f0c8f9f2c20113ab3b3c440d9b",
+    "proposedStateDigest": "ec093ff7de2a4b29d2c11ed275438ed07851e2e877903e5b6ddab989d38e6974"
+  },
+  "history": {
+    "existingStateFilesPreserved": 38,
+    "roadmapUnchanged": true,
+    "completedLeaseUnchanged": true,
+    "reportHistoryUnchanged": true,
+    "durableVerifiedTotalUnchanged": 20,
+    "nextStartingIDUnchanged": 21
+  },
+  "restrictionsObserved": {
+    "onlyControlRepositoryChanged": true,
+    "realLeaseAcquired": false,
+    "projectRepositoriesMutated": false,
+    "branchesOrPRsCreated": false,
+    "imagesGenerated": false,
+    "targetBuildsRun": false,
+    "emailSent": false
+  },
+  "persistenceLimit": "Transitions are proposals over explicit snapshots only. A runtime caller must fresh-read sources and persist with actual GitHub blob/ref compare-and-swap. This utility performs no network, Git write or Gmail send; dry-run timestamps and owner are planning inputs."
+}
