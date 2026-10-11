@@ -68,7 +68,10 @@ for path in paths:
     files[path]={"sha":entry[2],"mode":entry[0],"content":raw}
 snapshot={"owner":"OpenMakerProjects","repo":"roadmap-cloud-automation","branch":"main",
           "refSHA":base,"treeSHA":git("show","-s","--format=%T",base),"files":files}
+print("TRANSITION_OK stateDigest="+result["stateDigest"],flush=True)
 plan=prepare(operation,snapshot)
-payload={"result":result,"operation":operation,"plan":plan}
+print("PERSISTENCE_PLAN_OK expectedMainSHA="+plan["expectedMainSHA"]+" newBlobSHA="+plan["changes"][0]["blobSHA"],flush=True)
+payload={"result":result,"expectedMainSHA":base,"expectedBlobSHA":old_sha,
+         "newBlobSHA":plan["changes"][0]["blobSHA"],"treeSHA":snapshot["treeSHA"]}
 encoded=base64.b64encode(json.dumps(payload,separators=(",",":"),ensure_ascii=False).encode()).decode()
-print("BEGIN_RESULT_B64="+encoded)
+print("BEGIN_RESULT_B64="+encoded,flush=True)
