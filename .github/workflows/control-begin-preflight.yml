@@ -1,0 +1,34 @@
+name: Cloud begin transition preflight
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/control-begin-preflight.yml'
+      - 'tools/cloud_begin_preflight.py'
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate control state and manifest
+        run: |
+          python tools/validate_control_state.py
+          python tools/validate_execution_manifest.py
+          python scripts/select_batch.py > /tmp/selection.json
+          python -c 'import json; s=json.load(open("/tmp/selection.json")); assert [p["id"] for p in s["batch"]] == list(range(21,41)); assert s["batch_count"] == 20'
+      - name: Derive lifecycle transition and protected CAS plan
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          NOW_IST: '2026-10-12T04:02:04+05:30'
+          EXPIRES_IST: '2026-10-12T12:00:00+05:30'
+          LEASE_OWNER: 'cloud-20261012-040204-a21f9c'
+          REQUEST_ID: 'begin-20261012-040204-a21f9c'
+          RUN_REFERENCE: 'OMP-021-040-20261012'
+        run: python tools/cloud_begin_preflight.py
